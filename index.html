@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>QUBEX SENTINEL | PQC SECURITY</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        :root {
+            --quantum-cyan: #00E5FF;
+            --bg-dark: #050505;
+            --card-bg: #111111;
+            --text-main: #f8fafc;
+            --text-dim: #94a3b8;
+        }
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            margin: 0;
+            line-height: 1.6;
+        }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        
+        /* Header */
+        header { padding: 25px 0; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #222; }
+        .logo { font-size: 26px; font-weight: 900; letter-spacing: 1px; }
+        .logo span { color: var(--quantum-cyan); }
+        
+        /* Hero Section */
+        .hero { padding: 120px 0; text-align: center; }
+        .hero h1 { font-size: 68px; font-weight: 900; margin-bottom: 15px; text-transform: uppercase; letter-spacing: -1px; }
+        .hero p { font-size: 22px; color: var(--text-dim); max-width: 750px; margin: 0 auto 40px; font-weight: 300; }
+        
+        /* Benchmarks */
+        .benchmarks { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin: 60px 0; }
+        .stat-card { background: var(--card-bg); padding: 45px; border-radius: 12px; border: 1px solid #333; transition: 0.4s ease; }
+        .stat-card:hover { border-color: var(--quantum-cyan); transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0, 229, 255, 0.1); }
+        .stat-card h3 { font-size: 52px; color: var(--quantum-cyan); margin: 0; line-height: 1; }
+        .stat-card p { margin: 15px 0 0; color: var(--text-dim); text-transform: uppercase; letter-spacing: 1.5px; font-size: 13px; font-weight: 600; }
+
+        /* CTA Button */
+        .btn { background: transparent; color: var(--quantum-cyan); padding: 16px 40px; border-radius: 4px; border: 2px solid var(--quantum-cyan); font-weight: 700; text-decoration: none; display: inline-block; transition: 0.3s; text-transform: uppercase; letter-spacing: 1px; }
+        .btn:hover { background: var(--quantum-cyan); color: #000; box-shadow: 0 0 20px rgba(0, 229, 255, 0.4); }
+
+        /* Roadmap */
+        .roadmap { padding: 100px 0; }
+        .phase { border-left: 2px solid #333; padding-left: 40px; margin-bottom: 50px; position: relative; transition: 0.3s; }
+        .phase:hover { border-color: var(--quantum-cyan); }
+        .phase::before { content: ''; width: 12px; height: 12px; background: var(--bg-dark); border: 2px solid var(--quantum-cyan); position: absolute; left: -8px; top: 8px; border-radius: 50%; transition: 0.3s; }
+        .phase:hover::before { background: var(--quantum-cyan); box-shadow: 0 0 15px var(--quantum-cyan); }
+        .phase h4 { margin: 0; font-size: 16px; color: var(--quantum-cyan); letter-spacing: 2px; }
+        .phase h2 { margin: 10px 0; font-size: 28px; }
+        .phase p { color: var(--text-dim); font-size: 18px; }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container" style="display:flex; justify-content:space-between; width:100%; align-items:center;">
+        <div class="logo">QUBEX <span>SENTINEL</span></div>
+        <a href="https://forms.gle/hmUdBiQz3PT2x8TT7" target="_blank" class="btn" style="padding: 10px 24px; font-size: 12px;">Request Access</a>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="container">
+        <h1>QUBEX <span style="color: var(--quantum-cyan);">SENTINEL</span></h1>
+        <p>Chain-Agnostic PQC Security Middleware. Shielding the multi-chain ecosystem from the 7-Year Quantum Gap.</p>
+        
+        <div style="margin-top: 40px;">
+            <form action="https://formspree.io/f/mvzlneno" method="POST" style="display: flex; justify-content: center; gap: 10px; max-width: 550px; margin: 0 auto;">
+                <input type="email" name="email" placeholder="Enter professional email" required 
+                    style="background: transparent; border: none; border-bottom: 2px solid var(--quantum-cyan); color: white; padding: 10px; width: 100%; outline: none; font-family: 'Inter', sans-serif;">
+                <button type="submit" class="btn" style="padding: 10px 25px; white-space: nowrap;">Get Technical Brief v9.0</button>
+            </form>
+            <p style="font-size: 12px; color: #555; margin-top: 10px;">PQC Infrastructure</p>
+        </div>
+    </div>
+</section>
+
+<section class="container">
+    <div class="benchmarks">
+        <div class="stat-card">
+            <h3>$10.56B</h3>
+            <p>Simulated TVL Resilience</p>
+        </div>
+        <div class="stat-card">
+            <h3>< 12ms</h3>
+            <p>Latency Overhead</p>
+        </div>
+        <div class="stat-card">
+            <h3>Proprietary</h3>
+            <p>Core Sequencer Injection</p>
+        </div>
+    </div>
+</section>
+
+<section class="roadmap container">
+    <h2 style="font-size: 36px; margin-bottom: 60px; text-transform: uppercase;">Strategic Rollout</h2>
+    <div class="phase">
+        <h4>Q3 2026</h4>
+        <h2>Chain-Agnostic Devnet Launch</h2>
+        <p>Deployment of decoupled PQC validation logic across testbeds, establishing baseline performance metrics.</p>
+    </div>
+    <div class="phase">
+        <h4>Q1 2027</h4>
+        <h2>Institutional Security Pilot</h2>
+        <p>Rigorous cryptanalysis audits and early-stage integration with Tier-1 RWA custody providers.</p>
+    </div>
+    <div class="phase">
+        <h4>2028</h4>
+        <h2>The Global Standard</h2>
+        <p>QUBEX SENTINEL operates as the foundational PQC security layer across the decentralized web.</p>
+    </div>
+</section>
+
+<footer style="text-align: center; padding: 60px 0; color: #555; border-top: 1px solid #222; font-size: 14px;">
+    <div class="container">
+        <p>© 2026 QUBEX SENTINEL. All Rights Reserved. | PQC SECURITY </p>
+    </div>
+</footer>
+
+</body>
+</html>
