@@ -360,3 +360,25 @@
 
 </body>
 </html>
+
+<style>
+/* Αυτό το κομμάτι διορθώνει το κινητό */
+@media (max-width: 768px) {
+  /* Κάνει τα περιεχόμενα να μπαίνουν σε στήλη (το ένα κάτω από το άλλο) */
+  .container, .grid, .flex-section { 
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  /* Κάνει τα κουτιά να πιάνουν όλο το πλάτος της οθόνης του κινητού */
+  .card, .box, .feature { 
+    width: 95% !important;
+    margin: 10px 0 !important;
+  }
+
+  /* Μικραίνει λίγο τα γράμματα για να μη «σπάνε» οι λέξεις */
+  h1 { font-size: 24px !important; }
+  h2 { font-size: 20px !important; }
+}
+</style>
