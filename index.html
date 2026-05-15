@@ -51,6 +51,41 @@
         .phase h4 { margin: 0; font-size: 16px; color: var(--quantum-cyan); letter-spacing: 2px; }
         .phase h2 { margin: 10px 0; font-size: 28px; }
         .phase p { color: var(--text-dim); font-size: 18px; }
+        /* Mobile Fix για το Qubex Sentinel Site */
+@media (max-width: 768px) {
+    /* Διόρθωση Hero: Μικραίνουμε τον τίτλο για να μη βγαίνει εκτός οθόνης */
+    .hero h1 {
+        font-size: 38px !important;
+        line-height: 1.1;
+    }
+
+    /* Διόρθωση Form: Το email και το κουμπί μπαίνουν το ένα κάτω από το άλλο */
+    .hero form {
+        flex-direction: column !important;
+        gap: 20px !important;
+    }
+
+    /* Διόρθωση Roadmap (Strategic Rollout): Δίνουμε χώρο στο κείμενο */
+    .phase {
+        padding-left: 25px !important; /* Λιγότερο padding για να αναπνέει το κείμενο */
+        margin-bottom: 40px !important;
+    }
+
+    .phase h2 {
+        font-size: 22px !important; /* Πιο κομψός τίτλος στο κινητό */
+    }
+
+    .phase p {
+        font-size: 16px !important;
+    }
+
+    /* Διόρθωση Header: Για να μη «χτυπάει» το logo με το κουμπί */
+    header .container {
+        flex-direction: column !important;
+        gap: 15px;
+        text-align: center;
+    }
+}
     </style>
 </head>
 <body>
