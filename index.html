@@ -53,33 +53,47 @@
         .phase p { color: var(--text-dim); font-size: 18px; }
         /* Mobile Fix για το Qubex Sentinel Site */
 @media (max-width: 768px) {
-    /* Διόρθωση Hero: Μικραίνουμε τον τίτλο για να μη βγαίνει εκτός οθόνης */
+    /* 1. Διόρθωση Τίτλου Hero */
     .hero h1 {
         font-size: 38px !important;
         line-height: 1.1;
     }
 
-    /* Διόρθωση Form: Το email και το κουμπί μπαίνουν το ένα κάτω από το άλλο */
-    .hero form {
-        flex-direction: column !important;
-        gap: 20px !important;
+    /* 2. ΚΕΝΤΡΑΡΙΣΜΑ ΤΙΤΛΟΥ "STRATEGIC ROLLOUT" */
+    .roadmap h2 {
+        text-align: center !important;
+        font-size: 28px !important;
+        margin-bottom: 40px !important;
+        width: 100%;
     }
 
-    /* Διόρθωση Roadmap (Strategic Rollout): Δίνουμε χώρο στο κείμενο */
+    /* 3. ΔΙΟΡΘΩΣΗ ΚΥΚΛΟΥ (για να μη φαίνεται μισός) */
+    .roadmap {
+        padding-left: 35px !important; 
+        padding-right: 20px !important;
+    }
+
+    /* 4. Διόρθωση Φάσεων Roadmap */
     .phase {
-        padding-left: 25px !important; /* Λιγότερο padding για να αναπνέει το κείμενο */
+        padding-left: 25px !important;
         margin-bottom: 40px !important;
     }
 
     .phase h2 {
-        font-size: 22px !important; /* Πιο κομψός τίτλος στο κινητό */
+        font-size: 22px !important;
     }
 
-    .phase p {
-        font-size: 16px !important;
+    /* 5. Φόρμα: Email & Κουμπί σε στήλη */
+    .hero form {
+        flex-direction: column !important;
+        gap: 15px !important;
     }
 
-    /* Διόρθωση Header: Για να μη «χτυπάει» το logo με το κουμπί */
+    .hero input {
+        text-align: center;
+    }
+
+    /* 6. Header: Logo & Κουμπί κεντραρισμένα */
     header .container {
         flex-direction: column !important;
         gap: 15px;
