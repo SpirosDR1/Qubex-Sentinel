@@ -294,7 +294,7 @@
     <!-- Slide 9: Ecosystem -->
     <section class="slide">
         <h2 class="slide-title">Core Synergy</h2>
-        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
+        <div class="grid-3" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
             <div class="tile">
                 <i class="fa-solid fa-network-wired highlight" style="font-size: 30px; margin-bottom: 20px;"></i>
                 <h3>L2 Infrastructure</h3>
@@ -362,23 +362,49 @@
 </html>
 
 <style>
-/* Αυτό το κομμάτι διορθώνει το κινητό */
 @media (max-width: 768px) {
-  /* Κάνει τα περιεχόμενα να μπαίνουν σε στήλη (το ένα κάτω από το άλλο) */
-  .container, .grid, .flex-section { 
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-  }
+    /* Διόρθωση για τα Slides - να μην κόβεται το περιεχόμενο */
+    .slide {
+        height: auto !important;
+        min-height: 100vh;
+        padding: 60px 20px !important;
+    }
 
-  /* Κάνει τα κουτιά να πιάνουν όλο το πλάτος της οθόνης του κινητού */
-  .card, .box, .feature { 
-    width: 95% !important;
-    margin: 10px 0 !important;
-  }
+    /* Κάνει τα Grid από 2 ή 3 στήλες σε ΜΙΑ στήλη */
+    .grid-2, 
+    [style*="grid-template-columns: repeat(3, 1fr)"],
+    [style*="grid-template-columns: 1fr 1fr"] {
+        grid-template-columns: 1fr !important;
+        display: grid !important;
+        gap: 20px !important;
+    }
 
-  /* Μικραίνει λίγο τα γράμματα για να μη «σπάνε» οι λέξεις */
-  h1 { font-size: 24px !important; }
-  h2 { font-size: 20px !important; }
+    /* Διόρθωση για τα Timeline (Slide 4 & 11) - να μπαίνουν το ένα κάτω από το άλλο */
+    .timeline {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 40px;
+    }
+    .timeline-track {
+        display: none !important; /* Κρύβουμε την οριζόντια γραμμή */
+    }
+    .t-item {
+        width: 100% !important;
+        border-left: 2px solid var(--cyan);
+        padding-left: 20px;
+    }
+
+    /* Μικραίνουμε τα τεράστια νούμερα και τίτλους για να χωράνε */
+    .big-num {
+        font-size: 70px !important;
+        text-align: center;
+    }
+    h1 { font-size: 40px !important; }
+    h2 { font-size: 32px !important; }
+    
+    /* Τα κουτιά (Tiles) να έχουν σωστό πλάτος */
+    .tile {
+        width: 100% !important;
+    }
 }
 </style>
