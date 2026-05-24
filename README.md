@@ -6,7 +6,7 @@ QUBEX Sentinel is a production-ready Post-Quantum Cryptography (PQC) middleware 
 
 ### Live Portals & Data
 * Official Infrastructure Portal: [qubexsentinel.com](https://qubexsentinel.com)
-* Live Execution Logs & Benchmarks: [qubexsentinel.com/benchmarks.html](https://qubexsentinel.com/benchmarks.html)
+* Live Execution Logs & Benchmarks: [qubexsentinel.com/benchmarks.html](https://qubexsentinel.com/benchmarks)
 
 ---
 
