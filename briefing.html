@@ -117,7 +117,7 @@
 
         .big-num { font-size: 140px; font-weight: 700; color: var(--cyan); font-family: 'Space Grotesk'; line-height: 1; }
 
-        /* Timeline */
+        /* Timeline (Updated to 4 phases) */
         .timeline {
             display: flex;
             justify-content: space-between;
@@ -129,6 +129,27 @@
         .t-dot { width: 10px; height: 10px; background: var(--cyan); border-radius: 50%; margin-bottom: 20px; box-shadow: 0 0 10px var(--cyan); }
         .t-item h3 { font-size: 18px; margin-bottom: 10px; }
         .t-item p { font-size: 16px; }
+
+        /* Button Styling (New Colors/Hover) */
+        .btn-access {
+            font-family: 'Space Grotesk', sans-serif;
+            color: #000;
+            background-color: var(--cyan);
+            text-decoration: none;
+            border: 2px solid var(--cyan);
+            padding: 18px 45px;
+            border-radius: 4px;
+            display: inline-block;
+            transition: all 0.3s ease;
+            font-weight: 700;
+            font-size: 18px;
+            letter-spacing: 1px;
+        }
+        .btn-access:hover {
+            background-color: transparent;
+            color: var(--cyan);
+            box-shadow: 0 0 20px rgba(0, 229, 255, 0.2);
+        }
 
         /* Nav Helper */
         .nav-hint {
@@ -154,7 +175,7 @@
 
     <section class="slide">
         <div style="text-align: center;">
-            <div class="subtitle">Live Infrastructure Briefing</div>
+            <div class="subtitle">PRODUCTION-READY INFRASTRUCTURE</div>
             <h1>QUBEX <span class="highlight">SENTINEL</span></h1>
             <p style="margin-top: 20px; color: #888;">Multi-Chain Benchmarked PQC Middleware. 39k ns Latency.</p>
             <div class="accent-line" style="margin: 40px auto;"></div>
@@ -180,7 +201,7 @@
             <div class="tile">
                 <h3>Exploitation Phase</h3>
                 <p>Legacy ECDSA signatures ensure that intercepted TVL data will be universally decrypted once CRQCs (Quantum Computers) scale.</p>
-            </div>
+                </div>
         </div>
         <p style="margin-top: 40px; border-left: 2px solid var(--cyan); padding-left: 20px; font-style: italic;">
             Institutional RWAs cannot be secured by legacy cryptography. Security requires making <span class="highlight">today's harvested states</span> mathematically unbreakable tomorrow.
@@ -195,7 +216,7 @@
                 <div class="t-dot"></div>
                 <h3>2024</h3>
                 <p>NIST FIPS 203/204 Standards finalized. Global mandate initiated.</p>
-                </div>
+            </div>
             <div class="t-item">
                 <div class="t-dot"></div>
                 <h3>2025</h3>
@@ -208,7 +229,7 @@
             </div>
             <div class="t-item">
                 <div class="t-dot"></div>
-                <h3>2027</h3>
+                <h3>2027+</h3>
                 <p>The Global Standard. Multi-Billion TVL protected natively via RaaS.</p>
             </div>
         </div>
@@ -269,6 +290,7 @@
             Benchmarked across 11 major EVM environments, QUBEX achieves a record <span class="highlight">39k ns latency</span>, effectively eliminating sequencer drag for L2s.
         </p>
     </section>
+
     <section class="slide">
         <h2 class="slide-title">Battle-Tested Execution</h2>
         <div class="grid-2">
@@ -307,39 +329,42 @@
             <div class="subtitle">Part III</div>
             <h2>THE <span class="highlight">VISION</span></h2>
             <div class="accent-line"></div>
-            <p>Targeting the $10B Infrastructure Monopoly</p>
-        </div>
+            </div>
     </section>
 
     <section class="slide">
-        <h2 class="slide-title">Strategic Execution (2026-2027)</h2>
+        <h2 class="slide-title">Strategic Execution</h2>
         <div class="timeline">
             <div class="timeline-track"></div>
-            <div class="t-item" style="width: 30%;">
+            <div class="t-item">
                 <div class="t-dot"></div>
                 <h3>Live Now</h3>
-                <p>Public Multi-Chain Execution Logs. Proven 39k - 231k ns latency across EVM architectures.</p>
+                <p>Public Multi-Chain Benchmarks. Verified execution logs across 11 live ecosystems.</p>
             </div>
-            <div class="t-item" style="width: 30%;">
+            <div class="t-item">
                 <div class="t-dot"></div>
-                <h3>Q3 2026</h3>
-                <p>Genesis Partnership Program. Free-tier integration for Top 3 RaaS providers to capture market share.</p>
+                <h3>H2 2026</h3>
+                <p>Genesis Partnership Program. Strategic free-tier integration for Tier-1 RaaS providers.</p>
             </div>
-            <div class="t-item" style="width: 30%;">
+            <div class="t-item">
                 <div class="t-dot"></div>
                 <h3>Summer 2027</h3>
-                <p>The 10 Billion Standard. Node licensing flywheel goes live, cementing QUBEX as the definitive PQC layer.</p>
+                <p>RaaS Ecosystem Dominance. Securing $1B+ in institutional TVL natively.</p>
+            </div>
+            <div class="t-item">
+                <div class="t-dot"></div>
+                <h3>2028+</h3>
+                <p>The Global Standard. QUBEX Sentinel becomes the default PQC layer for the Web3 economy.</p>
             </div>
         </div>
     </section>
-
     <section class="slide">
         <div style="text-align: center;">
-            <div class="subtitle">End of Briefing</div>
+            <div class="subtitle">INITIATE INTEGRATION</div>
             <h2 style="font-size: 64px;">EXECUTION <span class="highlight">LOGS</span></h2>
             <p style="margin-top: 20px; color: #666;">Infrastructure verified. Ready for RaaS deployment.</p>
-            <div style="margin-top: 60px; font-family: 'Space Grotesk'; font-size: 24px; letter-spacing: 2px;">
-                <a href="#" style="color: var(--cyan); text-decoration: none; border: 1px solid var(--cyan); padding: 15px 40px; border-radius: 4px; display: inline-block; transition: all 0.3s;">ACCESS BENCHMARKS</a>
+            <div style="margin-top: 60px;">
+                <a href="https://github.com/SpirosDR1/Qubex-PQC-Benchmark" target="_blank" class="btn-access">ACCESS BENCHMARKS</a>
             </div>
         </div>
     </section>
