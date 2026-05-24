@@ -117,7 +117,7 @@
 
         .big-num { font-size: 140px; font-weight: 700; color: var(--cyan); font-family: 'Space Grotesk'; line-height: 1; }
 
-        /* Timeline (Updated to 4 phases) */
+        /* Timeline */
         .timeline {
             display: flex;
             justify-content: space-between;
@@ -125,7 +125,7 @@
             margin-top: 60px;
         }
         .timeline-track { position: absolute; top: 10px; left: 0; right: 0; height: 1px; background: #222; z-index: 0; }
-        .t-item { width: 22%; position: relative; z-index: 1; }
+        .t-item { position: relative; z-index: 1; }
         .t-dot { width: 10px; height: 10px; background: var(--cyan); border-radius: 50%; margin-bottom: 20px; box-shadow: 0 0 10px var(--cyan); }
         .t-item h3 { font-size: 18px; margin-bottom: 10px; }
         .t-item p { font-size: 16px; }
@@ -166,6 +166,7 @@
             .grid-2 { grid-template-columns: 1fr; }
             .slide { height: auto; padding: 80px 30px; }
             .big-num { font-size: 80px; }
+            .t-item { width: 100% !important; }
         }
     </style>
 </head>
@@ -212,22 +213,27 @@
         <h2 class="slide-title">The Quantum Migration Reality</h2>
         <div class="timeline">
             <div class="timeline-track"></div>
-            <div class="t-item">
+            <div class="t-item" style="width: 18%;">
                 <div class="t-dot"></div>
                 <h3>2024</h3>
                 <p>NIST FIPS 203/204 Standards finalized. Global mandate initiated.</p>
             </div>
-            <div class="t-item">
+            <div class="t-item" style="width: 18%;">
                 <div class="t-dot"></div>
                 <h3>2025</h3>
                 <p>Spike in high-TVL harvesting volume on sovereign L1s and L2s.</p>
             </div>
-            <div class="t-item">
+            <div class="t-item" style="width: 18%;">
                 <div class="t-dot"></div>
                 <h3>2026</h3>
                 <p>QUBEX Live Benchmarks. 11 EVM architectures secured at near-zero latency.</p>
             </div>
-            <div class="t-item">
+            <div class="t-item" style="width: 18%;">
+                <div class="t-dot"></div>
+                <h3>2027</h3>
+                <p>Universal Integration. QUBEX neutralizes early-stage quantum threats across L1-L3 blockchains.</p>
+            </div>
+            <div class="t-item" style="width: 18%;">
                 <div class="t-dot"></div>
                 <h3>2028+</h3>
                 <p>The Quantum Cliff. Structural vulnerability for non-PQC chains without integration.</p>
@@ -336,35 +342,36 @@
         <h2 class="slide-title">Strategic Execution</h2>
         <div class="timeline">
             <div class="timeline-track"></div>
-            <div class="t-item">
+            <div class="t-item" style="width: 22%;">
                 <div class="t-dot"></div>
                 <h3>Live Now</h3>
                 <p>Public Multi-Chain Benchmarks. Verified execution logs across 11 live ecosystems.</p>
             </div>
-            <div class="t-item">
+            <div class="t-item" style="width: 22%;">
                 <div class="t-dot"></div>
                 <h3>H2 2026</h3>
                 <p>Genesis Partnership Program. Strategic free-tier integration for Tier-1 RaaS providers.</p>
             </div>
-            <div class="t-item">
+            <div class="t-item" style="width: 22%;">
                 <div class="t-dot"></div>
                 <h3>Summer 2027</h3>
                 <p>RaaS Ecosystem Dominance. Securing $1B+ in institutional TVL natively.</p>
             </div>
-            <div class="t-item">
+            <div class="t-item" style="width: 22%;">
                 <div class="t-dot"></div>
                 <h3>2028+</h3>
                 <p>The Global Standard. QUBEX Sentinel becomes the default PQC layer for the Web3 economy.</p>
             </div>
         </div>
     </section>
+
     <section class="slide">
         <div style="text-align: center;">
             <div class="subtitle">INITIATE INTEGRATION</div>
             <h2 style="font-size: 64px;">EXECUTION <span class="highlight">LOGS</span></h2>
             <p style="margin-top: 20px; color: #666;">Infrastructure verified. Ready for RaaS deployment.</p>
             <div style="margin-top: 60px;">
-                <a href="https://github.com/SpirosDR1/Qubex-Sentinel" target="_blank" class="btn-access">ACCESS BENCHMARKS</a>
+                <a href="https://github.com/SpirosDR1/Qubex-PQC-Benchmark" target="_blank" class="btn-access">ACCESS BENCHMARKS</a>
             </div>
         </div>
     </section>
