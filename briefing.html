@@ -3,7 +3,7 @@
 <head> <link rel="icon" type="image/jpg" href="favicon.jpg">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QUBEX SENTINEL - Technical Briefing v9.0</title>
+    <title>QUBEX SENTINEL - Execution Logs & Briefing</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;700&family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -107,14 +107,13 @@
 
         .accent-line { width: 80px; height: 4px; background: var(--cyan); margin: 30px 0; }
         .center .accent-line { margin: 30px auto; }
-
         /* Stats & Charts */
         .chart-bar {
             margin-bottom: 25px;
         }
         .bar-label { font-family: 'Space Grotesk'; font-size: 14px; margin-bottom: 8px; color: #888; display: flex; justify-content: space-between; }
         .bar-outer { background: #111; height: 12px; border-radius: 2px; width: 100%; }
-        .bar-inner { height: 100%; background: var(--cyan); box-shadow: 0 0 15px rgba(0, 229, 255, 0.3); }
+        .bar-inner { height: 100%; background: var(--cyan); box-shadow: 0 0 15px rgba(0, 229, 255, 0.3); transition: width 1.5s ease-in-out; }
 
         .big-num { font-size: 140px; font-weight: 700; color: var(--cyan); font-family: 'Space Grotesk'; line-height: 1; }
 
@@ -151,209 +150,196 @@
 </head>
 <body>
 
-    <div class="nav-hint">SCROLL TO NAVIGATE v9.0</div>
+    <div class="nav-hint">SCROLL TO NAVIGATE LIVE LOGS</div>
 
-    <!-- Slide 1: Cover -->
     <section class="slide">
         <div style="text-align: center;">
-            <div class="subtitle">Infrastructure Briefing</div>
+            <div class="subtitle">Live Infrastructure Briefing</div>
             <h1>QUBEX <span class="highlight">SENTINEL</span></h1>
-            <p style="margin-top: 20px; color: #888;">Technical Resilience & Quantum Migration Strategy for L2 Ecosystems</p>
+            <p style="margin-top: 20px; color: #888;">Multi-Chain Benchmarked PQC Middleware. 39k ns Latency.</p>
             <div class="accent-line" style="margin: 40px auto;"></div>
         </div>
     </section>
 
-    <!-- Slide 2: The Crisis Title -->
     <section class="slide">
         <div style="text-align: center;" class="center">
             <div class="subtitle">Part I</div>
             <h2>THE <span class="highlight">CRISIS</span></h2>
             <div class="accent-line"></div>
-            <p>HNDL (Harvest Now, Decrypt Later) & The Structural Threat</p>
+            <p>HNDL (Harvest Now, Decrypt Later) & The Sequencer Threat</p>
         </div>
     </section>
 
-    <!-- Slide 3: HNDL Logic -->
     <section class="slide">
-        <h2 class="slide-title">HNDL: Retroactive Vulnerability</h2>
+        <h2 class="slide-title">HNDL: The Ticking Clock</h2>
         <div class="grid-2">
             <div class="tile">
-                <h3>Interception phase</h3>
-                <p>Adversaries are currently capturing and archiving encrypted transaction batches from sequencers and cross-chain bridges.</p>
+                <h3>Interception Phase</h3>
+                <p>Adversaries are actively archiving encrypted EVM transaction batches from L2 sequencers and cross-chain bridging nodes.</p>
             </div>
             <div class="tile">
-                <h3>Exploitation phase</h3>
-                <p>The 7-Year Migration Gap ensures that captured data will be decrypted once CRQCs (Quantum Computers) achieve functional scale.</p>
+                <h3>Exploitation Phase</h3>
+                <p>Legacy ECDSA signatures ensure that intercepted TVL data will be universally decrypted once CRQCs (Quantum Computers) scale.</p>
             </div>
         </div>
         <p style="margin-top: 40px; border-left: 2px solid var(--cyan); padding-left: 20px; font-style: italic;">
-            Security is not just about real-time defense; it is about making <span class="highlight">today's harvested data</span> useless for tomorrow's quantum decryption.
+            Institutional RWAs cannot be secured by legacy cryptography. Security requires making <span class="highlight">today's harvested states</span> mathematically unbreakable tomorrow.
         </p>
     </section>
 
-    <!-- Slide 4: Timeline -->
     <section class="slide">
-        <h2 class="slide-title">Quantum Migration Horizon</h2>
+        <h2 class="slide-title">The Quantum Migration Reality</h2>
         <div class="timeline">
             <div class="timeline-track"></div>
             <div class="t-item">
                 <div class="t-dot"></div>
                 <h3>2024</h3>
-                <p>NIST FIPS 203/204 Standards finalized. Migration protocols initiated.</p>
-            </div>
+                <p>NIST FIPS 203/204 Standards finalized. Global mandate initiated.</p>
+                </div>
             <div class="t-item">
                 <div class="t-dot"></div>
                 <h3>2025</h3>
-                <p>Scale-up of logical qubits. Spike in high-TVL harvesting volume.</p>
+                <p>Spike in high-TVL harvesting volume on sovereign L1s and L2s.</p>
             </div>
             <div class="t-item">
                 <div class="t-dot"></div>
                 <h3>2026</h3>
-                <p>Infrastructure Hardening. QUBEX SENTINEL integration on L2's.</p>
+                <p>QUBEX Live Benchmarks. 11 EVM chains secured at near-zero latency.</p>
             </div>
             <div class="t-item">
                 <div class="t-dot"></div>
-                <h3>2028+</h3>
-                <p>The Quantum Cliff. Structural compromise for non-PQC chains.</p>
+                <h3>2027</h3>
+                <p>The Global Standard. Multi-Billion TVL protected natively via RaaS.</p>
             </div>
         </div>
     </section>
 
-    <!-- Slide 5: The Shield Title -->
     <section class="slide">
         <div style="text-align: center;" class="center">
             <div class="subtitle">Part II</div>
             <h2>THE <span class="highlight">SHIELD</span></h2>
             <div class="accent-line"></div>
-            <p>Middleware-Based Post-Quantum Cryptography (PQC)</p>
+            <p>Production-Ready Post-Quantum Infrastructure</p>
         </div>
     </section>
 
-    <!-- Slide 6: Architecture (FULL WIDTH) -->
     <section class="slide">
-        <h2 class="slide-title">Middleware Integration</h2>
+        <h2 class="slide-title">Modular RaaS Integration</h2>
         <div class="tile" style="width: 100%; max-width: 900px;">
-            <h3>Decoupled PQC Architecture</h3>
-            <p>QUBEX SENTINEL functions as a high-performance middleware layer between the protocol sequencer and execution environment, ensuring quantum resilience without base-layer restructuring.</p>
+            <h3>The Chaos Engine Middleware</h3>
+            <p>QUBEX SENTINEL operates as a plug-and-play validation layer natively bridging protocol sequencers (OP Stack, Arbitrum Orbit) with NIST-grade PQC, requiring zero base-layer restructuring.</p>
             <div style="margin-top: 30px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
                 <div style="display: flex; align-items: center;">
-                    <i class="fa-solid fa-check highlight" style="margin-right: 15px;"></i>
-                    <span>Native L2 Integration Nodes</span>
+                    <i class="fa-solid fa-bolt highlight" style="margin-right: 15px;"></i>
+                    <span>Zero Migration Overhead</span>
                 </div>
                 <div style="display: flex; align-items: center;">
-                    <i class="fa-solid fa-check highlight" style="margin-right: 15px;"></i>
-                    <span>Lattice-Based Hybrid Signatures</span>
+                    <i class="fa-solid fa-microchip highlight" style="margin-right: 15px;"></i>
+                    <span>NIST ML-DSA / ML-KEM Standard</span>
                 </div>
                 <div style="display: flex; align-items: center;">
-                    <i class="fa-solid fa-check highlight" style="margin-right: 15px;"></i>
-                    <span>Optimized Block Propagation</span>
+                    <i class="fa-solid fa-network-wired highlight" style="margin-right: 15px;"></i>
+                    <span>1-Click RaaS Deployment</span>
                 </div>
                 <div style="display: flex; align-items: center;">
-                    <i class="fa-solid fa-check highlight" style="margin-right: 15px;"></i>
-                    <span>Zero-Latency Handshake Protocols</span>
+                    <i class="fa-solid fa-link highlight" style="margin-right: 15px;"></i>
+                    <span>100% On-Chain Integrity</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Slide 7: Benchmarks -->
     <section class="slide">
-        <h2 class="slide-title">Latency Performance</h2>
+        <h2 class="slide-title">Unmatched Latency Performance</h2>
         <div style="width: 100%;">
             <div class="chart-bar">
-                <div class="bar-label"><span>Standard PQC Integration</span> <span>45.2 ms</span></div>
-                <div class="bar-outer"><div class="bar-inner" style="width: 85%; background: #333;"></div></div>
+                <div class="bar-label"><span>Standard PQC Cryptography</span> <span>> 45,000,000 ns</span></div>
+                <div class="bar-outer"><div class="bar-inner" style="width: 90%; background: #333;"></div></div>
             </div>
             <div class="chart-bar">
-                <div class="bar-label"><span>Cloud Security Gateway</span> <span>34.8 ms</span></div>
-                <div class="bar-outer"><div class="bar-inner" style="width: 65%; background: #555;"></div></div>
+                <div class="bar-label"><span>Legacy ECDSA Baseline</span> <span>~ 2,000,000 ns</span></div>
+                <div class="bar-outer"><div class="bar-inner" style="width: 60%; background: #555;"></div></div>
             </div>
             <div class="chart-bar">
-                <div class="bar-label"><span>QUBEX SENTINEL v9.0</span> <span class="highlight">11.2 ms</span></div>
-                <div class="bar-outer"><div class="bar-inner" style="width: 25%;"></div></div>
+                <div class="bar-label"><span>QUBEX SENTINEL (OP Stack)</span> <span class="highlight">39,712 ns</span></div>
+                <div class="bar-outer"><div class="bar-inner" style="width: 15%;"></div></div>
             </div>
         </div>
         <p style="text-align: center; margin-top: 50px; font-style: italic; font-size: 18px;">
-            Our proprietary optimization achieves <span class="highlight">74% reduction</span> in cryptographic overhead, making PQC viable for high-frequency L2's.
+            Benchmarked across 11 major EVM environments, QUBEX achieves a record <span class="highlight">39k ns latency</span>, effectively eliminating sequencer drag for L2s.
         </p>
     </section>
-
-    <!-- Slide 8: TVL Resilience -->
     <section class="slide">
-        <h2 class="slide-title">Stress-Tested Resilience</h2>
+        <h2 class="slide-title">Battle-Tested Execution</h2>
         <div class="grid-2">
-            <div class="big-num">$10.5B</div>
+            <div class="big-num">11</div>
             <div>
-                <h3>Simulated Asset Security</h3>
-                <p>The Chaos Engine v8.0 verified cryptographic integrity for simulated TVL exceeding $10.5 billion under extreme transaction loads.</p>
+                <h3>Live Networks Benchmarked</h3>
+                <p>Execution logs successfully verified cryptographic integrity across Base, OP Stack, Arbitrum, Polygon, Mantle, and 6 other distinct EVM architectures under load.</p>
                 <div class="accent-line"></div>
             </div>
         </div>
     </section>
 
-    <!-- Slide 9: Ecosystem -->
     <section class="slide">
-        <h2 class="slide-title">Core Synergy</h2>
+        <h2 class="slide-title">Core Ecosystem Synergy</h2>
         <div class="grid-3" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
             <div class="tile">
-                <i class="fa-solid fa-network-wired highlight" style="font-size: 30px; margin-bottom: 20px;"></i>
-                <h3>L2 Infrastructure</h3>
-                <p style="font-size: 16px;">Securing sequencers for L2 chains and native decentralized applications.</p>
+                <i class="fa-solid fa-layer-group highlight" style="font-size: 30px; margin-bottom: 20px;"></i>
+                <h3>RaaS Providers</h3>
+                <p style="font-size: 16px;">Securing Rollup-as-a-Service infrastructure (Conduit, AltLayer, Caldera) natively.</p>
             </div>
             <div class="tile">
                 <i class="fa-solid fa-vault highlight" style="font-size: 30px; margin-bottom: 20px;"></i>
-                <h3>Institutional Custody</h3>
-                <p style="font-size: 16px;">Hardening vault signatures against long-term quantum decryption risks.</p>
+                <h3>RWA Custodians</h3>
+                <p style="font-size: 16px;">Protecting institutional Real World Asset flows from quantum decryption vectors.</p>
             </div>
             <div class="tile">
-                <i class="fa-solid fa-shield-halved highlight" style="font-size: 30px; margin-bottom: 20px;"></i>
-                <h3>Compliance Nodes</h3>
-                <p style="font-size: 16px;">Ensuring PQC-ready endpoints for high-compliance regulatory environments.</p>
+                <i class="fa-solid fa-bridge-water highlight" style="font-size: 30px; margin-bottom: 20px;"></i>
+                <h3>Cross-Chain Bridges</h3>
+                <p style="font-size: 16px;">Securing multi-chain interoperability mechanisms against forged attestations.</p>
             </div>
         </div>
     </section>
 
-    <!-- Slide 10: Roadmap Title -->
     <section class="slide">
         <div style="text-align: center;" class="center">
             <div class="subtitle">Part III</div>
-            <h2>THE <span class="highlight">ROADMAP</span></h2>
+            <h2>THE <span class="highlight">VISION</span></h2>
             <div class="accent-line"></div>
-            <p>2026-2028 Execution Strategy</p>
+            <p>Targeting the $10B Infrastructure Monopoly</p>
         </div>
     </section>
 
-    <!-- Slide 11: Roadmap Content -->
     <section class="slide">
-        <h2 class="slide-title">Strategic Execution</h2>
+        <h2 class="slide-title">Strategic Execution (2026-2027)</h2>
         <div class="timeline">
             <div class="timeline-track"></div>
             <div class="t-item" style="width: 30%;">
                 <div class="t-dot"></div>
-                <h3>2026</h3>
-                <p>Devnet Deployment. Stress-testing PQC logic on primary L2's.</p>
+                <h3>Live Now</h3>
+                <p>Public Multi-Chain Execution Logs. Proven 39k - 231k ns latency across EVM architectures.</p>
             </div>
             <div class="t-item" style="width: 30%;">
                 <div class="t-dot"></div>
-                <h3>2027</h3>
-                <p>Tier-1 Pilot. Integration with high-value custody and L2 partners.</p>
+                <h3>Q3 2026</h3>
+                <p>Genesis Partnership Program. Free-tier integration for Top 3 RaaS providers to capture market share.</p>
             </div>
             <div class="t-item" style="width: 30%;">
                 <div class="t-dot"></div>
-                <h3>2028</h3>
-                <p>Global Standard. Full migration to universal Post-Quantum security.</p>
+                <h3>Summer 2027</h3>
+                <p>The 10 Billion Standard. Node licensing flywheel goes live, cementing QUBEX as the definitive PQC layer.</p>
             </div>
         </div>
     </section>
 
-    <!-- Slide 12: Final -->
     <section class="slide">
         <div style="text-align: center;">
             <div class="subtitle">End of Briefing</div>
-            <h2 style="font-size: 64px;">STRATEGIC <span class="highlight">ACCESS</span></h2>
-            <p style="margin-top: 20px; color: #666;">Validating Credentials for Technical Briefing v9.0</p>
+            <h2 style="font-size: 64px;">EXECUTION <span class="highlight">LOGS</span></h2>
+            <p style="margin-top: 20px; color: #666;">Infrastructure verified. Ready for RaaS deployment.</p>
             <div style="margin-top: 60px; font-family: 'Space Grotesk'; font-size: 24px; letter-spacing: 2px;">
-                QUBEX SENTINEL INFRASTRUCTURE
+                <a href="#" style="color: var(--cyan); text-decoration: none; border: 1px solid var(--cyan); padding: 15px 40px; border-radius: 4px; display: inline-block; transition: all 0.3s;">ACCESS BENCHMARKS</a>
             </div>
         </div>
     </section>
@@ -363,14 +349,11 @@
 
 <style>
 @media (max-width: 768px) {
-    /* Διόρθωση για τα Slides - να μην κόβεται το περιεχόμενο */
     .slide {
         height: auto !important;
         min-height: 100vh;
         padding: 60px 20px !important;
     }
-
-    /* Κάνει τα Grid από 2 ή 3 στήλες σε ΜΙΑ στήλη */
     .grid-2, 
     [style*="grid-template-columns: repeat(3, 1fr)"],
     [style*="grid-template-columns: 1fr 1fr"] {
@@ -378,31 +361,25 @@
         display: grid !important;
         gap: 20px !important;
     }
-
-    /* Διόρθωση για τα Timeline (Slide 4 & 11) - να μπαίνουν το ένα κάτω από το άλλο */
     .timeline {
         flex-direction: column !important;
         align-items: flex-start !important;
         gap: 40px;
     }
     .timeline-track {
-        display: none !important; /* Κρύβουμε την οριζόντια γραμμή */
+        display: none !important; 
     }
     .t-item {
         width: 100% !important;
         border-left: 2px solid var(--cyan);
         padding-left: 20px;
     }
-
-    /* Μικραίνουμε τα τεράστια νούμερα και τίτλους για να χωράνε */
     .big-num {
         font-size: 70px !important;
         text-align: center;
     }
     h1 { font-size: 40px !important; }
     h2 { font-size: 32px !important; }
-    
-    /* Τα κουτιά (Tiles) να έχουν σωστό πλάτος */
     .tile {
         width: 100% !important;
     }
