@@ -1,7 +1,16 @@
-QUBEX Sentinel - Official Website & Briefing
+# QUBEX SENTINEL | PQC Execution Logs & Infrastructure
 
-This repository contains the source code for the QUBEX Sentinel landing page and the technical briefing.
-Live Landing Page: qubexsentinel.com
-Technical Briefing: qubexsentinel.com/briefing
+This repository contains the verified execution logs and source code for the QUBEX Sentinel infrastructure portals. 
 
-QUBEX Sentinel is a PQC (Post-Quantum Cryptography) security middleware designed for Web3 infrastructures. This site provides the executive summary and project updates.
+QUBEX Sentinel is a production-ready Post-Quantum Cryptography (PQC) middleware designed to shield L1/L2/L3 ecosystems from 'Harvest Now, Decrypt Later' (HNDL) threats without compromising sequencer performance.
+
+### Live Portals & Data
+* Official Infrastructure Portal: [qubexsentinel.com](https://qubexsentinel.com)
+* Live Execution Logs & Benchmarks: [qubexsentinel.com/benchmarks.html](https://qubexsentinel.com/benchmarks.html)
+
+---
+
+### Genesis Partnership Program
+We are actively selecting 3 Tier-1 RaaS / L2 / L3 ecosystems for our zero-fee, 6-month native integration program. Secure your network against quantum threats with our benchmarked 39,712 ns ML-DSA latency standard.
+
+[Apply for Genesis Access Here](https://forms.gle/hmUdBiQz3PT2x8TT7)
