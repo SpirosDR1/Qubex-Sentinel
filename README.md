@@ -5,8 +5,8 @@ This repository contains the verified execution logs and source code for the QUB
 QUBEX Sentinel is a production-ready Post-Quantum Cryptography (PQC) middleware designed to shield L1/L2/L3 ecosystems from 'Harvest Now, Decrypt Later' (HNDL) threats without compromising sequencer performance.
 
 ### Live Portals & Data
-* Official Infrastructure Portal: [qubexsentinel.com](https://qubexsentinel.com)
-* Live Execution Logs & Benchmarks: [qubexsentinel.com/benchmarks.html](https://qubexsentinel.com/benchmarks)
+* Official Infrastructure Portal: (https://qubexsentinel.com)
+* Live Execution Logs & Benchmarks: (https://qubexsentinel.com/benchmarks)
 
 ---
 
