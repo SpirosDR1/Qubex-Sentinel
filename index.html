@@ -20,6 +20,9 @@
             color: var(--text-main);
             margin: 0;
             line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
         .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
         
@@ -41,11 +44,11 @@
         .stat-card p { margin: 15px 0 0; color: var(--text-dim); text-transform: uppercase; letter-spacing: 1.5px; font-size: 13px; font-weight: 600; }
 
         /* CTA Button */
-        .btn { background: transparent; color: var(--quantum-cyan); padding: 16px 40px; border-radius: 4px; border: 2px solid var(--quantum-cyan); font-weight: 700; text-decoration: none; display: inline-block; transition: 0.3s; text-transform: uppercase; letter-spacing: 1px; }
+        .btn { background: transparent; color: var(--quantum-cyan); padding: 16px 40px; border-radius: 4px; border: 2px solid var(--quantum-cyan); font-weight: 700; text-decoration: none; display: inline-block; transition: 0.3s; text-transform: uppercase; letter-spacing: 1px; cursor: pointer; }
         .btn:hover { background: var(--quantum-cyan); color: #000; box-shadow: 0 0 20px rgba(0, 229, 255, 0.4); }
-
+        
         /* Roadmap */
-        .roadmap { padding: 100px 0; }
+        .roadmap { padding: 100px 0; flex: 1; }
         .phase { border-left: 2px solid #333; padding-left: 40px; margin-bottom: 50px; position: relative; transition: 0.3s; }
         .phase:hover { border-color: var(--quantum-cyan); }
         .phase::before { content: ''; width: 12px; height: 12px; background: var(--bg-dark); border: 2px solid var(--quantum-cyan); position: absolute; left: -8px; top: 8px; border-radius: 50%; transition: 0.3s; }
@@ -53,42 +56,26 @@
         .phase h4 { margin: 0; font-size: 16px; color: var(--quantum-cyan); letter-spacing: 2px; }
         .phase h2 { margin: 10px 0; font-size: 28px; }
         .phase p { color: var(--text-dim); font-size: 18px; }
+
+        /* Footer */
+        .site-footer { border-top: 1px solid #222; padding: 40px 0; text-align: center; margin-top: auto; }
+        .footer-links { display: flex; justify-content: center; gap: 30px; margin-bottom: 15px; flex-wrap: wrap; }
+        .footer-links a { color: var(--text-dim); text-decoration: none; font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; }
+        .footer-links a:hover { color: var(--quantum-cyan); }
+        .copyright { color: #555; font-size: 12px; }
+
         /* Mobile Fix */
-@media (max-width: 768px) {
-    .hero h1 {
-        font-size: 38px !important;
-        line-height: 1.1;
-    }
-    .roadmap h2 {
-        text-align: center !important;
-        font-size: 28px !important;
-        margin-bottom: 40px !important;
-        width: 100%;
-    }
-    .roadmap {
-        padding-left: 35px !important; 
-        padding-right: 20px !important;
-    }
-    .phase {
-        padding-left: 25px !important;
-        margin-bottom: 40px !important;
-    }
-    .phase h2 {
-        font-size: 22px !important;
-    }
-    .hero form {
-        flex-direction: column !important;
-        gap: 15px !important;
-    }
-    .hero input {
-        text-align: center;
-    }
-    header .container {
-        flex-direction: column !important;
-        gap: 15px;
-        text-align: center;
-    }
-}
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 38px !important; line-height: 1.1; }
+            .roadmap h2 { text-align: center !important; font-size: 28px !important; margin-bottom: 40px !important; width: 100%; }
+            .roadmap { padding-left: 35px !important; padding-right: 20px !important; }
+            .phase { padding-left: 25px !important; margin-bottom: 40px !important; }
+            .phase h2 { font-size: 22px !important; }
+            .hero form { flex-direction: column !important; gap: 15px !important; }
+            .hero input { text-align: center; }
+            header .container { flex-direction: column !important; gap: 15px; text-align: center; }
+            .footer-links { flex-direction: column; gap: 15px; }
+        }
     </style>
 </head>
 <body>
@@ -149,9 +136,25 @@
         <h4>Summer 2027</h4>
         <h2>RaaS Ecosystem Dominance</h2>
         <p>Securing $1B+ in institutional TVL natively through our Genesis Partners. QUBEX transitions from early integration to core multi-chain infrastructure.</p>
-    </div>
+        </div>
     <div class="phase" style="border-left-color: transparent;">
         <h4>2028+</h4>
         <h2>The Global Standard</h2>
         <p>Full industry migration. QUBEX Sentinel becomes the default PQC layer for the decentralized web.</p>
     </div>
+</section>
+
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-links">
+            <a href="mailto:spyridongagr@qubexsentinel.com">Enterprise Inquiries: spyridongagr@qubexsentinel.com</a>
+            <a href="https://x.com/QUBEX_SENTINEL" target="_blank">Official X (Twitter)</a>
+            <a href="https://www.linkedin.com/company/qubex-sentinel/" target="_blank">Qubex Sentinel LinkedIn</a>
+            <a href="https://www.linkedin.com/in/spyridon-g-9858b03a0/" target="_blank">Founder's LinkedIn</a>
+        </div>
+        <div class="copyright">&copy; 2026 QUBEX Sentinel. All rights reserved.</div>
+    </div>
+</footer>
+
+</body>
+</html>

@@ -105,9 +105,9 @@
             height: 100%;
         }
         .tile h3 { font-size: 22px; margin-bottom: 15px; color: var(--cyan); }
-
         .accent-line { width: 80px; height: 4px; background: var(--cyan); margin: 30px 0; }
         .center .accent-line { margin: 30px auto; }
+        
         /* Stats & Charts */
         .chart-bar {
             margin-bottom: 25px;
@@ -131,7 +131,7 @@
         .t-item h3 { font-size: 18px; margin-bottom: 10px; }
         .t-item p { font-size: 16px; }
 
-        /* Button Styling (Inverted Hover Effect) */
+        /* Button Styling */
         .btn-access {
             font-family: 'Space Grotesk', sans-serif;
             color: var(--cyan);
@@ -152,6 +152,38 @@
             box-shadow: 0 0 20px rgba(0, 229, 255, 0.4);
         }
 
+        /* Contact Links Footer */
+        .slide-footer-links {
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            border-top: 1px solid #222;
+            padding-top: 30px;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            flex-wrap: wrap;
+        }
+        .slide-footer-links a {
+            color: #666;
+            text-decoration: none;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 14px;
+            letter-spacing: 1px;
+            transition: color 0.3s ease;
+            display: flex;
+            align-items: center;
+        }
+        .slide-footer-links a:hover {
+            color: var(--cyan);
+        }
+        .slide-footer-links i {
+            margin-right: 8px;
+            font-size: 16px;
+        }
+
         /* Nav Helper */
         .nav-hint {
             position: fixed;
@@ -168,6 +200,7 @@
             .slide { height: auto; padding: 80px 30px; }
             .big-num { font-size: 80px; }
             .t-item { width: 100% !important; }
+            .slide-footer-links { flex-direction: column; gap: 20px; text-align: center; align-items: center; }
         }
     </style>
 </head>
@@ -183,7 +216,6 @@
             <div class="accent-line" style="margin: 40px auto;"></div>
         </div>
     </section>
-
     <section class="slide">
         <div style="text-align: center;" class="center">
             <div class="subtitle">Part I</div>
@@ -338,7 +370,6 @@
             <div class="accent-line"></div>
         </div>
     </section>
-
     <section class="slide">
         <h2 class="slide-title">Strategic Execution</h2>
         <div class="timeline">
@@ -374,12 +405,18 @@
             <div style="margin-top: 60px;">
                 <a href="https://github.com/SpirosDR1/Qubex-PQC-Benchmark" target="_blank" class="btn-access">ACCESS BENCHMARKS</a>
             </div>
+            
+            <div class="slide-footer-links">
+                <a href="mailto:spyridongagr@qubexsentinel.com"><i class="fa-solid fa-envelope"></i> spyridongagr@qubexsentinel.com</a>
+                <a href="https://x.com/QUBEX_SENTINEL" target="_blank"><i class="fa-brands fa-x-twitter"></i> @QUBEX_SENTINEL</a>
+                <a href="https://www.linkedin.com/company/qubex-sentinel/" target="_blank"><i class="fa-brands fa-linkedin"></i> Qubex Sentinel</a>
+                <a href="https://www.linkedin.com/in/spyridon-g-9858b03a0/" target="_blank"><i class="fa-brands fa-linkedin-in"></i> Founder</a>
+            </div>
         </div>
     </section>
 
 </body>
 </html>
-
 <style>
 @media (max-width: 768px) {
     .slide {
