@@ -1,16 +1,22 @@
-# QUBEX SENTINEL | PQC Execution Logs & Infrastructure
+# QUBEX Sentinel | Official Infrastructure Portals
 
-This repository contains the verified execution logs and source code for the QUBEX Sentinel infrastructure portals. 
+This repository contains the deployment source code for the public-facing interfaces of QUBEX Sentinel. 
 
-QUBEX Sentinel is a production-ready Post-Quantum Cryptography (PQC) middleware designed to shield L1/L2/L3 ecosystems from 'Harvest Now, Decrypt Later' (HNDL) threats without compromising sequencer performance.
+QUBEX Sentinel is the enterprise-grade Post-Quantum Cryptography (PQC) middleware designed to natively shield EVM ecosystems (L1/L2/L3) from "Harvest Now, Decrypt Later" (HNDL) vectors, without compromising sequencer performance or adding L1 calldata overhead.
 
-### Live Portals & Data
-* Official Infrastructure Portal: (https://qubexsentinel.com)
-* Live Execution Logs & Benchmarks: (https://qubexsentinel.com/benchmarks)
+## Live Portals & Data
+
+* Official Infrastructure Portal: [qubexsentinel.com](https://qubexsentinel.com)
+* Omnichain Execution Logs & Benchmarks: [qubexsentinel.com/benchmarks](https://qubexsentinel.com/benchmarks)
 
 ---
 
-### Genesis Partnership Program
-We are actively selecting 3 Tier-1 RaaS / L2 / L3 ecosystems for our zero-fee, 6-month native integration program. Secure your network against quantum threats with our benchmarked 39,595 ns ML-DSA latency standard.
+## Current Execution Protocol
 
-[Apply for Genesis Access Here](https://forms.gle/hmUdBiQz3PT2x8TT7)
+Following our latest Devnet benchmark, QUBEX has successfully verified 1.1 Million concurrent ML-DSA operations across 11 Tier-1 EVM ecosystems in 1m 46s, maintaining an enterprise baseline latency of ~39k - 65k ns (Sub-Millisecond).
+
+## Genesis Partnership Program
+
+We are currently selecting high-TVL Tier-1 DeFi protocols and Rollup-as-a-Service (RaaS) providers for exclusive Genesis Pilot integrations prior to full EVM-wide protocol standardization.
+
+[Submit Genesis Pilot Request Here](https://forms.gle/hmUdBiQz3PT2x8TT7)
