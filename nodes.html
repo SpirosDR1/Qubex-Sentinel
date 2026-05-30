@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <link rel="icon" type="image/jpg" href="../favicon.jpg">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUBEX SENTINEL | Run a Node. Govern the DePIN.</title>
+    <meta name="description" content="Govern the Quantum Defense Layer. Power the QUBEX AI Chaos Engine and execute post-quantum cryptography from your own hardware.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;700&family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --cyan: #00E5FF;
+            --bg: #000;
+            --card-bg: #080808;
+            --border: #1a1a1a;
+            --text-main: #fff;
+            --text-dim: #ccc;
+        }
+
+        * { box-sizing: border-box; scroll-behavior: smooth; }
+        
+        body {
+            background-color: #050505;
+            margin: 0;
+            color: var(--text-main);
+            font-family: 'Urbanist', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Slide Container */
+        .slide {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 60px;
+            position: relative;
+            background-color: var(--bg);
+            border-bottom: 1px solid #111;
+            overflow: hidden;
+        }
+
+        .slide::before {
+            content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+            background-image: linear-gradient(rgba(0, 229, 255, 0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 229, 255, 0.02) 1px, transparent 1px);
+            background-size: 50px 50px; z-index: 0;
+        }
+        .slide::after {
+            content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(circle at 50% 50%, transparent 0%, #000 95%); z-index: 0;
+        }
+        .slide > * { position: relative; z-index: 1; max-width: 1100px; width: 100%; }
+
+        /* Typography */
+        h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; margin: 0; text-transform: uppercase; }
+        h1 { font-size: clamp(48px, 8vw, 84px); font-weight: 700; line-height: 0.9; }
+        h2 { font-size: clamp(32px, 5vw, 64px); letter-spacing: -2px; }
+        
+        .slide-title { font-size: 24px; font-weight: 400; margin-bottom: 40px; color: var(--cyan); letter-spacing: 2px; border-left: 3px solid var(--cyan); padding-left: 20px; }
+        .subtitle { font-size: 14px; color: #666; letter-spacing: 10px; margin-bottom: 20px; text-transform: uppercase; }
+        p { font-size: 20px; line-height: 1.6; color: var(--text-dim); }
+        .highlight { color: var(--cyan); }
+
+        /* Layout Elements */
+        .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; align-items: stretch; margin-top: 40px;}
+        .tile { background: var(--card-bg); border: 1px solid var(--border); padding: 35px; height: 100%; }
+        .tile h3 { font-size: 22px; margin-bottom: 15px; color: var(--cyan); }
+        .accent-line { width: 80px; height: 4px; background: var(--cyan); margin: 30px 0; }
+        .center .accent-line { margin: 30px auto; }
+        
+        /* Terminal Log CSS */
+        .terminal-window {
+            background: #090909; border: 1px solid #222; border-radius: 8px; width: 100%; margin: 20px 0; overflow: hidden; box-shadow: 0 10px 30px rgba(0, 229, 255, 0.05);
+            }
+        .terminal-header { background: #111; padding: 12px 15px; display: flex; align-items: center; border-bottom: 1px solid #222; justify-content: space-between;}
+        .terminal-header-left { display: flex; align-items: center;}
+        .terminal-header .dot { width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; }
+        .dot.red { background: #ff5f56; } .dot.yellow { background: #ffbd2e; } .dot.green { background: #27c93f; }
+        .terminal-header .title { color: #555; font-family: monospace; font-size: 12px; margin-left: 15px; letter-spacing: 1px; }
+        .terminal-body { padding: 25px; overflow-x: auto; }
+        .terminal-body pre { margin: 0; font-family: 'Courier New', Courier, monospace; color: var(--text-dim); font-size: 14px; line-height: 1.6; }
+        .terminal-body .cmd { color: var(--cyan); font-weight: bold; }
+        .terminal-body .val { color: #fff; }
+        .terminal-body .success { color: #27c93f; }
+
+        /* Stats & Charts */
+        .chart-bar { margin-bottom: 25px; }
+        .bar-label { font-family: 'Space Grotesk'; font-size: 14px; margin-bottom: 8px; color: #888; display: flex; justify-content: space-between; }
+        .bar-outer { background: #111; height: 12px; border-radius: 2px; width: 100%; }
+        .bar-inner { height: 100%; background: var(--cyan); box-shadow: 0 0 15px rgba(0, 229, 255, 0.3); }
+        .big-num { font-size: 140px; font-weight: 700; color: var(--cyan); font-family: 'Space Grotesk'; line-height: 1; }
+
+        /* Button Styling */
+        .btn-access { font-family: 'Space Grotesk', sans-serif; color: var(--cyan); background-color: transparent; text-decoration: none; border: 2px solid var(--cyan); padding: 18px 45px; border-radius: 4px; display: inline-block; transition: all 0.3s ease; font-weight: 700; font-size: 18px; letter-spacing: 1px; cursor: pointer; margin: 10px;}
+        .btn-access:hover { background-color: var(--cyan); color: #000; box-shadow: 0 0 20px rgba(0, 229, 255, 0.4); }
+
+        /* Contact Links Footer */
+        .slide-footer-links { margin-top: 50px; display: flex; justify-content: center; gap: 40px; border-top: 1px solid #222; padding-top: 30px; width: 100%; max-width: 600px; margin-left: auto; margin-right: auto; flex-wrap: wrap; }
+        .slide-footer-links a { color: #666; text-decoration: none; font-family: 'Space Grotesk', sans-serif; font-size: 14px; letter-spacing: 1px; transition: color 0.3s ease; display: flex; align-items: center; }
+        .slide-footer-links a:hover { color: var(--cyan); }
+        .slide-footer-links i { margin-right: 8px; font-size: 16px; }
+        
+        .header-top { position: absolute; top: 30px; left: 50px; font-family: 'Space Grotesk'; font-size: 20px; font-weight: 700; z-index: 10;}
+        .header-top a { color: #fff; text-decoration: none;}
+        .header-top span { color: var(--cyan); }
+        .nav-hint { position: absolute; bottom: 20px; right: 20px; font-size: 12px; color: #444; z-index: 100; font-family: 'Space Grotesk'; }
+
+        @media (max-width: 900px) {
+            .grid-3 { grid-template-columns: 1fr; }
+            .slide { height: auto; padding: 100px 30px; }
+            .big-num { font-size: 80px; }
+            .slide-footer-links { flex-direction: column; gap: 20px; text-align: center; align-items: center; }
+            .header-top { top: 20px; left: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header-top"><a href="/">QUBEX <span>SENTINEL</span></a></div>
+    <div class="nav-hint">SCROLL TO EXPLORE THE DEPIN</div>
+
+    <section class="slide">
+        <div style="text-align: center;">
+            <div class="subtitle">DECENTRALIZATION IS THE ULTIMATE SECURITY</div>
+            <h1>GOVERN THE QUANTUM <span class="highlight">DEFENSE LAYER</span></h1>
+            <p style="margin-top: 20px; color: #888; max-width: 700px; margin-left: auto; margin-right: auto;">Power the AI Chaos Engine and execute post-quantum cryptography from your own hardware.
+                Secure Web3 liquidity, earn network rewards, and become a foundational brick of the quantum-safe internet.</p>
+            <div class="accent-line" style="margin: 40px auto;"></div>
+            <div style="margin-top: 40px;">
+                <a href="#" class="btn-access">READ NODEOMICS DRAFT</a>
+                <a href="https://forms.gle/hmUdBiQz3PT2x8TT7" target="_blank" class="btn-access" style="color: #fff; border-color: #333;">JOIN WAITLIST</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide">
+        <div style="text-align: center;" class="center">
+            <div class="subtitle">The DePIN Workflow</div>
+            <h2>HOW TO BECOME A <span class="highlight">SENTINEL</span></h2>
+            <div class="accent-line"></div>
+        </div>
+        <div class="grid-3">
+            <div class="tile">
+                <h3>01. Download & Deploy</h3>
+                <p>Install our lightweight Go-based client executable. Engineered to run efficiently on standard consumer CPUs without requiring enterprise AWS servers.</p>
+            </div>
+            <div class="tile">
+                <h3>02. Predict & Validate</h3>
+                <p>Your node pulls real-time mempool telemetry from the AI Chaos Engine proxy, executing sub-millisecond NIST ML-DSA signature checks to intercept HNDL vectors.</p>
+            </div>
+            <div class="tile">
+                <h3>03. Secure & Earn</h3>
+                <p>Submit aggregate proofs on-chain. Receive $QUBEX protocol yield backed by true infrastructure utility and demand from Tier-1 L2s and Bridges.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide">
+        <h2 class="slide-title">Hardware Reality (The 0.17ms Benchmark)</h2>
+        <div style="width: 100%;">
+            <div class="chart-bar">
+                <div class="bar-label"><span>Legacy ECDSA Baseline (Slow)</span> <span>~ 2,000,000 ns</span></div>
+                <div class="bar-outer"><div class="bar-inner" style="width: 80%; background: #555;"></div></div>
+            </div>
+            <div class="chart-bar">
+                <div class="bar-label"><span>QUBEX DePIN Validation (Consumer CPU)</span> <span class="highlight">~ 170,000 ns (~0.17ms)</span></div>
+                <div class="bar-outer"><div class="bar-inner" style="width: 15%;"></div></div>
+            </div>
+        </div>
+        <p style="text-align: center; margin-top: 50px; font-style: italic; font-size: 18px;">
+            The industry believed Post-Quantum security required heavy enterprise data centers. We proved them wrong. Our Devnet logs reflect <span class="highlight">sub-millisecond verification latency on standard consumer-grade processors</span>, validating the true viability of a decentralized physical infrastructure network (DePIN).
+        </p>
+    </section>
+
+    <section class="slide">
+        <h2 class="slide-title">Omnichain Ground Truth (Devnet Logs)</h2>
+        <div class="terminal-window">
+            <div class="terminal-header">
+                <div class="terminal-header-left">
+                    <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                    <span class="title">qubex-chaos-engine ~ ./broadcaster --env=live</span>
+                </div>
+            </div>
+            <div class="terminal-body">
+<pre>
+<span class="cmd">QUBEX SENTINEL</span> | OMNICHAIN PQC DEVNET BROADCASTER INITIALIZED
+[SYSTEM] Targeting 11 Tier-1 EVM Ecosystems Simultaneously...
+==========================================================================
+<span class="val">QUBEX OMNICHAIN DEPLOYMENT REPORT (NIST ML-DSA-87 | LEVEL 5)</span>
+| Arbitrum  | Latency: 476748 ns (Sign) 179985 ns (Verify) | Block: 271813388 | Status: <span class="success">SECURED</span> |
+| zkSync    | Latency: 532161 ns (Sign) 186484 ns (Verify) | Block: 7519892   | Status: <span class="success">SECURED</span> |
+| Metis     | Latency: 569466 ns (Sign) 175481 ns (Verify) | Block: 10784955  | Status: <span class="success">SECURED</span> |
+| BNB       | Latency: 752569 ns (Sign) 217239 ns (Verify) | Block: 110117717 | Status: <span class="success">SECURED</span> |
+| Base      | Latency: 1023278 ns (Sign) 118730 ns (Verify) | Block: 42113874 | Status: <span class="success">SECURED</span> |
+| Optimism  | Latency: 1038430 ns (Sign) 120701 ns (Verify) | Block: 44096748 | Status: <span class="success">SECURED</span> |
+| Blast     | Latency: 1057001 ns (Sign) 134870 ns (Verify) | Block: 37631969 | Status: <span class="success">SECURED</span> |
+| Polygon   | Latency: 1401724 ns (Sign) 74529 ns (Verify) | Block: 39176941 | Status: <span class="success">SECURED</span> |
+| Mantle    | Latency: 1395950 ns (Sign) 78393 ns (Verify) | Block: 39225679 | Status: <span class="success">SECURED</span> |
+| Linea     | Latency: 1709490 ns (Sign) 70578 ns (Verify) | Block: 29812119 | Status: <span class="success">SECURED</span> |
+| Scroll    | Latency: 1813690 ns (Sign) 58989 ns (Verify) | Block: 18330523 | Status: <span class="success">SECURED</span> |
+==========================================================================
+[SYSTEM] 2200000 total PQC operations verified across 11 EVMs in 3m10.3502042s
+[STATE] QUBEX Decoupled Pre-Batcher Shield: <span class="success">ACTIVE & VALIDATED</span>
+[AUDIT] ML-DSA-87 Signature Integrity Check: <span class="success">PASSED</span>
+</pre>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide">
+        <div style="text-align: center;">
+            <div class="subtitle">DON'T TRUST. VERIFY.</div>
+            <h2 style="font-size: 64px;">THE CODE IS <span class="highlight">LAW</span></h2>
+            <div style="margin-top: 60px;">
+                <a href="https://github.com/SpirosDR1/Qubex-PQC-Benchmarks" target="_blank" class="btn-access">AUDIT REPOSITORY</a>
+            </div>
+            
+            <div class="slide-footer-links">
+                <a href="mailto:spyridongagr@qubexsentinel.com"><i class="fa-solid fa-envelope"></i> spyridongagr@qubexsentinel.com</a>
+                <a href="https://x.com/QUBEX_SENTINEL" target="_blank"><i class="fa-brands fa-x-twitter"></i> @QUBEX_SENTINEL</a>
+                <a href="https://www.linkedin.com/company/qubex-sentinel/" target="_blank"><i class="fa-brands fa-linkedin"></i> Qubex Sentinel</a>
+                <a href="https://www.linkedin.com/in/spyridon-g-9858b03a0/" target="_blank"><i class="fa-brands fa-linkedin-in"></i> Founder</a>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
