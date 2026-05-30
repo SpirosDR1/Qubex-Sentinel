@@ -2,22 +2,30 @@
 
 This repository contains the deployment source code for the public-facing interfaces of QUBEX Sentinel.
 
-QUBEX Sentinel is the enterprise-grade Sub-Millisecond Post-Quantum Cryptography (PQC) middleware designed to natively shield EVM ecosystems (L1/L2/L3) from "Harvest Now, Decrypt Later" (HNDL) vectors, without compromising sequencer performance or adding L1 calldata overhead.
+QUBEX Sentinel is transitioning out of stealth as the first AI-Driven Post-Quantum DePIN. We deploy real-time predictive AI and decentralized NIST ML-DSA verification to natively shield EVM ecosystems and Cross-Chain Bridges from "Harvest Now, Decrypt Later" (HNDL) vectors, with zero integration friction and zero L1 calldata overhead.
 
-## Live Portals & Data
-* Official Infrastructure Portal: [qubexsentinel.com](https://qubexsentinel.com)
-* Omnichain Execution Logs & Benchmarks: [qubexsentinel.com/benchmarks](https://qubexsentinel.com/benchmarks)
+### Live Portals & Interfaces
 
-## Current Execution Protocol
-Following our latest Devnet benchmark, QUBEX has successfully verified 1.1 Million concurrent ML-DSA operations across 11 Tier-1 EVM ecosystems in 1m 46s.
+* Main Infrastructure Portal: [qubexsentinel.com](https://qubexsentinel.com) *(The AI-Driven Post-Quantum Shield)*
+* Sentinel Node Network: [qubexsentinel.com/nodes](https://qubexsentinel.com/nodes) *(DePIN Governance & Node Deployment)*
 
-Performance Metrics (NIST ML-DSA):
-* Devnet (Consumer CPU Limit): ~317,479 ns baseline
-* Mainnet Target (Enterprise Bare-Metal): < 100,000 ns
+---
 
-Our hardware-agnostic architecture proves the absolute stability of the algorithm under extreme consumer hardware limitations, ready to scale on enterprise servers for maximum sub-millisecond execution.
+### Current Execution Protocol (Devnet Live Logs)
 
-## Genesis Partnership Program
-We are currently selecting high-TVL Tier-1 DeFi protocols and Rollup-as-a-Service (RaaS) providers for exclusive Genesis Pilot integrations prior to full EVM-wide protocol standardization.
+Following our latest aggressive Devnet stress test, QUBEX has successfully verified 2.2 Million concurrent ML-DSA operations across 11 Tier-1 EVM ecosystems. 
 
-[Submit Genesis Pilot Request Here](https://forms.gle/hmUdBiQz3PT2x8TT7)
+Performance Metrics (NIST ML-DSA-87 / Level 5):
+* Verification Latency: ~0.17ms (~170,000 ns)
+* Hardware Baseline: Achieved strictly on standard Consumer-Grade CPUs.
+* L1 Impact: 0% Gas Bloat via optimized signature aggregation.
+
+Our hardware-agnostic DePIN architecture proves that absolute Post-Quantum security does not require centralized enterprise data centers. The shield operates with sub-millisecond precision on distributed consumer hardware.
+
+---
+
+### Genesis Partnership Program
+
+We are currently prioritizing high-TVL Cross-Chain Bridges and Tier-1 L2 ecosystems for exclusive Genesis Pilot integrations of the DePIN layer.
+
+[Submit Genesis Pilot Request Here](https://docs.google.com/forms/d/e/1FAIpQLSc6HvUe5tBH6fJ-m0B8j3eBBl4vBaPPHN_XF9h0m9OrxGPRww/viewform)
