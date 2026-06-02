@@ -4,8 +4,8 @@
     <link rel="icon" type="image/jpg" href="../favicon.jpg">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QUBEX SENTINEL | Run a Node. Govern the DePIN.</title>
-    <meta name="description" content="Govern the Quantum Defense Layer. Power the QUBEX AI Chaos Engine and execute post-quantum cryptography from your own hardware.">
+    <title>QUBEX SENTINEL | DePIN Node Network & Live Metrics</title>
+    <meta name="description" content="Govern the Quantum Defense Layer. Execute microsecond NIST ML-DSA signature validation on consumer hardware. Verify our live Devnet Omnichain benchmarks.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;700&family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -83,10 +83,11 @@
         .dot.red { background: #ff5f56; } .dot.yellow { background: #ffbd2e; } .dot.green { background: #27c93f; }
         .terminal-header .title { color: #555; font-family: monospace; font-size: 12px; margin-left: 15px; letter-spacing: 1px; }
         .terminal-body { padding: 25px; overflow-x: auto; }
-        .terminal-body pre { margin: 0; font-family: 'Courier New', Courier, monospace; color: var(--text-dim); font-size: 14px; line-height: 1.6; }
+        .terminal-body pre { margin: 0; font-family: 'Courier New', Courier, monospace; color: var(--text-dim); font-size: 13px; line-height: 1.5; }
         .terminal-body .cmd { color: var(--cyan); font-weight: bold; }
         .terminal-body .val { color: #fff; }
         .terminal-body .success { color: #27c93f; }
+        .terminal-body .hash { color: #4da6ff; text-decoration: underline; }
 
         /* Stats & Charts */
         .chart-bar { margin-bottom: 25px; }
@@ -177,7 +178,7 @@
         </p>
     </section>
 
-    <section class="slide">
+    <section class="slide" style="height: auto; padding: 100px 60px;">
         <h2 class="slide-title">Omnichain Ground Truth (Devnet Logs)</h2>
         <div class="terminal-window">
             <div class="terminal-header">
@@ -191,26 +192,58 @@
 <span class="cmd">QUBEX SENTINEL</span> | OMNICHAIN CHAOS ENGINE DEPLOYMENT
 EXECUTION MODE: CONCURRENT (GOROUTINES ACTIVE)
 ==========================================================================
+
 [MASTER NODE] 0xbd8355B1144a21769dD8bcF1F612966fc9a83d75
 [INJECTION] -> ETH Sepolia (ChainID: 11155111)
-  - PQC Audit: ML-DSA-87 Verified in 175.65µs | Status: <span class="success">SECURED</span>
+  <span style="color:#888;">Status: Intercepting Mempool...</span>
+  <span class="success">PQC Audit: ML-DSA-87 Verified in 175.65µs</span>
+  <span class="success">Sequencer: ZERO-BLOAT L1 EXECUTION CONFIRMED</span>
+  TX Hash: <a href="https://sepolia.etherscan.io/tx/0xc4101045e196bcf1374933cc7ea30f283706f9008b4c596f01aa7a6a5b6ce24a" target="_blank" class="hash">https://sepolia.etherscan.io/tx/0xc4101045e196bcf1374933cc7ea30f283706f9008b4c596f01aa7a6a5b6ce24a</a>
+
 [INJECTION] -> Polygon Amoy (ChainID: 80002)
-  - PQC Audit: ML-DSA-87 Verified in 461.59µs | Status: <span class="success">SECURED</span>
+  <span style="color:#888;">Status: Intercepting Mempool...</span>
+  <span class="success">PQC Audit: ML-DSA-87 Verified in 461.59µs</span>
+  <span class="success">Sequencer: ZERO-BLOAT L1 EXECUTION CONFIRMED</span>
+  TX Hash: <a href="https://amoy.polygonscan.com/tx/0x4af67e3ff15f79f38d899933405c4d5ae314c5763cc0f6b9de5cdc371bea4c20" target="_blank" class="hash">https://amoy.polygonscan.com/tx/0x4af67e3ff15f79f38d899933405c4d5ae314c5763cc0f6b9de5cdc371bea4c20</a>
+
 [INJECTION] -> Base Sepolia (ChainID: 84532)
-  - PQC Audit: ML-DSA-87 Verified in 466.89µs | Status: <span class="success">SECURED</span>
+  <span style="color:#888;">Status: Intercepting Mempool...</span>
+  <span class="success">PQC Audit: ML-DSA-87 Verified in 466.89µs</span>
+  <span class="success">Sequencer: ZERO-BLOAT L1 EXECUTION CONFIRMED</span>
+  TX Hash: <a href="https://sepolia.basescan.org/tx/0xd75fd4c88c46b66e9b7d9d8b3f5c45063631b4f00dbd10229785853eab3e7c33" target="_blank" class="hash">https://sepolia.basescan.org/tx/0xd75fd4c88c46b66e9b7d9d8b3f5c45063631b4f00dbd10229785853eab3e7c33</a>
+
 [INJECTION] -> Scroll Sepolia (ChainID: 534351)
-  - PQC Audit: ML-DSA-87 Verified in 590.69µs | Status: <span class="success">SECURED</span>
+  <span style="color:#888;">Status: Intercepting Mempool...</span>
+  <span class="success">PQC Audit: ML-DSA-87 Verified in 590.69µs</span>
+  <span class="success">Sequencer: ZERO-BLOAT L1 EXECUTION CONFIRMED</span>
+  TX Hash: <a href="https://sepolia.scrollscan.com/tx/0x54021e02d9ac44aa310f65eb94c531bae99c974b7e416f0312c3bf37d56b6199" target="_blank" class="hash">https://sepolia.scrollscan.com/tx/0x54021e02d9ac44aa310f65eb94c531bae99c974b7e416f0312c3bf37d56b6199</a>
+
 [INJECTION] -> Optimism Sepolia (ChainID: 11155420)
-  - PQC Audit: ML-DSA-87 Verified in 550.08µs | Status: <span class="success">SECURED</span>
+  <span style="color:#888;">Status: Intercepting Mempool...</span>
+  <span class="success">PQC Audit: ML-DSA-87 Verified in 550.08µs</span>
+  <span class="success">Sequencer: ZERO-BLOAT L1 EXECUTION CONFIRMED</span>
+  TX Hash: <a href="https://sepolia-optimism.etherscan.io/tx/0x35b60638b72265ec8df03ab02a3569f39864e6c1253f56c17aa6ab41b0db7d61" target="_blank" class="hash">https://sepolia-optimism.etherscan.io/tx/0x35b60638b72265ec8df03ab02a3569f39864e6c1253f56c17aa6ab41b0db7d61</a>
+
 [INJECTION] -> Arbitrum Sepolia (ChainID: 421614)
-  - PQC Audit: ML-DSA-87 Verified in 290.01µs | Status: <span class="success">SECURED</span>
+  <span style="color:#888;">Status: Intercepting Mempool...</span>
+  <span class="success">PQC Audit: ML-DSA-87 Verified in 290.01µs</span>
+  <span class="success">Sequencer: ZERO-BLOAT L1 EXECUTION CONFIRMED</span>
+  TX Hash: <a href="https://sepolia.arbiscan.io/tx/0x1c9516853eacdca1d77128005814be3c2f651e8985dd7a131d2c3803d70e75f1" target="_blank" class="hash">https://sepolia.arbiscan.io/tx/0x1c9516853eacdca1d77128005814be3c2f651e8985dd7a131d2c3803d70e75f1</a>
+
 [INJECTION] -> BNB Testnet (ChainID: 97)
-  - PQC Audit: ML-DSA-87 Verified in 361.45µs | Status: <span class="success">SECURED</span>
+  <span style="color:#888;">Status: Intercepting Mempool...</span>
+  <span class="success">PQC Audit: ML-DSA-87 Verified in 361.45µs</span>
+  <span class="success">Sequencer: ZERO-BLOAT L1 EXECUTION CONFIRMED</span>
+  TX Hash: <a href="https://testnet.bscscan.com/tx/0x5476355b1ccdd72c54d040f524da1c5c80b5834c5d24101e3224657a05eed9da" target="_blank" class="hash">https://testnet.bscscan.com/tx/0x5476355b1ccdd72c54d040f524da1c5c80b5834c5d24101e3224657a05eed9da</a>
+
 [INJECTION] -> Mantle Sepolia (ChainID: 5003)
-  - PQC Audit: ML-DSA-87 Verified in 195.37µs | Status: <span class="success">SECURED</span>
+  <span style="color:#888;">Status: Intercepting Mempool...</span>
+  <span class="success">PQC Audit: ML-DSA-87 Verified in 195.37µs</span>
+  <span class="success">Sequencer: ZERO-BLOAT L1 EXECUTION CONFIRMED</span>
+  TX Hash: <a href="https://explorer.sepolia.mantle.xyz/tx/0x32ff16914fe3530e83c2641c8efd98037e6eb4e32803e6df80ed6a3edfdda3e8" target="_blank" class="hash">https://explorer.sepolia.mantle.xyz/tx/0x32ff16914fe3530e83c2641c8efd98037e6eb4e32803e6df80ed6a3edfdda3e8</a>
+
 ==========================================================================
-[SYSTEM] 2,200,000+ concurrent operations verified across 8 EVM ecosystems.
-[STATE] QUBEX Decoupled Pre-Batcher Shield: <span class="success">ACTIVE & VALIDATED</span>
+<span class="success">✓ OMNICHAIN CONCURRENT BROADCAST COMPLETE. ALL VECTORS SECURED.</span>
 </pre>
             </div>
         </div>
