@@ -18,7 +18,7 @@ Following our latest aggressive Devnet stress test, QUBEX has successfully verif
 
 Performance Metrics (NIST ML-DSA-87 / Level 5):
 
-* Verification Latency: 175µs - 791µs
+* Verification Latency: 175µs - 590µs
 
 * Hardware Baseline: Achieved strictly on standard Consumer-Grade CPUs (Decentralized Node execution).
 
