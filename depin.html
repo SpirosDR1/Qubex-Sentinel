@@ -3,7 +3,7 @@
 <head> 
     <link rel="icon" type="image/jpg" href="../favicon.jpg">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
     <title>QUBEX SENTINEL | DePIN Node Network & Live Metrics</title>
     <meta name="description" content="Govern the Quantum Defense Layer. Execute microsecond NIST ML-DSA signature validation on consumer hardware. Verify our live Devnet Omnichain benchmarks.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,15 +30,14 @@
             overflow-x: hidden;
         }
 
-        /* Slide Container */
         .slide {
-            height: 100vh;
+            min-height: 100vh;
             width: 100vw;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding: 60px;
+            padding: 80px 20px;
             position: relative;
             background-color: var(--bg);
             border-bottom: 1px solid #111;
@@ -56,91 +55,82 @@
         }
         .slide > * { position: relative; z-index: 1; max-width: 1100px; width: 100%; }
 
-        /* Typography */
         h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; margin: 0; text-transform: uppercase; }
-        h1 { font-size: clamp(48px, 8vw, 84px); font-weight: 700; line-height: 0.9; }
-        h2 { font-size: clamp(32px, 5vw, 64px); letter-spacing: -2px; }
+        h1 { font-size: clamp(36px, 8vw, 84px); font-weight: 700; line-height: 1; }
+        h2 { font-size: clamp(28px, 5vw, 64px); letter-spacing: -1px; }
         
-        .slide-title { font-size: 24px; font-weight: 400; margin-bottom: 40px; color: var(--cyan); letter-spacing: 2px; border-left: 3px solid var(--cyan); padding-left: 20px; }
-        .subtitle { font-size: 14px; color: #666; letter-spacing: 10px; margin-bottom: 20px; text-transform: uppercase; }
-        p { font-size: 20px; line-height: 1.6; color: var(--text-dim); }
+        .slide-title { font-size: clamp(18px, 4vw, 24px); font-weight: 400; margin-bottom: 40px; color: var(--cyan); letter-spacing: 2px; border-left: 3px solid var(--cyan); padding-left: 15px; }
+        .subtitle { font-size: 12px; color: #666; letter-spacing: 5px; margin-bottom: 20px; text-transform: uppercase; text-align: center; }
+        p { font-size: clamp(16px, 3vw, 20px); line-height: 1.6; color: var(--text-dim); }
         .highlight { color: var(--cyan); }
         
-        /* Layout Elements */
-        .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; align-items: stretch; margin-top: 40px;}
-        .tile { background: var(--card-bg); border: 1px solid var(--border); padding: 35px; height: 100%; }
-        .tile h3 { font-size: 22px; margin-bottom: 15px; color: var(--cyan); }
-        .accent-line { width: 80px; height: 4px; background: var(--cyan); margin: 30px 0; }
-        .center .accent-line { margin: 30px auto; }
+        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 40px; }
+        .tile { background: var(--card-bg); border: 1px solid var(--border); padding: 30px; }
+        .tile h3 { font-size: 20px; margin-bottom: 15px; color: var(--cyan); }
+        .accent-line { width: 60px; height: 3px; background: var(--cyan); margin: 25px 0; }
+        .center .accent-line { margin: 25px auto; }
         
-        /* Terminal Log CSS */
+        /* TERMINAL RESPONSIVENESS (THE MOST IMPORTANT FIX) */
         .terminal-window {
-            background: #090909; border: 1px solid #222; border-radius: 8px; width: 100%; margin: 20px 0; overflow: hidden; box-shadow: 0 10px 30px rgba(0, 229, 255, 0.05);
+            background: #090909; border: 1px solid #222; border-radius: 8px; width: 100%; margin: 20px 0; box-shadow: 0 10px 30px rgba(0, 229, 255, 0.05); overflow: hidden;
             }
-        .terminal-header { background: #111; padding: 12px 15px; display: flex; align-items: center; border-bottom: 1px solid #222; justify-content: space-between;}
-        .terminal-header-left { display: flex; align-items: center;}
-        .terminal-header .dot { width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; }
+        .terminal-header { background: #111; padding: 12px 15px; display: flex; align-items: center; border-bottom: 1px solid #222; justify-content: space-between; }
+        .terminal-header-left { display: flex; align-items: center; }
+        .terminal-header .dot { width: 10px; height: 10px; border-radius: 50%; margin-right: 6px; }
         .dot.red { background: #ff5f56; } .dot.yellow { background: #ffbd2e; } .dot.green { background: #27c93f; }
-        .terminal-header .title { color: #555; font-family: monospace; font-size: 12px; margin-left: 15px; letter-spacing: 1px; }
-        .terminal-body { padding: 25px; overflow-x: auto; }
-        .terminal-body pre { margin: 0; font-family: 'Courier New', Courier, monospace; color: var(--text-dim); font-size: 13px; line-height: 1.5; }
+        .terminal-header .title { color: #555; font-family: monospace; font-size: 10px; margin-left: 10px; letter-spacing: 1px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 200px; }
+        
+        .terminal-body { padding: 15px; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+        .terminal-body pre { margin: 0; font-family: 'Courier New', Courier, monospace; color: var(--text-dim); font-size: 11px; line-height: 1.5; min-width: 600px; } /* min-width ensures horizontal scroll instead of ugly breaks */
         .terminal-body .cmd { color: var(--cyan); font-weight: bold; }
-        .terminal-body .val { color: #fff; }
         .terminal-body .success { color: #27c93f; }
-        .terminal-body .hash { color: #4da6ff; text-decoration: underline; }
+        .terminal-body .hash { color: #4da6ff; text-decoration: underline; word-break: break-all; }
 
-        /* Stats & Charts */
         .chart-bar { margin-bottom: 25px; }
-        .bar-label { font-family: 'Space Grotesk'; font-size: 14px; margin-bottom: 8px; color: #888; display: flex; justify-content: space-between; }
+        .bar-label { font-family: 'Space Grotesk'; font-size: 12px; margin-bottom: 8px; color: #888; display: flex; flex-direction: column; gap: 5px; }
+        @media (min-width: 600px) { .bar-label { flex-direction: row; justify-content: space-between; font-size: 14px; } }
         .bar-outer { background: #111; height: 12px; border-radius: 2px; width: 100%; }
         .bar-inner { height: 100%; background: var(--cyan); box-shadow: 0 0 15px rgba(0, 229, 255, 0.3); }
-        .big-num { font-size: 140px; font-weight: 700; color: var(--cyan); font-family: 'Space Grotesk'; line-height: 1; }
 
-        /* Button Styling */
-        .btn-access { font-family: 'Space Grotesk', sans-serif; color: var(--cyan); background-color: transparent; text-decoration: none; border: 2px solid var(--cyan); padding: 18px 45px; border-radius: 4px; display: inline-block; transition: all 0.3s ease; font-weight: 700; font-size: 18px; letter-spacing: 1px; cursor: pointer; margin: 10px;}
+        .btn-access { font-family: 'Space Grotesk', sans-serif; color: var(--cyan); background-color: transparent; text-decoration: none; border: 2px solid var(--cyan); padding: 15px 30px; border-radius: 4px; display: inline-block; transition: all 0.3s ease; font-weight: 700; font-size: 14px; letter-spacing: 1px; cursor: pointer; margin: 10px; text-align: center; }
         .btn-access:hover { background-color: var(--cyan); color: #000; box-shadow: 0 0 20px rgba(0, 229, 255, 0.4); }
 
-        /* Contact Links Footer */
-        .slide-footer-links { margin-top: 50px; display: flex; justify-content: center; gap: 40px; border-top: 1px solid #222; padding-top: 30px; width: 100%; max-width: 600px; margin-left: auto; margin-right: auto; flex-wrap: wrap; }
-        .slide-footer-links a { color: #666; text-decoration: none; font-family: 'Space Grotesk', sans-serif; font-size: 14px; letter-spacing: 1px; transition: color 0.3s ease; display: flex; align-items: center; }
+        .slide-footer-links { margin-top: 50px; display: flex; flex-direction: column; align-items: center; gap: 20px; border-top: 1px solid #222; padding-top: 30px; width: 100%; max-width: 600px; margin-left: auto; margin-right: auto; }
+        @media (min-width: 600px) { .slide-footer-links { flex-direction: row; justify-content: center; flex-wrap: wrap; gap: 40px; } }
+        .slide-footer-links a { color: #666; text-decoration: none; font-family: 'Space Grotesk', sans-serif; font-size: 14px; letter-spacing: 1px; display: flex; align-items: center; }
         .slide-footer-links a:hover { color: var(--cyan); }
         .slide-footer-links i { margin-right: 8px; font-size: 16px; }
         
-        .header-top { position: absolute; top: 30px; left: 50px; font-family: 'Space Grotesk'; font-size: 20px; font-weight: 700; z-index: 10;}
-        .header-top a { color: #fff; text-decoration: none;}
+        .header-top { position: absolute; top: 20px; left: 20px; font-family: 'Space Grotesk'; font-size: 16px; font-weight: 700; z-index: 10; }
+        @media (min-width: 768px) { .header-top { top: 30px; left: 50px; font-size: 20px; } }
+        .header-top a { color: #fff; text-decoration: none; }
         .header-top span { color: var(--cyan); }
-        .nav-hint { position: absolute; bottom: 20px; right: 20px; font-size: 12px; color: #444; z-index: 100; font-family: 'Space Grotesk'; }
+        .nav-hint { position: absolute; bottom: 20px; right: 20px; font-size: 10px; color: #444; z-index: 100; font-family: 'Space Grotesk'; text-align: right;}
 
-        @media (max-width: 900px) {
-            .grid-3 { grid-template-columns: 1fr; }
-            .slide { height: auto; padding: 100px 30px; }
-            .big-num { font-size: 80px; }
-            .slide-footer-links { flex-direction: column; gap: 20px; text-align: center; align-items: center; }
-            .header-top { top: 20px; left: 20px; }
-        }
+        .btn-container { display: flex; flex-direction: column; align-items: center; width: 100%; }
+        @media (min-width: 600px) { .btn-container { flex-direction: row; justify-content: center; } }
     </style>
 </head>
 <body>
 
     <div class="header-top"><a href="/">QUBEX <span>SENTINEL</span></a></div>
-    <div class="nav-hint">SCROLL TO EXPLORE THE DEPIN</div>
-
+    <div class="nav-hint">SCROLL TO EXPLORE<br>THE DEPIN</div>
     <section class="slide">
-        <div style="text-align: center;">
+        <div style="text-align: center; width: 100%;">
             <div class="subtitle">DECENTRALIZATION IS THE ULTIMATE SECURITY</div>
             <h1>GOVERN THE QUANTUM <span class="highlight">DEFENSE LAYER</span></h1>
             <p style="margin-top: 20px; color: #888; max-width: 700px; margin-left: auto; margin-right: auto;">Power the AI Chaos Engine and execute post-quantum cryptography from your own hardware.
                 Secure Web3 liquidity, earn network rewards, and become a foundational brick of the quantum-safe internet.</p>
-            <div class="accent-line" style="margin: 40px auto;"></div>
-            <div style="margin-top: 40px;">
-                <a href="#" class="btn-access">READ NODEOMICS DRAFT</a>
-                <a href="https://forms.gle/hmUdBiQz3PT2x8TT7" target="_blank" class="btn-access" style="color: #fff; border-color: #333;">JOIN WAITLIST</a>
+            <div class="accent-line" style="margin: 30px auto;"></div>
+            <div class="btn-container">
+                <a href="#" class="btn-access" style="width: 250px;">READ NODEOMICS DRAFT</a>
+                <a href="https://forms.gle/hmUdBiQz3PT2x8TT7" target="_blank" class="btn-access" style="color: #fff; border-color: #333; width: 250px;">JOIN WAITLIST</a>
             </div>
         </div>
     </section>
 
     <section class="slide">
-        <div style="text-align: center;" class="center">
+        <div style="text-align: center; width: 100%;" class="center">
             <div class="subtitle">The DePIN Workflow</div>
             <h2>HOW TO BECOME A <span class="highlight">SENTINEL</span></h2>
             <div class="accent-line"></div>
@@ -162,23 +152,23 @@
     </section>
 
     <section class="slide">
-        <h2 class="slide-title">Hardware Reality (The Microsecond Benchmark)</h2>
+        <h2 class="slide-title">Hardware Reality (Microsecond Benchmark)</h2>
         <div style="width: 100%;">
             <div class="chart-bar">
                 <div class="bar-label"><span>Legacy ECDSA Baseline (Slow)</span> <span>~ 2,000,000 ns</span></div>
                 <div class="bar-outer"><div class="bar-inner" style="width: 80%; background: #555;"></div></div>
             </div>
             <div class="chart-bar">
-                <div class="bar-label"><span>QUBEX DePIN Validation (Consumer CPU)</span> <span class="highlight">175µs - 590µs</span></div>
+                <div class="bar-label"><span>QUBEX DePIN Validation (Consumer CPU)</span> <span class="highlight">175µs - 791µs</span></div>
                 <div class="bar-outer"><div class="bar-inner" style="width: 15%;"></div></div>
             </div>
         </div>
-        <p style="text-align: center; margin-top: 50px; font-style: italic; font-size: 18px;">
-            The industry believed Post-Quantum security required heavy enterprise data centers. We proved them wrong. Our Devnet logs reflect <span class="highlight">microsecond verification latency on standard consumer-grade processors</span>, validating the true viability of a decentralized physical infrastructure network (DePIN).
+        <p style="text-align: center; margin-top: 40px; font-style: italic; font-size: clamp(14px, 4vw, 18px);">
+            The industry believed Post-Quantum security required heavy enterprise data centers. We proved them wrong. Our Devnet logs reflect <span class="highlight">microsecond verification latency on standard consumer-grade processors</span>.
         </p>
     </section>
 
-    <section class="slide" id="proof" style="height: auto; padding: 100px 60px;">
+    <section class="slide" id="proof">
         <h2 class="slide-title">Omnichain Ground Truth (Devnet Logs)</h2>
         <div class="terminal-window">
             <div class="terminal-header">
@@ -226,7 +216,7 @@ EXECUTION MODE: CONCURRENT (GOROUTINES ACTIVE)
 
 [INJECTION] -> Arbitrum Sepolia (ChainID: 421614)
   <span style="color:#888;">Status: Intercepting Mempool...</span>
-  <span class="success">PQC Audit: ML-DSA-87 Verified in 290.01µs</span>
+  <span class="success">PQC Audit: ML-DSA-87 Verified in 791.01µs</span>
   <span class="success">Sequencer: ZERO-BLOAT L1 EXECUTION CONFIRMED</span>
   TX Hash: <a href="https://sepolia.arbiscan.io/tx/0x1c9516853eacdca1d77128005814be3c2f651e8985dd7a131d2c3803d70e75f1" target="_blank" class="hash">https://sepolia.arbiscan.io/tx/0x1c9516853eacdca1d77128005814be3c2f651e8985dd7a131d2c3803d70e75f1</a>
 
@@ -250,10 +240,10 @@ EXECUTION MODE: CONCURRENT (GOROUTINES ACTIVE)
     </section>
 
     <section class="slide">
-        <div style="text-align: center;">
+        <div style="text-align: center; width: 100%;">
             <div class="subtitle">DON'T TRUST. VERIFY.</div>
-            <h2 style="font-size: 64px;">THE CODE IS <span class="highlight">LAW</span></h2>
-            <div style="margin-top: 60px;">
+            <h2 style="font-size: clamp(36px, 6vw, 64px);">THE CODE IS <span class="highlight">LAW</span></h2>
+            <div style="margin-top: 40px;">
                 <a href="https://github.com/SpirosDR1/Qubex-PQC-Benchmarks" target="_blank" class="btn-access">AUDIT REPOSITORY</a>
             </div>
             
