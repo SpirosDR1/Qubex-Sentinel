@@ -2,25 +2,29 @@
 
 This repository contains the deployment source code for the public-facing interfaces of QUBEX Sentinel.
 
-QUBEX Sentinel is transitioning out of stealth as the first AI-Driven Post-Quantum DePIN. We deploy real-time predictive AI and decentralized NIST ML-DSA verification to natively shield EVM ecosystems and Cross-Chain Bridges from "Harvest Now, Decrypt Later" (HNDL) vectors, with zero integration friction and zero L1 calldata overhead.
+QUBEX Sentinel is transitioning out of stealth as the first AI-Driven Post-Quantum DePIN. We deploy real-time predictive AI and decentralized NIST ML-DSA verification to natively shield EVM ecosystems and Cross-Chain Bridges from "Harvest Now, Decrypt Later" (HNDL) vectors, with zero integration friction and absolute zero L1 calldata overhead.
 
 ### Live Portals & Interfaces
 
 * Main Infrastructure Portal: [qubexsentinel.com](https://qubexsentinel.com) *(The AI-Driven Post-Quantum Shield)*
-* Sentinel Node Network: [qubexsentinel.com/nodes](https://qubexsentinel.com/nodes) *(DePIN Governance & Node Deployment)*
+
+* Sentinel Node Network: [qubexsentinel.com/depin](https://qubexsentinel.com/depin) *(DePIN Governance & Node Deployment)*
 
 ---
 
-### Current Execution Protocol (Devnet Live Logs)
+### Current Execution Protocol (Live Devnet Logs)
 
-Following our latest aggressive Devnet stress test, QUBEX has successfully verified 2.2 Million concurrent ML-DSA operations across 11 Tier-1 EVM ecosystems. 
+Following our latest aggressive Devnet stress test, QUBEX has successfully verified 2.2 Million concurrent ML-DSA operations across 8 EVM ecosystems (6 Tier-1 L2 Rollups + 2 L1 Settlement Layers).
 
 Performance Metrics (NIST ML-DSA-87 / Level 5):
-* Verification Latency: ~0.17ms (~170,000 ns)
-* Hardware Baseline: Achieved strictly on standard Consumer-Grade CPUs.
-* L1 Impact: 0% Gas Bloat via optimized signature aggregation.
 
-Our hardware-agnostic DePIN architecture proves that absolute Post-Quantum security does not require centralized enterprise data centers. The shield operates with sub-millisecond precision on distributed consumer hardware.
+* Verification Latency: 175µs - 791µs
+
+* Hardware Baseline: Achieved strictly on standard Consumer-Grade CPUs (Decentralized Node execution).
+
+* L1 Impact: 0% Gas Bloat via decoupled pre-batcher execution.
+
+Our hardware-agnostic DePIN architecture proves that absolute Post-Quantum security does not require centralized enterprise data centers. The shield operates with microsecond precision on distributed consumer hardware.
 
 ---
 
