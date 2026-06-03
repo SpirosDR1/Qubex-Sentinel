@@ -15,36 +15,136 @@
         body { font-family: 'Inter', sans-serif; background-color: var(--bg-dark); color: var(--text-main); line-height: 1.6; min-height: 100vh; display: flex; flex-direction: column; overflow-x: hidden; }
         h1, h2, h3, .logo { font-family: 'Space Grotesk', sans-serif; text-transform: uppercase; }
         .container { width: 100%; max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        
         header { padding: 25px 0; border-bottom: 1px solid rgba(255, 255, 255, 0.05); background: rgba(5, 5, 5, 0.8); backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 100; }
         .header-content { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; }
         .logo { font-size: 24px; font-weight: 900; letter-spacing: 1px; text-decoration: none; color: #fff; }
         .logo span { color: var(--quantum-cyan); }
         .nav-right { display: flex; align-items: center; gap: 25px; }
+        .nav-links { display: flex; gap: 25px; }
         .nav-links a { color: var(--text-main); text-decoration: none; font-weight: 600; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; }
         .nav-links a:hover { color: var(--quantum-cyan); }
+        
         .hero { padding: 120px 0 80px; text-align: center; }
         .hero h1 { font-size: clamp(36px, 7vw, 72px); font-weight: 900; margin-bottom: 20px; letter-spacing: -1.5px; line-height: 1.05; }
         .hero p { font-size: clamp(16px, 3vw, 20px); color: var(--text-dim); max-width: 750px; margin: 0 auto 50px; font-weight: 300; }
+        
         .btn { background: transparent; color: var(--quantum-cyan); padding: 14px 32px; border-radius: 2px; border: 1px solid var(--quantum-cyan); font-weight: 700; text-decoration: none; display: inline-block; transition: all 0.3s ease; text-transform: uppercase; letter-spacing: 1.5px; cursor: pointer; text-align: center; font-family: 'Space Grotesk', sans-serif; font-size: 13px; }
         .btn:hover { background: var(--quantum-cyan); color: #000; box-shadow: 0 0 25px rgba(0, 229, 255, 0.3); }
+        
         .form-container { display: flex; justify-content: center; gap: 15px; max-width: 600px; margin: 0 auto; }
         .form-input { background: rgba(255, 255, 255, 0.03); border: 1px solid #222; border-bottom: 2px solid var(--quantum-cyan); color: white; padding: 14px 20px; width: 100%; outline: none; font-family: 'Inter', sans-serif; font-size: 15px; }
+        
         .benchmarks { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 80px 0; }
         .stat-card { background: var(--card-bg); padding: 50px 30px; border-radius: 4px; border: 1px solid rgba(255, 255, 255, 0.05); text-align: center; }
         .stat-card h3 { font-size: 56px; color: var(--quantum-cyan); line-height: 1; letter-spacing: -2px; }
         .stat-card p { margin: 15px 0 0; color: var(--text-main); text-transform: uppercase; letter-spacing: 1.5px; font-size: 13px; font-weight: 600; }
+        
         .roadmap { padding: 100px 0; }
+        .roadmap > h2 { font-size: clamp(28px, 5vw, 42px); margin-bottom: 50px; text-align: center; }
         .phase { border-left: 1px solid rgba(0, 229, 255, 0.3); padding-left: 40px; margin-bottom: 60px; position: relative; max-width: 800px; margin: 0 auto 60px; }
         .phase::before { content: ''; width: 10px; height: 10px; background: var(--quantum-cyan); position: absolute; left: -5.5px; top: 8px; border-radius: 50%; }
+        .phase h4 { margin: 0; font-size: 12px; color: var(--quantum-cyan); letter-spacing: 3px; font-family: 'Space Grotesk', sans-serif; }
+        .phase h2 { margin: 10px 0 15px; font-size: clamp(22px, 4vw, 32px); letter-spacing: -0.5px; }
+        .phase p { color: var(--text-dim); font-size: 16px; }
+        
         .site-footer { border-top: 1px solid rgba(255, 255, 255, 0.05); padding: 40px 0; text-align: center; margin-top: auto; background: #020202; }
-        @media (max-width: 768px) { .header-content { flex-direction: column; } .form-container { flex-direction: column; } .btn { width: 100%; } }
+        .footer-links { display: flex; justify-content: center; gap: 30px; margin-bottom: 20px; flex-wrap: wrap; }
+        .footer-links a { color: var(--text-dim); text-decoration: none; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; }
+        .footer-links a:hover { color: var(--quantum-cyan); }
+        .copyright { font-size: 12px; color: #555; }
+        
+        @media (max-width: 768px) { 
+            .header-content { flex-direction: column; gap: 20px; text-align: center; } 
+            .nav-right { display: flex; flex-direction: column; width: 100%; gap: 20px; }
+            .nav-links { display: flex; flex-direction: row; justify-content: center; gap: 30px; width: 100%; }
+            .form-container { flex-direction: column; } 
+            .btn { width: 100%; } 
+            .roadmap.container { padding-left: 30px; padding-right: 20px; }
+            .phase { margin-left: 10px; padding-left: 25px; }
+        }
     </style>
 </head>
 <body>
-<header><div class="container header-content"><a href="/" class="logo">QUBEX <span>SENTINEL</span></a><div class="nav-right"><div class="nav-links"><a href="/depin">DePIN Nodes</a><a href="https://github.com/SpirosDR1/Qubex-PQC-Benchmarks" target="_blank">GitHub</a></div><a href="https://forms.gle/hmUdBiQz3PT2x8TT7" target="_blank" class="btn">Genesis Pilot Access</a></div></div></header>
-<section class="hero"><div class="container"><h1>THE AI-DRIVEN <br><span style="color: var(--quantum-cyan);">POST-QUANTUM SHIELD</span></h1><p>Billions in Cross-Chain Bridges and L1/L2 Sequencers are exposed to "Harvest Now, Decrypt Later" vectors. QUBEX Sentinel deploys active mempool AI and decentralized PQC validation.</p><form action="https://formspree.io/f/mvzlneno" method="POST" class="form-container"><input type="email" name="email" class="form-input" placeholder="Corporate email" required><button type="submit" class="btn">Apply for Pilot</button></form></div></section>
-<section class="container"><div class="benchmarks"><div class="stat-card"><h3>175<span style="text-transform: lowercase;">µs</span></h3><p>Cryptographic Latency</p></div><div class="stat-card"><h3>8 EVMs</h3><p>Synchronized Omnichain</p></div><div class="stat-card"><h3>0%</h3><p>L1 Gas Bloat</p></div></div></section>
-<section class="roadmap container"><h2>CORE ARCHITECTURE</h2><div class="phase"><h4>THE BRAIN</h4><h2>Predictive AI (Chaos Engine)</h2><p>Continuous mempool matrix analysis detecting HNDL threat vectors.</p></div><div class="phase"><h4>THE MUSCLE</h4><h2>Decentralized Sentinel Nodes</h2><p>NIST Level 5 PQC validation on distributed consumer hardware.</p></div></section>
-<footer class="site-footer"><div class="container"><div class="copyright">&copy; 2026 QUBEX Sentinel. All rights reserved.</div></div></footer>
+
+<header>
+    <div class="container header-content">
+        <a href="/" class="logo">QUBEX <span>SENTINEL</span></a>
+        <div class="nav-right">
+            <div class="nav-links">
+                <a href="/depin">DePIN Nodes</a>
+                <a href="https://github.com/SpirosDR1/Qubex-PQC-Benchmarks" target="_blank">GitHub</a>
+            </div>
+            <a href="https://forms.gle/hmUdBiQz3PT2x8TT7" target="_blank" class="btn">Genesis Pilot Access</a>
+        </div>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="container">
+        <h1>THE AI-DRIVEN <br><span style="color: var(--quantum-cyan);">POST-QUANTUM SHIELD</span></h1>
+        <p>Billions in Cross-Chain Bridges and L1/L2 Sequencers are exposed to "Harvest Now, Decrypt Later" vectors. QUBEX Sentinel deploys active mempool AI and decentralized PQC validation to eliminate the threat natively.</p>
+        
+        <div style="margin-top: 50px;">
+            <form action="https://formspree.io/f/mvzlneno" method="POST" class="form-container">
+                <input type="email" name="email" class="form-input" placeholder="Corporate email for Enterprise Integration" required>
+                <button type="submit" class="btn">Apply for Pilot</button>
+            </form>
+            <p style="font-size: 12px; color: #666; margin-top: 20px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">Zero L1 Calldata Bloat • Zero Smart Contract Rewrites</p>
+        </div>
+    </div>
+</section>
+
+<section class="container">
+    <div class="benchmarks">
+        <div class="stat-card">
+            <h3>175<span style="text-transform: lowercase;">µs</span></h3>
+            <p>Cryptographic Latency</p>
+            <span style="font-size: 11px; color: var(--text-dim); display: block; margin-top: 5px;">(Hardware-Level Execution)</span>
+        </div>
+        <div class="stat-card">
+            <h3>8 EVMs</h3>
+            <p>Synchronized Omnichain</p>
+            <span style="font-size: 11px; color: var(--text-dim); display: block; margin-top: 5px;">6 L2 Rollups + 2 L1s</span>
+        </div>
+        <div class="stat-card">
+            <h3>0%</h3>
+            <p>L1 Gas Bloat Added</p>
+            <span style="font-size: 11px; color: var(--text-dim); display: block; margin-top: 5px;">Via Decoupled Pre-Batching</span>
+        </div>
+    </div>
+</section>
+
+<section class="roadmap container">
+    <h2>CORE ARCHITECTURE</h2>
+    <div class="phase">
+        <h4>THE BRAIN</h4>
+        <h2>Predictive AI (Chaos Engine)</h2>
+        <p>Continuous mempool matrix analysis. Our AI layer sniffs out anomalous sequencing patterns and telemetry signatures linked to HNDL threat vectors before they ever hit the execution layer.</p>
+    </div>
+    <div class="phase">
+        <h4>THE MUSCLE</h4>
+        <h2>Decentralized Sentinel Nodes</h2>
+        <p>Moving security away from single points of failure. A global DePIN handles heavy NIST Level 5 cryptographic load, validating ML-DSA-87 signatures natively on distributed, heterogeneous consumer hardware.</p>
+    </div>
+    <div class="phase" style="border-left-color: transparent;">
+        <h4>THE INTEGRATION</h4>
+        <h2>Non-Disruptive Proxy Overlay</h2>
+        <p>Seamless execution for L1s, L2s, and Cross-Chain Bridges. QUBEX secures existing liquidity without requiring smart contract rewrites or ecosystem fragmentation.</p>
+    </div>
+</section>
+
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-links">
+            <a href="mailto:spyridongagr@qubexsentinel.com">Enterprise Inquiries</a>
+            <a href="https://x.com/QUBEX_SENTINEL" target="_blank">X (Twitter)</a>
+            <a href="https://www.linkedin.com/company/qubex-sentinel/" target="_blank">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/spyridon-g-9858b03a0/" target="_blank">Founder</a>
+        </div>
+        <div class="copyright">&copy; 2026 QUBEX Sentinel. All rights reserved. Code > Promises.</div>
+    </div>
+</footer>
+
 </body>
 </html>
