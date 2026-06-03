@@ -59,7 +59,7 @@
         h2 { font-size: clamp(28px, 5vw, 54px); font-weight: 700; letter-spacing: -1px; }
         
         .slide-title { font-size: clamp(16px, 3vw, 20px); font-weight: 700; margin-bottom: 40px; color: var(--cyan); letter-spacing: 2px; border-left: 2px solid var(--cyan); padding-left: 15px; }
-        .subtitle { font-size: 11px; color: #666; letter-spacing: 4px; margin-bottom: 20px; font-weight: 700; }
+        .subtitle { font-size: 11px; color: #666; letter-spacing: 4px; margin-bottom: 20px; font-weight: 700; text-transform: uppercase; }
         p { font-size: clamp(15px, 2.5vw, 18px); line-height: 1.7; color: var(--text-dim); }
         .highlight { color: var(--cyan); }
         
@@ -69,10 +69,9 @@
         .accent-line { width: 50px; height: 2px; background: var(--cyan); margin: 30px 0; }
         .center .accent-line { margin: 30px auto; }
         
-        /* THE INSTITUTIONAL TERMINAL */
         .terminal-window {
             background: #030303; border: 1px solid #1a1a1a; border-radius: 6px; width: 100%; margin: 30px 0; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5); overflow: hidden;
-        }
+            }
         .terminal-header { background: #0a0a0a; padding: 12px 15px; display: flex; align-items: center; border-bottom: 1px solid #1a1a1a; }
         .terminal-header .dot { width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; }
         .dot.red { background: #ff5f56; } .dot.yellow { background: #ffbd2e; } .dot.green { background: #27c93f; }
@@ -80,7 +79,6 @@
         
         .terminal-body { padding: 20px; overflow-x: auto; -webkit-overflow-scrolling: touch; }
         
-        /* CUSTOM SCROLLBAR FOR TERMINAL */
         .terminal-body::-webkit-scrollbar { height: 6px; }
         .terminal-body::-webkit-scrollbar-track { background: #030303; }
         .terminal-body::-webkit-scrollbar-thumb { background: #333; border-radius: 3px; }
@@ -115,7 +113,6 @@
         .header-top a { color: #fff; text-decoration: none; }
         .header-top span { color: var(--cyan); }
         .nav-hint { position: absolute; bottom: 30px; right: 30px; font-size: 10px; color: #555; z-index: 10; font-family: 'Space Grotesk', sans-serif; text-align: right; font-weight: 700; letter-spacing: 2px; }
-        
         @media (max-width: 768px) {
             .slide { padding: 120px 20px 60px; }
             .header-top { width: 100%; text-align: center; left: 0; top: 25px; }
@@ -166,11 +163,11 @@
         <h2 class="slide-title">HARDWARE REALITY (MICROSECOND BENCHMARK)</h2>
         <div style="width: 100%; margin-top: 40px;">
             <div class="chart-bar">
-                <div class="bar-label"><span>Legacy ECDSA Baseline (Slow)</span> <span>~ 2,000,000 ns</span></div>
+                <div class="bar-label"><span>Legacy ECDSA Baseline (Slow)</span> <span>~ 2,000,000 <span style="text-transform: lowercase;">ns</span></span></div>
                 <div class="bar-outer"><div class="bar-inner" style="width: 100%; background: #333; box-shadow: none;"></div></div>
             </div>
             <div class="chart-bar">
-                <div class="bar-label"><span>QUBEX DePIN Validation (Consumer CPU)</span> <span class="highlight">175µs - 791µs</span></div>
+                <div class="bar-label"><span>QUBEX DePIN Validation (Consumer CPU)</span> <span class="highlight">175<span style="text-transform: lowercase;">µs</span> - 590<span style="text-transform: lowercase;">µs</span></span></div>
                 <div class="bar-outer"><div class="bar-inner" style="width: 12%;"></div></div>
             </div>
         </div>
@@ -198,33 +195,50 @@ EXECUTION MODE: CONCURRENT (GOROUTINES ACTIVE)
 
 [INJECTION] -> ETH Sepolia (ChainID: 11155111)
   <span style="color:#666;">Status: Intercepting Mempool...</span>
-  <span class="success">PQC Audit: ML-DSA-87 Verified in 175.65µs</span>
+  <span class="success">PQC Audit: ML-DSA-87 Verified in 175.65<span style="text-transform: lowercase;">µs</span></span>
   <span class="success">Sequencer: ZERO-BLOAT L1 EXECUTION CONFIRMED</span>
   TX Hash: <a href="https://sepolia.etherscan.io/tx/0xc4101045e196bcf1374933cc7ea30f283706f9008b4c596f01aa7a6a5b6ce24a" target="_blank" class="hash">0xc410...ce24a</a>
 
 [INJECTION] -> Polygon Amoy (ChainID: 80002)
   <span style="color:#666;">Status: Intercepting Mempool...</span>
-  <span class="success">PQC Audit: ML-DSA-87 Verified in 461.59µs</span>
+  <span class="success">PQC Audit: ML-DSA-87 Verified in 461.59<span style="text-transform: lowercase;">µs</span></span>
   <span class="success">Sequencer: ZERO-BLOAT L1 EXECUTION CONFIRMED</span>
   TX Hash: <a href="https://amoy.polygonscan.com/tx/0x4af67e3ff15f79f38d899933405c4d5ae314c5763cc0f6b9de5cdc371bea4c20" target="_blank" class="hash">0x4af6...4c20</a>
 
 [INJECTION] -> Base Sepolia (ChainID: 84532)
   <span style="color:#666;">Status: Intercepting Mempool...</span>
-  <span class="success">PQC Audit: ML-DSA-87 Verified in 466.89µs</span>
+  <span class="success">PQC Audit: ML-DSA-87 Verified in 466.89<span style="text-transform: lowercase;">µs</span></span>
   <span class="success">Sequencer: ZERO-BLOAT L1 EXECUTION CONFIRMED</span>
   TX Hash: <a href="https://sepolia.basescan.org/tx/0xd75fd4c88c46b66e9b7d9d8b3f5c45063631b4f00dbd10229785853eab3e7c33" target="_blank" class="hash">0xd75f...7c33</a>
 
 [INJECTION] -> Scroll Sepolia (ChainID: 534351)
   <span style="color:#666;">Status: Intercepting Mempool...</span>
-  <span class="success">PQC Audit: ML-DSA-87 Verified in 590.69µs</span>
+  <span class="success">PQC Audit: ML-DSA-87 Verified in 590.69<span style="text-transform: lowercase;">µs</span></span>
   <span class="success">Sequencer: ZERO-BLOAT L1 EXECUTION CONFIRMED</span>
   TX Hash: <a href="https://sepolia.scrollscan.com/tx/0x54021e02d9ac44aa310f65eb94c531bae99c974b7e416f0312c3bf37d56b6199" target="_blank" class="hash">0x5402...6199</a>
 
 [INJECTION] -> Optimism Sepolia (ChainID: 11155420)
   <span style="color:#666;">Status: Intercepting Mempool...</span>
-  <span class="success">PQC Audit: ML-DSA-87 Verified in 550.08µs</span>
+  <span class="success">PQC Audit: ML-DSA-87 Verified in 550.08<span style="text-transform: lowercase;">µs</span></span>
   <span class="success">Sequencer: ZERO-BLOAT L1 EXECUTION CONFIRMED</span>
   TX Hash: <a href="https://sepolia-optimism.etherscan.io/tx/0x35b60638b72265ec8df03ab02a3569f39864e6c1253f56c17aa6ab41b0db7d61" target="_blank" class="hash">0x35b6...7d61</a>
+
+[INJECTION] -> Arbitrum Sepolia (ChainID: 421614)
+  <span style="color:#666;">Status: Intercepting Mempool...</span>
+  <span class="success">PQC Audit: ML-DSA-87 Verified in 290.01<span style="text-transform: lowercase;">µs</span></span>
+  <span class="success">Sequencer: ZERO-BLOAT L1 EXECUTION CONFIRMED</span>
+  TX Hash: <a href="https://sepolia.arbiscan.io/tx/0x1c9516853eacdca1d77128005814be3c2f651e8985dd7a131d2c3803d70e75f1" target="_blank" class="hash">0x1c95...75f1</a>
+
+[INJECTION] -> BNB Testnet (ChainID: 97)
+  <span style="color:#666;">Status: Intercepting Mempool...</span>
+  <span class="success">PQC Audit: ML-DSA-87 Verified in 361.45<span style="text-transform: lowercase;">µs</span></span>
+  <span class="success">Sequencer: ZERO-BLOAT L1 EXECUTION CONFIRMED</span>
+  TX Hash: <a href="https://testnet.bscscan.com/tx/0x5476355b1ccdd72c54d040f524da1c5c80b5834c5d24101e3224657a05eed9da" target="_blank" class="hash">0x5476...e9da</a>
+  [INJECTION] -> Mantle Sepolia (ChainID: 5003)
+  <span style="color:#666;">Status: Intercepting Mempool...</span>
+  <span class="success">PQC Audit: ML-DSA-87 Verified in 195.37<span style="text-transform: lowercase;">µs</span></span>
+  <span class="success">Sequencer: ZERO-BLOAT L1 EXECUTION CONFIRMED</span>
+  TX Hash: <a href="https://explorer.sepolia.mantle.xyz/tx/0x32ff16914fe3530e83c2641c8efd98037e6eb4e32803e6df80ed6a3edfdda3e8" target="_blank" class="hash">0x32ff...a3e8</a>
 
 ==========================================================================
 <span class="success">✓ OMNICHAIN CONCURRENT BROADCAST COMPLETE. ALL VECTORS SECURED.</span>
