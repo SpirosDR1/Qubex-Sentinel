@@ -8,27 +8,28 @@
     <meta name="description" content="Govern the Quantum Defense Layer. Execute microsecond NIST ML-DSA signature validation on consumer hardware. Verify our live Devnet Omnichain benchmarks.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;700&family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         :root {
             --cyan: #00E5FF;
             --bg: #000;
-            --card-bg: #080808;
-            --border: #1a1a1a;
+            --card-bg: #050505;
+            --border: #111;
             --text-main: #fff;
-            --text-dim: #ccc;
+            --text-dim: #a3a3a3;
         }
 
-        * { box-sizing: border-box; scroll-behavior: smooth; }
+        * { box-sizing: border-box; scroll-behavior: smooth; margin: 0; padding: 0; }
         
         body {
-            background-color: #050505;
-            margin: 0;
+            background-color: var(--bg);
             color: var(--text-main);
-            font-family: 'Urbanist', sans-serif;
+            font-family: 'Inter', sans-serif;
             overflow-x: hidden;
         }
+
+        h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; text-transform: uppercase; }
 
         .slide {
             min-height: 100vh;
@@ -37,9 +38,8 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding: 80px 20px;
+            padding: 100px 20px;
             position: relative;
-            background-color: var(--bg);
             border-bottom: 1px solid #111;
             overflow: hidden;
         }
@@ -51,89 +51,100 @@
         }
         .slide::after {
             content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
-            background: radial-gradient(circle at 50% 50%, transparent 0%, #000 95%); z-index: 0;
+            background: radial-gradient(circle at 50% 50%, transparent 0%, #000 90%); z-index: 0;
         }
         .slide > * { position: relative; z-index: 1; max-width: 1100px; width: 100%; }
 
-        h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; margin: 0; text-transform: uppercase; }
-        h1 { font-size: clamp(36px, 8vw, 84px); font-weight: 700; line-height: 1; }
-        h2 { font-size: clamp(28px, 5vw, 64px); letter-spacing: -1px; }
+        h1 { font-size: clamp(38px, 8vw, 84px); font-weight: 900; line-height: 1.1; letter-spacing: -2px; }
+        h2 { font-size: clamp(28px, 5vw, 54px); font-weight: 700; letter-spacing: -1px; }
         
-        .slide-title { font-size: clamp(18px, 4vw, 24px); font-weight: 400; margin-bottom: 40px; color: var(--cyan); letter-spacing: 2px; border-left: 3px solid var(--cyan); padding-left: 15px; }
-        .subtitle { font-size: 12px; color: #666; letter-spacing: 5px; margin-bottom: 20px; text-transform: uppercase; text-align: center; }
-        p { font-size: clamp(16px, 3vw, 20px); line-height: 1.6; color: var(--text-dim); }
+        .slide-title { font-size: clamp(16px, 3vw, 20px); font-weight: 700; margin-bottom: 40px; color: var(--cyan); letter-spacing: 2px; border-left: 2px solid var(--cyan); padding-left: 15px; }
+        .subtitle { font-size: 11px; color: #666; letter-spacing: 4px; margin-bottom: 20px; font-weight: 700; }
+        p { font-size: clamp(15px, 2.5vw, 18px); line-height: 1.7; color: var(--text-dim); }
         .highlight { color: var(--cyan); }
         
-        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 40px; }
-        .tile { background: var(--card-bg); border: 1px solid var(--border); padding: 30px; }
-        .tile h3 { font-size: 20px; margin-bottom: 15px; color: var(--cyan); }
-        .accent-line { width: 60px; height: 3px; background: var(--cyan); margin: 25px 0; }
-        .center .accent-line { margin: 25px auto; }
+        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 50px; }
+        .tile { background: var(--card-bg); border: 1px solid var(--border); padding: 40px 30px; border-radius: 4px; }
+        .tile h3 { font-size: 22px; margin-bottom: 15px; color: var(--cyan); }
+        .accent-line { width: 50px; height: 2px; background: var(--cyan); margin: 30px 0; }
+        .center .accent-line { margin: 30px auto; }
         
-        /* TERMINAL RESPONSIVENESS (THE MOST IMPORTANT FIX) */
+        /* THE INSTITUTIONAL TERMINAL */
         .terminal-window {
-            background: #090909; border: 1px solid #222; border-radius: 8px; width: 100%; margin: 20px 0; box-shadow: 0 10px 30px rgba(0, 229, 255, 0.05); overflow: hidden;
-            }
-        .terminal-header { background: #111; padding: 12px 15px; display: flex; align-items: center; border-bottom: 1px solid #222; justify-content: space-between; }
-        .terminal-header-left { display: flex; align-items: center; }
-        .terminal-header .dot { width: 10px; height: 10px; border-radius: 50%; margin-right: 6px; }
+            background: #030303; border: 1px solid #1a1a1a; border-radius: 6px; width: 100%; margin: 30px 0; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5); overflow: hidden;
+        }
+        .terminal-header { background: #0a0a0a; padding: 12px 15px; display: flex; align-items: center; border-bottom: 1px solid #1a1a1a; }
+        .terminal-header .dot { width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; }
         .dot.red { background: #ff5f56; } .dot.yellow { background: #ffbd2e; } .dot.green { background: #27c93f; }
-        .terminal-header .title { color: #555; font-family: monospace; font-size: 10px; margin-left: 10px; letter-spacing: 1px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 200px; }
+        .terminal-header .title { color: #555; font-family: monospace; font-size: 11px; margin-left: 10px; letter-spacing: 1px; }
         
-        .terminal-body { padding: 15px; overflow-x: auto; -webkit-overflow-scrolling: touch; }
-        .terminal-body pre { margin: 0; font-family: 'Courier New', Courier, monospace; color: var(--text-dim); font-size: 11px; line-height: 1.5; min-width: 600px; } /* min-width ensures horizontal scroll instead of ugly breaks */
+        .terminal-body { padding: 20px; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+        
+        /* CUSTOM SCROLLBAR FOR TERMINAL */
+        .terminal-body::-webkit-scrollbar { height: 6px; }
+        .terminal-body::-webkit-scrollbar-track { background: #030303; }
+        .terminal-body::-webkit-scrollbar-thumb { background: #333; border-radius: 3px; }
+        .terminal-body::-webkit-scrollbar-thumb:hover { background: var(--cyan); }
+
+        .terminal-body pre { margin: 0; font-family: 'Courier New', monospace; color: #aaa; font-size: 12px; line-height: 1.6; min-width: 700px; } 
         .terminal-body .cmd { color: var(--cyan); font-weight: bold; }
         .terminal-body .success { color: #27c93f; }
-        .terminal-body .hash { color: #4da6ff; text-decoration: underline; word-break: break-all; }
+        .terminal-body .hash { color: #4da6ff; text-decoration: none; }
+        .terminal-body .hash:hover { text-decoration: underline; }
 
-        .chart-bar { margin-bottom: 25px; }
-        .bar-label { font-family: 'Space Grotesk'; font-size: 12px; margin-bottom: 8px; color: #888; display: flex; flex-direction: column; gap: 5px; }
-        @media (min-width: 600px) { .bar-label { flex-direction: row; justify-content: space-between; font-size: 14px; } }
-        .bar-outer { background: #111; height: 12px; border-radius: 2px; width: 100%; }
-        .bar-inner { height: 100%; background: var(--cyan); box-shadow: 0 0 15px rgba(0, 229, 255, 0.3); }
+        .chart-bar { margin-bottom: 30px; }
+        .bar-label { font-family: 'Space Grotesk', sans-serif; font-size: 13px; margin-bottom: 10px; color: #888; display: flex; flex-direction: column; gap: 5px; text-transform: uppercase; letter-spacing: 1px; }
+        @media (min-width: 600px) { .bar-label { flex-direction: row; justify-content: space-between; } }
+        .bar-outer { background: #111; height: 8px; border-radius: 4px; width: 100%; overflow: hidden; }
+        .bar-inner { height: 100%; background: var(--cyan); box-shadow: 0 0 15px rgba(0, 229, 255, 0.4); }
 
-        .btn-access { font-family: 'Space Grotesk', sans-serif; color: var(--cyan); background-color: transparent; text-decoration: none; border: 2px solid var(--cyan); padding: 15px 30px; border-radius: 4px; display: inline-block; transition: all 0.3s ease; font-weight: 700; font-size: 14px; letter-spacing: 1px; cursor: pointer; margin: 10px; text-align: center; }
-        .btn-access:hover { background-color: var(--cyan); color: #000; box-shadow: 0 0 20px rgba(0, 229, 255, 0.4); }
-
-        .slide-footer-links { margin-top: 50px; display: flex; flex-direction: column; align-items: center; gap: 20px; border-top: 1px solid #222; padding-top: 30px; width: 100%; max-width: 600px; margin-left: auto; margin-right: auto; }
-        @media (min-width: 600px) { .slide-footer-links { flex-direction: row; justify-content: center; flex-wrap: wrap; gap: 40px; } }
-        .slide-footer-links a { color: #666; text-decoration: none; font-family: 'Space Grotesk', sans-serif; font-size: 14px; letter-spacing: 1px; display: flex; align-items: center; }
-        .slide-footer-links a:hover { color: var(--cyan); }
-        .slide-footer-links i { margin-right: 8px; font-size: 16px; }
+        .btn-container { display: flex; flex-direction: column; align-items: center; width: 100%; gap: 15px; margin-top: 30px; }
+        @media (min-width: 600px) { .btn-container { flex-direction: row; justify-content: center; } }
         
-        .header-top { position: absolute; top: 20px; left: 20px; font-family: 'Space Grotesk'; font-size: 16px; font-weight: 700; z-index: 10; }
-        @media (min-width: 768px) { .header-top { top: 30px; left: 50px; font-size: 20px; } }
+        .btn-access { font-family: 'Space Grotesk', sans-serif; color: var(--cyan); background-color: transparent; text-decoration: none; border: 1px solid var(--cyan); padding: 16px 30px; border-radius: 2px; display: inline-block; transition: all 0.3s ease; font-weight: 700; font-size: 13px; letter-spacing: 1.5px; cursor: pointer; text-align: center; width: 100%; max-width: 280px; }
+        .btn-access:hover { background-color: var(--cyan); color: #000; box-shadow: 0 0 20px rgba(0, 229, 255, 0.3); }
+
+        .slide-footer-links { margin-top: 60px; display: flex; flex-direction: column; align-items: center; gap: 20px; border-top: 1px solid #111; padding-top: 40px; width: 100%; }
+        @media (min-width: 768px) { .slide-footer-links { flex-direction: row; justify-content: center; gap: 40px; } }
+        .slide-footer-links a { color: #666; text-decoration: none; font-family: 'Space Grotesk', sans-serif; font-size: 12px; letter-spacing: 1px; display: flex; align-items: center; transition: 0.3s; text-transform: uppercase; }
+        .slide-footer-links a:hover { color: var(--cyan); }
+        .slide-footer-links i { margin-right: 10px; font-size: 14px; }
+        
+        .header-top { position: absolute; top: 30px; left: 30px; font-family: 'Space Grotesk', sans-serif; font-size: 18px; font-weight: 900; z-index: 10; letter-spacing: 1px; }
+        @media (min-width: 768px) { .header-top { top: 40px; left: 50px; font-size: 22px; } }
         .header-top a { color: #fff; text-decoration: none; }
         .header-top span { color: var(--cyan); }
-        .nav-hint { position: absolute; bottom: 20px; right: 20px; font-size: 10px; color: #444; z-index: 100; font-family: 'Space Grotesk'; text-align: right;}
-
-        .btn-container { display: flex; flex-direction: column; align-items: center; width: 100%; }
-        @media (min-width: 600px) { .btn-container { flex-direction: row; justify-content: center; } }
+        .nav-hint { position: absolute; bottom: 30px; right: 30px; font-size: 10px; color: #555; z-index: 10; font-family: 'Space Grotesk', sans-serif; text-align: right; font-weight: 700; letter-spacing: 2px; }
+        
+        @media (max-width: 768px) {
+            .slide { padding: 120px 20px 60px; }
+            .header-top { width: 100%; text-align: center; left: 0; top: 25px; }
+            .nav-hint { display: none; }
+        }
     </style>
 </head>
 <body>
 
     <div class="header-top"><a href="/">QUBEX <span>SENTINEL</span></a></div>
     <div class="nav-hint">SCROLL TO EXPLORE<br>THE DEPIN</div>
+    
     <section class="slide">
         <div style="text-align: center; width: 100%;">
             <div class="subtitle">DECENTRALIZATION IS THE ULTIMATE SECURITY</div>
-            <h1>GOVERN THE QUANTUM <span class="highlight">DEFENSE LAYER</span></h1>
-            <p style="margin-top: 20px; color: #888; max-width: 700px; margin-left: auto; margin-right: auto;">Power the AI Chaos Engine and execute post-quantum cryptography from your own hardware.
-                Secure Web3 liquidity, earn network rewards, and become a foundational brick of the quantum-safe internet.</p>
-            <div class="accent-line" style="margin: 30px auto;"></div>
+            <h1>GOVERN THE QUANTUM <br><span class="highlight">DEFENSE LAYER</span></h1>
+            <p style="margin-top: 25px; color: #888; max-width: 750px; margin-left: auto; margin-right: auto;">Power the AI Chaos Engine and execute post-quantum cryptography from your own hardware. Secure Web3 liquidity, earn network rewards, and become a foundational brick of the quantum-safe internet.</p>
+            
             <div class="btn-container">
-                <a href="#" class="btn-access" style="width: 250px;">READ NODEOMICS DRAFT</a>
-                <a href="https://forms.gle/hmUdBiQz3PT2x8TT7" target="_blank" class="btn-access" style="color: #fff; border-color: #333; width: 250px;">JOIN WAITLIST</a>
+                <a href="#" class="btn-access">READ NODEOMICS DRAFT</a>
+                <a href="https://forms.gle/hmUdBiQz3PT2x8TT7" target="_blank" class="btn-access" style="color: #fff; border-color: #333;">JOIN WAITLIST</a>
             </div>
         </div>
     </section>
 
     <section class="slide">
         <div style="text-align: center; width: 100%;" class="center">
-            <div class="subtitle">The DePIN Workflow</div>
+            <div class="subtitle">THE DEPIN WORKFLOW</div>
             <h2>HOW TO BECOME A <span class="highlight">SENTINEL</span></h2>
-            <div class="accent-line"></div>
         </div>
         <div class="grid-3">
             <div class="tile">
@@ -152,30 +163,30 @@
     </section>
 
     <section class="slide">
-        <h2 class="slide-title">Hardware Reality (Microsecond Benchmark)</h2>
-        <div style="width: 100%;">
+        <h2 class="slide-title">HARDWARE REALITY (MICROSECOND BENCHMARK)</h2>
+        <div style="width: 100%; margin-top: 40px;">
             <div class="chart-bar">
                 <div class="bar-label"><span>Legacy ECDSA Baseline (Slow)</span> <span>~ 2,000,000 ns</span></div>
-                <div class="bar-outer"><div class="bar-inner" style="width: 80%; background: #555;"></div></div>
+                <div class="bar-outer"><div class="bar-inner" style="width: 100%; background: #333; box-shadow: none;"></div></div>
             </div>
             <div class="chart-bar">
                 <div class="bar-label"><span>QUBEX DePIN Validation (Consumer CPU)</span> <span class="highlight">175µs - 791µs</span></div>
-                <div class="bar-outer"><div class="bar-inner" style="width: 15%;"></div></div>
+                <div class="bar-outer"><div class="bar-inner" style="width: 12%;"></div></div>
             </div>
         </div>
-        <p style="text-align: center; margin-top: 40px; font-style: italic; font-size: clamp(14px, 4vw, 18px);">
-            The industry believed Post-Quantum security required heavy enterprise data centers. We proved them wrong. Our Devnet logs reflect <span class="highlight">microsecond verification latency on standard consumer-grade processors</span>.
+        <p style="text-align: center; margin-top: 50px; font-weight: 300;">
+            The industry believed Post-Quantum security required heavy enterprise data centers. We proved them wrong. Our Devnet logs reflect <span class="highlight" style="font-weight: 600;">microsecond verification latency on standard consumer-grade processors</span>.
         </p>
     </section>
 
     <section class="slide" id="proof">
-        <h2 class="slide-title">Omnichain Ground Truth (Devnet Logs)</h2>
+        <h2 class="slide-title">OMNICHAIN GROUND TRUTH (DEVNET LOGS)</h2>
         <div class="terminal-window">
             <div class="terminal-header">
-                <div class="terminal-header-left">
+                <div style="display: flex;">
                     <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
-                    <span class="title">qubex-chaos-engine ~ ./broadcaster --env=live</span>
                 </div>
+                <span class="title">qubex-chaos-engine ~ ./broadcaster --env=live</span>
             </div>
             <div class="terminal-body">
 <pre>
@@ -184,53 +195,36 @@ EXECUTION MODE: CONCURRENT (GOROUTINES ACTIVE)
 ==========================================================================
 
 [MASTER NODE] 0xbd8355B1144a21769dD8bcF1F612966fc9a83d75
+
 [INJECTION] -> ETH Sepolia (ChainID: 11155111)
-  <span style="color:#888;">Status: Intercepting Mempool...</span>
+  <span style="color:#666;">Status: Intercepting Mempool...</span>
   <span class="success">PQC Audit: ML-DSA-87 Verified in 175.65µs</span>
   <span class="success">Sequencer: ZERO-BLOAT L1 EXECUTION CONFIRMED</span>
-  TX Hash: <a href="https://sepolia.etherscan.io/tx/0xc4101045e196bcf1374933cc7ea30f283706f9008b4c596f01aa7a6a5b6ce24a" target="_blank" class="hash">https://sepolia.etherscan.io/tx/0xc4101045e196bcf1374933cc7ea30f283706f9008b4c596f01aa7a6a5b6ce24a</a>
+  TX Hash: <a href="https://sepolia.etherscan.io/tx/0xc4101045e196bcf1374933cc7ea30f283706f9008b4c596f01aa7a6a5b6ce24a" target="_blank" class="hash">0xc410...ce24a</a>
 
 [INJECTION] -> Polygon Amoy (ChainID: 80002)
-  <span style="color:#888;">Status: Intercepting Mempool...</span>
+  <span style="color:#666;">Status: Intercepting Mempool...</span>
   <span class="success">PQC Audit: ML-DSA-87 Verified in 461.59µs</span>
   <span class="success">Sequencer: ZERO-BLOAT L1 EXECUTION CONFIRMED</span>
-  TX Hash: <a href="https://amoy.polygonscan.com/tx/0x4af67e3ff15f79f38d899933405c4d5ae314c5763cc0f6b9de5cdc371bea4c20" target="_blank" class="hash">https://amoy.polygonscan.com/tx/0x4af67e3ff15f79f38d899933405c4d5ae314c5763cc0f6b9de5cdc371bea4c20</a>
+  TX Hash: <a href="https://amoy.polygonscan.com/tx/0x4af67e3ff15f79f38d899933405c4d5ae314c5763cc0f6b9de5cdc371bea4c20" target="_blank" class="hash">0x4af6...4c20</a>
 
 [INJECTION] -> Base Sepolia (ChainID: 84532)
-  <span style="color:#888;">Status: Intercepting Mempool...</span>
+  <span style="color:#666;">Status: Intercepting Mempool...</span>
   <span class="success">PQC Audit: ML-DSA-87 Verified in 466.89µs</span>
   <span class="success">Sequencer: ZERO-BLOAT L1 EXECUTION CONFIRMED</span>
-  TX Hash: <a href="https://sepolia.basescan.org/tx/0xd75fd4c88c46b66e9b7d9d8b3f5c45063631b4f00dbd10229785853eab3e7c33" target="_blank" class="hash">https://sepolia.basescan.org/tx/0xd75fd4c88c46b66e9b7d9d8b3f5c45063631b4f00dbd10229785853eab3e7c33</a>
+  TX Hash: <a href="https://sepolia.basescan.org/tx/0xd75fd4c88c46b66e9b7d9d8b3f5c45063631b4f00dbd10229785853eab3e7c33" target="_blank" class="hash">0xd75f...7c33</a>
 
 [INJECTION] -> Scroll Sepolia (ChainID: 534351)
-  <span style="color:#888;">Status: Intercepting Mempool...</span>
+  <span style="color:#666;">Status: Intercepting Mempool...</span>
   <span class="success">PQC Audit: ML-DSA-87 Verified in 590.69µs</span>
   <span class="success">Sequencer: ZERO-BLOAT L1 EXECUTION CONFIRMED</span>
-  TX Hash: <a href="https://sepolia.scrollscan.com/tx/0x54021e02d9ac44aa310f65eb94c531bae99c974b7e416f0312c3bf37d56b6199" target="_blank" class="hash">https://sepolia.scrollscan.com/tx/0x54021e02d9ac44aa310f65eb94c531bae99c974b7e416f0312c3bf37d56b6199</a>
+  TX Hash: <a href="https://sepolia.scrollscan.com/tx/0x54021e02d9ac44aa310f65eb94c531bae99c974b7e416f0312c3bf37d56b6199" target="_blank" class="hash">0x5402...6199</a>
 
 [INJECTION] -> Optimism Sepolia (ChainID: 11155420)
-  <span style="color:#888;">Status: Intercepting Mempool...</span>
+  <span style="color:#666;">Status: Intercepting Mempool...</span>
   <span class="success">PQC Audit: ML-DSA-87 Verified in 550.08µs</span>
   <span class="success">Sequencer: ZERO-BLOAT L1 EXECUTION CONFIRMED</span>
-  TX Hash: <a href="https://sepolia-optimism.etherscan.io/tx/0x35b60638b72265ec8df03ab02a3569f39864e6c1253f56c17aa6ab41b0db7d61" target="_blank" class="hash">https://sepolia-optimism.etherscan.io/tx/0x35b60638b72265ec8df03ab02a3569f39864e6c1253f56c17aa6ab41b0db7d61</a>
-
-[INJECTION] -> Arbitrum Sepolia (ChainID: 421614)
-  <span style="color:#888;">Status: Intercepting Mempool...</span>
-  <span class="success">PQC Audit: ML-DSA-87 Verified in 791.01µs</span>
-  <span class="success">Sequencer: ZERO-BLOAT L1 EXECUTION CONFIRMED</span>
-  TX Hash: <a href="https://sepolia.arbiscan.io/tx/0x1c9516853eacdca1d77128005814be3c2f651e8985dd7a131d2c3803d70e75f1" target="_blank" class="hash">https://sepolia.arbiscan.io/tx/0x1c9516853eacdca1d77128005814be3c2f651e8985dd7a131d2c3803d70e75f1</a>
-
-[INJECTION] -> BNB Testnet (ChainID: 97)
-  <span style="color:#888;">Status: Intercepting Mempool...</span>
-  <span class="success">PQC Audit: ML-DSA-87 Verified in 361.45µs</span>
-  <span class="success">Sequencer: ZERO-BLOAT L1 EXECUTION CONFIRMED</span>
-  TX Hash: <a href="https://testnet.bscscan.com/tx/0x5476355b1ccdd72c54d040f524da1c5c80b5834c5d24101e3224657a05eed9da" target="_blank" class="hash">https://testnet.bscscan.com/tx/0x5476355b1ccdd72c54d040f524da1c5c80b5834c5d24101e3224657a05eed9da</a>
-
-[INJECTION] -> Mantle Sepolia (ChainID: 5003)
-  <span style="color:#888;">Status: Intercepting Mempool...</span>
-  <span class="success">PQC Audit: ML-DSA-87 Verified in 195.37µs</span>
-  <span class="success">Sequencer: ZERO-BLOAT L1 EXECUTION CONFIRMED</span>
-  TX Hash: <a href="https://explorer.sepolia.mantle.xyz/tx/0x32ff16914fe3530e83c2641c8efd98037e6eb4e32803e6df80ed6a3edfdda3e8" target="_blank" class="hash">https://explorer.sepolia.mantle.xyz/tx/0x32ff16914fe3530e83c2641c8efd98037e6eb4e32803e6df80ed6a3edfdda3e8</a>
+  TX Hash: <a href="https://sepolia-optimism.etherscan.io/tx/0x35b60638b72265ec8df03ab02a3569f39864e6c1253f56c17aa6ab41b0db7d61" target="_blank" class="hash">0x35b6...7d61</a>
 
 ==========================================================================
 <span class="success">✓ OMNICHAIN CONCURRENT BROADCAST COMPLETE. ALL VECTORS SECURED.</span>
@@ -242,15 +236,15 @@ EXECUTION MODE: CONCURRENT (GOROUTINES ACTIVE)
     <section class="slide">
         <div style="text-align: center; width: 100%;">
             <div class="subtitle">DON'T TRUST. VERIFY.</div>
-            <h2 style="font-size: clamp(36px, 6vw, 64px);">THE CODE IS <span class="highlight">LAW</span></h2>
-            <div style="margin-top: 40px;">
+            <h2 style="font-size: clamp(38px, 6vw, 72px);">THE CODE IS <span class="highlight">LAW</span></h2>
+            <div style="margin-top: 50px;">
                 <a href="https://github.com/SpirosDR1/Qubex-PQC-Benchmarks" target="_blank" class="btn-access">AUDIT REPOSITORY</a>
             </div>
             
             <div class="slide-footer-links">
-                <a href="mailto:spyridongagr@qubexsentinel.com"><i class="fa-solid fa-envelope"></i> spyridongagr@qubexsentinel.com</a>
-                <a href="https://x.com/QUBEX_SENTINEL" target="_blank"><i class="fa-brands fa-x-twitter"></i> @QUBEX_SENTINEL</a>
-                <a href="https://www.linkedin.com/company/qubex-sentinel/" target="_blank"><i class="fa-brands fa-linkedin"></i> Qubex Sentinel</a>
+                <a href="mailto:spyridongagr@qubexsentinel.com"><i class="fa-solid fa-envelope"></i> Enterprise Email</a>
+                <a href="https://x.com/QUBEX_SENTINEL" target="_blank"><i class="fa-brands fa-x-twitter"></i> Official X</a>
+                <a href="https://www.linkedin.com/company/qubex-sentinel/" target="_blank"><i class="fa-brands fa-linkedin"></i> Protocol LinkedIn</a>
                 <a href="https://www.linkedin.com/in/spyridon-g-9858b03a0/" target="_blank"><i class="fa-brands fa-linkedin-in"></i> Founder</a>
             </div>
         </div>
