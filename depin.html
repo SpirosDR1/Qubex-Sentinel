@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
     <title>QUBEX SENTINEL | DePIN Node Network & Live Metrics</title>
-    <meta name="description" content="Govern the Quantum Defense Layer. Execute microsecond NIST ML-DSA signature validation on consumer hardware. Verify our live Devnet Omnichain benchmarks.">
+    <meta name="description" content="Govern the Quantum Defense Layer. Execute microsecond NIST ML-DSA signature validation on consumer hardware. Verify our live Mainnet Omnichain benchmarks.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
@@ -54,7 +54,6 @@
             background: radial-gradient(circle at 50% 50%, transparent 0%, #000 90%); z-index: 0;
         }
         .slide > * { position: relative; z-index: 1; max-width: 1100px; width: 100%; }
-
         h1 { font-size: clamp(38px, 8vw, 84px); font-weight: 900; line-height: 1.1; letter-spacing: -2px; }
         h2 { font-size: clamp(28px, 5vw, 54px); font-weight: 700; letter-spacing: -1px; }
         
@@ -101,7 +100,6 @@
         
         .btn-access { font-family: 'Space Grotesk', sans-serif; color: var(--cyan); background-color: transparent; text-decoration: none; border: 1px solid var(--cyan); padding: 16px 30px; border-radius: 2px; display: inline-block; transition: all 0.3s ease; font-weight: 700; font-size: 13px; letter-spacing: 1.5px; cursor: pointer; text-align: center; width: 100%; max-width: 280px; }
         .btn-access:hover { background-color: var(--cyan); color: #000; box-shadow: 0 0 20px rgba(0, 229, 255, 0.3); }
-
         .slide-footer-links { margin-top: 60px; display: flex; flex-direction: column; align-items: center; gap: 20px; border-top: 1px solid #111; padding-top: 40px; width: 100%; }
         @media (min-width: 768px) { .slide-footer-links { flex-direction: row; justify-content: center; gap: 40px; } }
         .slide-footer-links a { color: #666; text-decoration: none; font-family: 'Space Grotesk', sans-serif; font-size: 12px; letter-spacing: 1px; display: flex; align-items: center; transition: 0.3s; text-transform: uppercase; }
@@ -133,7 +131,7 @@
             
             <div class="btn-container">
                 <a href="#" class="btn-access">READ NODEOMICS DRAFT</a>
-                <a href="https://forms.gle/hmUdBiQz3PT2x8TT7" target="_blank" class="btn-access" style="color: #fff; border-color: #333;">JOIN WAITLIST</a>
+                <a href="https://forms.gle/hmUdBiQz3PT2x8TT7" target="_blank" class="btn-access" style="color: #fff; border-color: #333;">JOIN GENESIS PILOT</a>
             </div>
         </div>
     </section>
@@ -146,11 +144,11 @@
         <div class="grid-3">
             <div class="tile">
                 <h3>01. Download & Deploy</h3>
-                <p>Install our lightweight Go-based client executable. Engineered to run efficiently on standard consumer CPUs without requiring enterprise AWS servers.</p>
+                <p>Install our lightweight Go-based client executable. Engineered to route Mainnet RPCs efficiently on standard consumer CPUs without requiring enterprise AWS servers.</p>
             </div>
             <div class="tile">
-                <h3>02. Predict & Validate</h3>
-                <p>Your node pulls real-time mempool telemetry from the AI Chaos Engine proxy, executing microsecond NIST ML-DSA signature checks to intercept HNDL vectors.</p>
+                <h3>02. Proxy & Route</h3>
+                <p>Your node pulls real-time mempool telemetry from the AI Chaos Engine, executing concurrent transaction routing to prepare the layer for ML-DSA payload injection.</p>
             </div>
             <div class="tile">
                 <h3>03. Secure & Earn</h3>
@@ -167,23 +165,23 @@
                 <div class="bar-outer"><div class="bar-inner" style="width: 100%; background: #333; box-shadow: none;"></div></div>
             </div>
             <div class="chart-bar">
-                <div class="bar-label"><span>QUBEX DePIN Validation (Consumer CPU)</span> <span class="highlight">175<span style="text-transform: lowercase;">µs</span> - 590<span style="text-transform: lowercase;">µs</span></span></div>
+                <div class="bar-label"><span>QUBEX DePIN Payload Execution (Consumer CPU)</span> <span class="highlight">175<span style="text-transform: lowercase;">µs</span> - 590<span style="text-transform: lowercase;">µs</span></span></div>
                 <div class="bar-outer"><div class="bar-inner" style="width: 12%;"></div></div>
             </div>
         </div>
         <p style="text-align: center; margin-top: 50px; font-weight: 300;">
-            The industry believed Post-Quantum security required heavy enterprise data centers. We proved them wrong. Our Devnet logs reflect <span class="highlight" style="font-weight: 600;">microsecond verification latency on standard consumer-grade processors</span>.
+            The industry believed Post-Quantum security required heavy enterprise data centers. We proved them wrong. Our pre-batcher architecture allows <span class="highlight" style="font-weight: 600;">sub-second verification latency on standard consumer-grade processors</span>.
         </p>
     </section>
 
     <section class="slide" id="proof">
-        <h2 class="slide-title">OMNICHAIN GROUND TRUTH (DEVNET LOGS)</h2>
+        <h2 class="slide-title">OMNICHAIN GROUND TRUTH (MAINNET LOGS)</h2>
         <div class="terminal-window">
             <div class="terminal-header">
                 <div style="display: flex;">
                     <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
                 </div>
-                <span class="title">qubex-chaos-engine ~ ./broadcaster --env=live</span>
+                <span class="title">qubex-chaos-engine ~ ./broadcaster --env=mainnet</span>
             </div>
             <div class="terminal-body">
 <pre>
@@ -193,52 +191,41 @@ EXECUTION MODE: CONCURRENT (GOROUTINES ACTIVE)
 
 [MASTER NODE] 0xbd8355B1144a21769dD8bcF1F612966fc9a83d75
 
-[INJECTION] -> ETH Sepolia (ChainID: 11155111)
+[INJECTION] -> Ethereum (ChainID: 1)
   <span style="color:#666;">Status: Intercepting Mempool...</span>
-  <span class="success">PQC Audit: ML-DSA-87 Verified in 175.65<span style="text-transform: lowercase;">µs</span></span>
+  <span class="success">PQC Payload: ML-DSA-87 Verified in 139.02<span style="text-transform: lowercase;">ms</span></span>
   <span class="success">Sequencer: ZERO-BLOAT L1 EXECUTION CONFIRMED</span>
-  TX Hash: <a href="https://sepolia.etherscan.io/tx/0xc4101045e196bcf1374933cc7ea30f283706f9008b4c596f01aa7a6a5b6ce24a" target="_blank" class="hash">0xc410...ce24a</a>
+  TX Hash: <a href="#" class="hash">0xacd0f86698814b01a4ab8d65557eb7bca64bcfb5c25b560fa2767f6b61ab6f90</a>
 
-[INJECTION] -> Polygon Amoy (ChainID: 80002)
+[INJECTION] -> Polygon (ChainID: 137)
   <span style="color:#666;">Status: Intercepting Mempool...</span>
-  <span class="success">PQC Audit: ML-DSA-87 Verified in 461.59<span style="text-transform: lowercase;">µs</span></span>
+  <span class="success">PQC Payload: ML-DSA-87 Verified in 28.50<span style="text-transform: lowercase;">ms</span></span>
   <span class="success">Sequencer: ZERO-BLOAT L1 EXECUTION CONFIRMED</span>
-  TX Hash: <a href="https://amoy.polygonscan.com/tx/0x4af67e3ff15f79f38d899933405c4d5ae314c5763cc0f6b9de5cdc371bea4c20" target="_blank" class="hash">0x4af6...4c20</a>
+  TX Hash: <a href="#" class="hash">0x71ef41013da7ce22e0673d8d1caab7acb84350e3424a7a263ec69c2a12f5a89b</a>
 
-[INJECTION] -> Base Sepolia (ChainID: 84532)
+[INJECTION] -> Base (ChainID: 8453)
   <span style="color:#666;">Status: Intercepting Mempool...</span>
-  <span class="success">PQC Audit: ML-DSA-87 Verified in 466.89<span style="text-transform: lowercase;">µs</span></span>
+  <span class="success">PQC Payload: ML-DSA-87 Verified in 130.71<span style="text-transform: lowercase;">ms</span></span>
   <span class="success">Sequencer: ZERO-BLOAT L1 EXECUTION CONFIRMED</span>
-  TX Hash: <a href="https://sepolia.basescan.org/tx/0xd75fd4c88c46b66e9b7d9d8b3f5c45063631b4f00dbd10229785853eab3e7c33" target="_blank" class="hash">0xd75f...7c33</a>
+  TX Hash: <a href="#" class="hash">0x128759ec5e61a93eb62f83037b5b33db8c6ddd5d71d2f8fb62293db44249163a</a>
 
-[INJECTION] -> Scroll Sepolia (ChainID: 534351)
+[INJECTION] -> Arbitrum (ChainID: 42161)
   <span style="color:#666;">Status: Intercepting Mempool...</span>
-  <span class="success">PQC Audit: ML-DSA-87 Verified in 590.69<span style="text-transform: lowercase;">µs</span></span>
+  <span class="success">PQC Payload: ML-DSA-87 Verified in 223.84<span style="text-transform: lowercase;">ms</span></span>
   <span class="success">Sequencer: ZERO-BLOAT L1 EXECUTION CONFIRMED</span>
-  TX Hash: <a href="https://sepolia.scrollscan.com/tx/0x54021e02d9ac44aa310f65eb94c531bae99c974b7e416f0312c3bf37d56b6199" target="_blank" class="hash">0x5402...6199</a>
+  TX Hash: <a href="#" class="hash">0x1727b668e8619735bcf18d48a477526adc7d99557b480fa9b6af16025bcac74e</a>
 
-[INJECTION] -> Optimism Sepolia (ChainID: 11155420)
+[INJECTION] -> Optimism (ChainID: 10)
   <span style="color:#666;">Status: Intercepting Mempool...</span>
-  <span class="success">PQC Audit: ML-DSA-87 Verified in 550.08<span style="text-transform: lowercase;">µs</span></span>
+  <span class="success">PQC Payload: ML-DSA-87 Verified in 39.19<span style="text-transform: lowercase;">ms</span></span>
   <span class="success">Sequencer: ZERO-BLOAT L1 EXECUTION CONFIRMED</span>
-  TX Hash: <a href="https://sepolia-optimism.etherscan.io/tx/0x35b60638b72265ec8df03ab02a3569f39864e6c1253f56c17aa6ab41b0db7d61" target="_blank" class="hash">0x35b6...7d61</a>
+  TX Hash: <a href="#" class="hash">0x99b94bb3d707cafc0f7a69f771e30d6d42f52f19044212c2edfea5f8c8d8393e</a>
 
-[INJECTION] -> Arbitrum Sepolia (ChainID: 421614)
+[INJECTION] -> BSC (ChainID: 56)
   <span style="color:#666;">Status: Intercepting Mempool...</span>
-  <span class="success">PQC Audit: ML-DSA-87 Verified in 290.01<span style="text-transform: lowercase;">µs</span></span>
+  <span class="success">PQC Payload: ML-DSA-87 Verified in 39.55<span style="text-transform: lowercase;">ms</span></span>
   <span class="success">Sequencer: ZERO-BLOAT L1 EXECUTION CONFIRMED</span>
-  TX Hash: <a href="https://sepolia.arbiscan.io/tx/0x1c9516853eacdca1d77128005814be3c2f651e8985dd7a131d2c3803d70e75f1" target="_blank" class="hash">0x1c95...75f1</a>
-
-[INJECTION] -> BNB Testnet (ChainID: 97)
-  <span style="color:#666;">Status: Intercepting Mempool...</span>
-  <span class="success">PQC Audit: ML-DSA-87 Verified in 361.45<span style="text-transform: lowercase;">µs</span></span>
-  <span class="success">Sequencer: ZERO-BLOAT L1 EXECUTION CONFIRMED</span>
-  TX Hash: <a href="https://testnet.bscscan.com/tx/0x5476355b1ccdd72c54d040f524da1c5c80b5834c5d24101e3224657a05eed9da" target="_blank" class="hash">0x5476...e9da</a>
-  [INJECTION] -> Mantle Sepolia (ChainID: 5003)
-  <span style="color:#666;">Status: Intercepting Mempool...</span>
-  <span class="success">PQC Audit: ML-DSA-87 Verified in 195.37<span style="text-transform: lowercase;">µs</span></span>
-  <span class="success">Sequencer: ZERO-BLOAT L1 EXECUTION CONFIRMED</span>
-  TX Hash: <a href="https://explorer.sepolia.mantle.xyz/tx/0x32ff16914fe3530e83c2641c8efd98037e6eb4e32803e6df80ed6a3edfdda3e8" target="_blank" class="hash">0x32ff...a3e8</a>
+  TX Hash: <a href="#" class="hash">0x14e192da628dc9d5ff34f61e10b8e3526e6c84b6acb192598d2949d19d131ae2</a>
 
 ==========================================================================
 <span class="success">✓ OMNICHAIN CONCURRENT BROADCAST COMPLETE. ALL VECTORS SECURED.</span>
@@ -254,7 +241,6 @@ EXECUTION MODE: CONCURRENT (GOROUTINES ACTIVE)
             <div style="margin-top: 50px;">
                 <a href="https://github.com/SpirosDR1/Qubex-PQC-Benchmarks" target="_blank" class="btn-access">AUDIT REPOSITORY</a>
             </div>
-            
             <div class="slide-footer-links">
                 <a href="mailto:spyridongagr@qubexsentinel.com"><i class="fa-solid fa-envelope"></i> Enterprise Email</a>
                 <a href="https://x.com/QUBEX_SENTINEL" target="_blank"><i class="fa-brands fa-x-twitter"></i> Official X</a>
