@@ -1,34 +1,28 @@
-# QUBEX Sentinel | OmniChain Infrastructure Portals
+# QUBEX SENTINEL | Web3 Infrastructure Portals
 
-The 1st AI-Driven Post-Quantum DePIN.  
-This repository hosts the production environment for QUBEX Sentinel's public-facing architecture and DePIN governance interfaces.
+The 1st AI-Driven Post-Quantum DePIN. 
+This repository hosts the production environment code for QUBEX Sentinel's public-facing architecture and DePIN governance interfaces.
 
 > Primary Mission: Natively shielding high-TVL L1 Settlement Layers, L2 Sequencers, and Cross-Chain Bridges from "Harvest Now, Decrypt Later" (HNDL) vectors. Zero integration friction. Zero L1 calldata overhead.
 
----
+## Live Portals & Interfaces
 
-### Live Portals & Interfaces
+* Main Infrastructure Portal: [qubexsentinel.com](https://qubexsentinel.com) *(The AI-Driven Post-Quantum Shield)*
 
-*   Main Infrastructure Portal: [qubexsentinel.com](https://qubexsentinel.com) *(The AI-Driven Post-Quantum Shield)*
+* Sentinel Node Network: [qubexsentinel.com/depin](https://qubexsentinel.com/depin) *(DePIN Governance & Node Deployment)*
 
-*   Sentinel Node Network: [qubexsentinel.com/depin](https://qubexsentinel.com/depin) *(DePIN Governance & Node Deployment)*
+## Core Architecture (Mainnet Status)
 
----
+QUBEX has successfully deployed its decoupled pre-batcher routing layer across Tier-1 EVM Mainnets. This UI repository reflects the front-end access points for our live routing engines.
 
-### Current Execution Protocol (Live Devnet Logs)
-
-Following our latest aggressive Devnet stress test, QUBEX has successfully verified 2,200,000+ concurrent ML-DSA-87 operations across 8 EVM ecosystems (6 Tier-1 L2 Rollups + 2 L1 Settlement Layers).
-
-| Performance Metric | Devnet Verified Value | Notes |
+| Architectural Metric | Mainnet Verified Value | Technical Notes |
 | :--- | :--- | :--- |
-| Verification Latency | 175µs - 590µs | Microsecond precision executing NIST Level 5 cryptography. |
+| Routing Latency | Sub-second | Concurrent mempool piercing across major EVM ecosystems. |
 | Hardware Baseline | Consumer-Grade CPUs | Decentralized Sentinel Node execution. No enterprise data centers required. |
-| L1 Impact | 0% Gas Bloat | Via decoupled pre-batcher execution. |
+| L1 Impact | 0% Gas Bloat | Executed entirely via decoupled pre-batcher proxy integration. |
 
----
+## Genesis Integration Pilots
 
-### Genesis Partnership Program
+We are actively opening strictly limited slots for high-TVL L1s, L2 Rollups, and Cross-Chain Bridges to integrate our active ML-DSA cryptographic payload via the established Mainnet routing layer.
 
-We are currently selecting high-TVL L1s, Cross-Chain Bridges, and Tier-1 Rollup ecosystems for exclusive Genesis Pilot integrations of the DePIN layer.
-
-[Submit Genesis Pilot Request Here](https://docs.google.com/forms/d/e/1FAIpQLSc6HvUe5tBH6fJ-m0B8j3eBBl4vBaPPHN_XF9h0m9OrxGPRww/viewform)
+Institutional Access: [Submit Genesis Pilot Request Here](https://forms.gle/hmUdBiQz3PT2x8TT7)
