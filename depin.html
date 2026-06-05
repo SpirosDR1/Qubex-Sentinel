@@ -39,7 +39,6 @@
         .terminal-header .dot { width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; flex-shrink: 0; }
         .dot.red { background: #ff5f56; } .dot.yellow { background: #ffbd2e; } .dot.green { background: #27c93f; }
         .terminal-header .title { color: #555; font-family: monospace; font-size: clamp(9px, 2vw, 11px); margin-left: 10px; letter-spacing: 1px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-        
         .terminal-body { padding: 20px; overflow-x: auto; -webkit-overflow-scrolling: touch; width: 100%; }
         .terminal-body::-webkit-scrollbar { height: 6px; }
         .terminal-body::-webkit-scrollbar-track { background: #030303; }
@@ -88,7 +87,7 @@
             <p style="margin-top: 25px; color: #888; max-width: 750px; margin-left: auto; margin-right: auto;">Power the AI Chaos Engine and execute post-quantum cryptography from your own hardware. Secure Web3 liquidity, earn network rewards, and become a foundational brick of the quantum-safe internet.</p>
             
             <div class="btn-container">
-                <a href="#" class="btn-access">READ NODEOMICS DRAFT</a>
+                <a href="#" class="btn-access">VIEW SENTINEL PAPER</a>
                 <a href="https://forms.gle/hmUdBiQz3PT2x8TT7" target="_blank" class="btn-access" style="color: #fff; border-color: #333;">JOIN GENESIS PILOT</a>
             </div>
         </div>
@@ -128,12 +127,15 @@
             </div>
         </div>
         <p style="text-align: center; margin-top: 50px; font-weight: 300;">
-            The industry believed cross-chain PQC validation would cause massive latency. We proved them wrong. Our concurrent pre-batcher architecture executes live Mainnet RPC routing and payload verification in <span class="highlight" style="font-weight: 600;">milliseconds</span>.
+            The industry believed cross-chain PQC validation would cause massive latency. We proved them wrong. Our concurrent pre-batcher architecture executes live Mainnet RPC routing and <strong style="color: #fff;">off-chain ML-DSA validation</strong> in <span class="highlight" style="font-weight: 600;">milliseconds</span>.
         </p>
     </section>
 
     <section class="slide" id="proof">
         <h2 class="slide-title">OMNICHAIN GROUND TRUTH (MAINNET LOGS)</h2>
+        <p style="text-align: center; max-width: 900px; margin: 0 auto 20px auto; font-size: 14px; color: #888;">
+            <strong style="color: var(--cyan);">[ARCHITECTURAL NOTE]:</strong> EVM settlement layers natively reject massive ML-DSA signatures. The Mainnet TX hashes below demonstrate our <strong style="color: #fff;">Phase-2 Zero-Bloat Routing Engine</strong>. The ML-DSA-87 PQC validation (Phase-1) is executed concurrently off-chain via the Sentinel DePIN <em>before</em> sequencer injection. Decoupled security. Zero consensus rewrites.
+            </p>
         <div class="terminal-window">
             <div class="terminal-header">
                 <div style="display: flex;">
@@ -192,7 +194,6 @@ OMNICHAIN VECTOR COMPLETE. Total Execution Time: 853.081058ms
             </div>
         </div>
     </section>
-
     <section class="slide">
         <div style="text-align: center; width: 100%;">
             <div class="subtitle">DON'T TRUST. VERIFY.</div>
