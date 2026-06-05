@@ -11,7 +11,7 @@ The 1st AI-Driven Post-Quantum DePIN. This repository hosts the production envir
 ### Core Architecture (Mainnet Status)
 QUBEX has successfully deployed its decoupled pre-batcher routing layer across Tier-1 EVM Mainnets. 
 
-*Note: To protect enterprise intellectual property, the core Go routing engine and ML-DSA-87 cryptographic payload logic remain in private repositories. This repository serves strictly as the public-facing access point.*
+*Note: To protect enterprise intellectual property, the core Python-based AI Chaos Engine remains in a private repository. This repository serves strictly as the public-facing access point for our client interfaces.*
 
 | Architectural Metric | Mainnet Verified Value | Technical Notes |
 | :--- | :--- | :--- |
