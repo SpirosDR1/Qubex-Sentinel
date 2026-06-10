@@ -4,8 +4,8 @@
     <link rel="icon" type="image/jpg" href="../favicon.jpg">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
-    <title>QUBEX SENTINEL | Development Roadmap & Community</title>
-    <meta name="description" content="Post-quantum cryptography infrastructure in development. Join the community. Follow the execution. No fake metrics—just real progress.">
+    <title>QUBEX SENTINEL | API Development & Roadmap</title>
+    <meta name="description" content="Enterprise API in development. Fast deployment. Real revenue. Institutional partnerships. Join the community.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
@@ -34,6 +34,12 @@
         .tile { background: var(--card-bg); border: 1px solid var(--border); padding: 30px 20px; border-radius: 4px; }
         .tile h3 { font-size: clamp(18px, 4vw, 22px); margin-bottom: 15px; color: var(--cyan); }
         
+        .chart-bar { margin-bottom: 30px; }
+        .bar-label { font-family: 'Space Grotesk', sans-serif; font-size: 12px; margin-bottom: 10px; color: #888; display: flex; flex-direction: column; gap: 5px; text-transform: uppercase; letter-spacing: 1px; }
+        @media (min-width: 600px) { .bar-label { flex-direction: row; justify-content: space-between; font-size: 13px; } }
+        .bar-outer { background: #111; height: 8px; border-radius: 4px; width: 100%; overflow: hidden; }
+        .bar-inner { height: 100%; background: var(--cyan); box-shadow: 0 0 15px rgba(0, 229, 255, 0.4); }
+
         .btn-container { display: flex; flex-direction: column; align-items: center; width: 100%; gap: 15px; margin-top: 30px; }
         @media (min-width: 600px) { .btn-container { flex-direction: row; justify-content: center; } }
         
@@ -57,13 +63,13 @@
 <body>
 
     <div class="header-top"><a href="/">QUBEX <span>SENTINEL</span></a></div>
-    <div class="nav-hint">SCROLL FOR ROADMAP<br>& COMMUNITY</div>
+    <div class="nav-hint">SCROLL FOR ROADMAP<br>& API DETAILS</div>
     
     <section class="slide">
         <div style="text-align: center; width: 100%;">
-            <div class="subtitle">Building the Future of Institutional Security</div>
-            <h1>Join The <br><span class="highlight">Community</span></h1>
-            <p style="margin-top: 25px; color: #888; max-width: 750px; margin-left: auto; margin-right: auto;">We're building post-quantum cryptography infrastructure for institutions. This is early stage. We're being transparent about where we are and where we're going.</p>
+            <div class="subtitle">Enterprise API in Development</div>
+            <h1>Build the <br><span class="highlight">Future</span></h1>
+            <p style="margin-top: 25px; color: #888; max-width: 750px; margin-left: auto; margin-right: auto;">RESTful API for post-quantum signature validation. Institutions validate ML-DSA signatures in milliseconds. Fast integration. Real revenue. Zero fake claims.</p>
             
             <div class="btn-container">
                 <a href="https://forms.gle/hmUdBiQz3PT2x8TT7" target="_blank" class="btn-access">Join Genesis Community</a>
@@ -74,54 +80,79 @@
 
     <section class="slide">
         <div style="text-align: center; width: 100%;" class="center">
-            <div class="subtitle">How We're Building</div>
-            <h2>The Development <span class="highlight">Timeline</span></h2>
+            <div class="subtitle">How It Works</div>
+            <h2>API Architecture <span class="highlight">Phase 1</span></h2>
         </div>
         <div class="grid-3">
             <div class="tile">
-                <h3>Now: Foundation</h3>
-                <p>Circuit development, community building, research. Transparent progress shared weekly. No fake metrics—just honest updates.</p>
+                <h3>01. Institution Calls API</h3>
+                <p>POST /verify-pqc-signature with ML-DSA signature and metadata. RESTful endpoint. Standard API contract.</p>
             </div>
             <div class="tile">
-                <h3>Q3 2026: Audits</h3>
-                <p>Professional security review from tier-1 firms (Certora, Trail of Bits, or equivalent). Published audit reports. Real validation.</p>
+                <h3>02. Backend Validates</h3>
+                <p>Qubex backend validates ML-DSA-87 signature. Returns verification certificate (valid/invalid). Response in milliseconds.</p>
             </div>
             <div class="tile">
-                <h3>Q1 2027: Partnerships</h3>
-                <p>First institutional integrations with custody partners. Real partnerships, real traction. Revenue generation begins.</p>
+                <h3>03. Institution Uses Certificate</h3>
+                <p>Institution posts certificate on-chain as proof of PQC verification. Zero on-chain latency impact. Institution pays subscription.</p>
             </div>
         </div>
     </section>
 
     <section class="slide">
-        <h2 class="slide-title">What's Real. What's Not.</h2>
+        <h2 class="slide-title">API Development Timeline</h2>
+        <div style="width: 100%; margin-top: 40px;">
+            <div class="chart-bar">
+                <div class="bar-label"><span>June - August 2026: API Development</span> <span class="highlight">Q2-Q3</span></div>
+                <div class="bar-outer"><div class="bar-inner" style="width: 100%;"></div></div>
+            </div>
+            <div class="chart-bar">
+                <div class="bar-label"><span>September 2026: Security Review + Testing</span> <span class="highlight">Q3</span></div>
+                <div class="bar-outer"><div class="bar-inner" style="width: 70%;"></div></div>
+            </div>
+            <div class="chart-bar">
+                <div class="bar-label"><span>October - December 2026: First Institutional Pilots</span> <span class="highlight">Q4</span></div>
+                <div class="bar-outer"><div class="bar-inner" style="width: 50%;"></div></div>
+            </div>
+            <div class="chart-bar">
+                <div class="bar-label"><span>2027: Scale to 2-3 Paying Customers</span> <span class="highlight">$5-15M ARR</span></div>
+                <div class="bar-outer"><div class="bar-inner" style="width: 40%;"></div></div>
+            </div>
+        </div>
+        <p style="text-align: center; margin-top: 50px; font-weight: 300;">
+            <strong style="color: #fff;">Phase 1 Timeline: 6 months to first revenue.</strong> Enterprise SaaS model = fast iteration. Institutional pilots begin Q4 2026. Revenue generation starts Q1 2027.
+        </p>
+    </section>
+
+    <section class="slide">
+        <h2 class="slide-title">Why This Model Works</h2>
         <div style="width: 100%; max-width: 900px; margin: 40px auto 0;">
             <div style="background: var(--card-bg); border: 1px solid var(--border); padding: 30px; margin-bottom: 20px; border-radius: 4px;">
-                <h3 style="color: #27c93f; margin-bottom: 15px;">✓ What Exists</h3>
-                <p style="color: #aaa; margin-bottom: 10px;">• HNDL threat (proven, real, documented)</p>
-                <p style="color: #aaa; margin-bottom: 10px;">• Post-quantum standards (NIST finalized, real)</p>
-                <p style="color: #aaa; margin-bottom: 10px;">• Institutional need (conversations happening, real)</p>
-                <p style="color: #aaa;">• 20-year-old founder (real) + hiring team (real)</p>
+                <h3 style="color: #27c93f; margin-bottom: 15px;">✓ What's Real</h3>
+                <p style="color: #aaa; margin-bottom: 10px;">• ML-DSA-87 signature validation (working, benchmarked)</p>
+                <p style="color: #aaa; margin-bottom: 10px;">• 6 mainnet RPC connections (verified, tested)</p>
+                <p style="color: #aaa; margin-bottom: 10px;">• Institutional need (conversations happening now)</p>
+                <p style="color: #aaa;">• Founder + team hiring (building now)</p>
             </div>
             
             <div style="background: var(--card-bg); border: 1px solid var(--border); padding: 30px; border-radius: 4px;">
-                <h3 style="color: #ff6b6b; margin-bottom: 15px;">✗ What Doesn't Exist Yet</h3>
-                <p style="color: #aaa; margin-bottom: 10px;">• Live mainnet deployment (coming Q1 2027)</p>
-                <p style="color: #aaa; margin-bottom: 10px;">• Professional audits (scheduled Q3 2026)</p>
-                <p style="color: #aaa; margin-bottom: 10px;">• Institutional integrations (starting Q1 2027)</p>
-                <p style="color: #aaa;">• Revenue (targeting Q4 2027)</p>
+                <h3 style="color: #ffb300; margin-bottom: 15px;">⏳ What's In Development</h3>
+                <p style="color: #aaa; margin-bottom: 10px;">• RESTful API (starting June 2026)</p>
+                <p style="color: #aaa; margin-bottom: 10px;">• Institutional integrations (target Q4 2026)</p>
+                <p style="color: #aaa; margin-bottom: 10px;">• Revenue generation (target Q1 2027)</p>
+                <p style="color: #aaa;">• Phase 2 DePIN network (2027+)</p>
             </div>
         </div>
     </section>
 
     <section class="slide">
         <div style="text-align: center; width: 100%;">
-            <div class="subtitle">No Fake Benchmarks. No Promises.</div>
-            <h2 style="font-size: clamp(32px, 6vw, 72px);">Just <span class="highlight">Execution</span></h2>
-            <p style="margin-top: 30px; color: #888; max-width: 750px;">We're building in public. You'll see our progress. You'll see our challenges. No marketing fluff. No inflated metrics. Just honest work toward solving a real $1T problem.</p>
+            <div class="subtitle">Fast. Honest. Executable.</div>
+            <h2 style="font-size: clamp(32px, 6vw, 72px);">Join The <span class="highlight">Mission</span></h2>
+            <p style="margin-top: 30px; color: #888; max-width: 750px;">We're building enterprise infrastructure for institutional crypto. Phase 1: Fast API deployment. Phase 2: Decentralized network. No hype. Just execution.</p>
             
             <div style="margin-top: 50px;">
-                <a href="https://github.com/SpirosDR1/Qubex-PQC-Benchmarks" target="_blank" class="btn-access">View GitHub Repository</a>
+                <a href="https://github.com/SpirosDR1/Qubex-PQC-Benchmarks" target="_blank" class="btn-access">View GitHub</a>
             </div>
             
             <div class="slide-footer-links">
