@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>QUBEX SENTINEL | Enterprise Post-Quantum API</title>
-    <meta name="description" content="Enterprise API for quantum-safe institutional cryptocurrency. Validate ML-DSA signatures. Revenue-backed infrastructure. Founded by 20-year-old Spyridon Gagrinas.">
+    <title>QUBEX SENTINEL | Enterprise Post-Quantum API for Institutions</title>
+    <meta name="description" content="Enterprise API for quantum-safe institutional cryptocurrency. Validate ML-DSA signatures. Revenue-backed infrastructure. Founded by 20-year-old Spyridon Gagrinas. Solving $1T institutional crypto security.">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
     <link rel="icon" type="image/jpeg" href="favicon.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,18 +34,36 @@
         .btn:hover { background: var(--quantum-cyan); color: #000; box-shadow: 0 0 25px rgba(0, 229, 255, 0.3); }
         .btn-primary { padding: 18px 40px; font-size: 15px; }
         
+        .section-header { text-align: center; margin-bottom: 60px; }
+        .section-header h2 { font-size: clamp(26px, 6vw, 42px); margin-bottom: 15px; }
+        .section-header p { color: var(--text-dim); font-size: clamp(14px, 3vw, 16px); max-width: 700px; margin: 0 auto; }
+        
         .benchmarks { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin: clamp(40px, 10vw, 80px) 0 30px; }
-        .stat-card { background: var(--card-bg); padding: 40px 20px; border-radius: 4px; border: 1px solid rgba(255, 255, 255, 0.05); text-align: center; width: 100%; }
+        .stat-card { background: var(--card-bg); padding: 40px 20px; border-radius: 4px; border: 1px solid rgba(255, 255, 255, 0.05); text-align: center; width: 100%; transition: 0.3s; }
+        .stat-card:hover { border-color: var(--quantum-cyan); box-shadow: 0 0 20px rgba(0, 229, 255, 0.1); }
         .stat-card h3 { font-size: clamp(32px, 8vw, 48px); color: var(--quantum-cyan); line-height: 1; letter-spacing: -2px; }
         .stat-card p { margin: 15px 0 0; color: var(--text-main); text-transform: uppercase; letter-spacing: 1.5px; font-size: 13px; font-weight: 600; }
         
+        .problem-solution { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; margin: 60px 0; }
+        .problem-solution-text h3 { font-size: clamp(24px, 5vw, 32px); margin-bottom: 20px; }
+        .problem-solution-text p { color: var(--text-dim); margin-bottom: 15px; line-height: 1.8; }
+        @media (max-width: 768px) { .problem-solution { grid-template-columns: 1fr; } }
+        
+        .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin: 60px 0; }
+        .feature { background: var(--card-bg); padding: 35px; border-radius: 4px; border: 1px solid rgba(255, 255, 255, 0.05); }
+        .feature h3 { color: var(--quantum-cyan); margin-bottom: 15px; font-size: clamp(18px, 4vw, 22px); }
+        .feature p { color: var(--text-dim); line-height: 1.8; }
+        
         .roadmap { padding: clamp(60px, 10vw, 100px) 0; }
-        .roadmap > h2 { font-size: clamp(26px, 6vw, 42px); margin-bottom: 50px; text-align: center; }
         .phase { border-left: 1px solid rgba(0, 229, 255, 0.3); padding-left: 30px; margin-bottom: 50px; position: relative; max-width: 800px; margin: 0 auto 50px; }
         .phase::before { content: ''; width: 10px; height: 10px; background: var(--quantum-cyan); position: absolute; left: -5.5px; top: 8px; border-radius: 50%; }
         .phase h4 { margin: 0; font-size: 11px; color: var(--quantum-cyan); letter-spacing: 3px; font-family: 'Space Grotesk', sans-serif; }
         .phase h2 { margin: 10px 0 15px; font-size: clamp(20px, 5vw, 32px); letter-spacing: -0.5px; }
         .phase p { color: var(--text-dim); font-size: clamp(14px, 3vw, 16px); }
+        
+        .cta-section { background: linear-gradient(135deg, rgba(0, 229, 255, 0.05) 0%, rgba(0, 229, 255, 0.02) 100%); border: 1px solid rgba(0, 229, 255, 0.1); border-radius: 4px; padding: 60px 30px; text-align: center; margin: 80px 0; }
+        .cta-section h2 { margin-bottom: 20px; }
+        .cta-section p { color: var(--text-dim); margin-bottom: 30px; max-width: 600px; margin-left: auto; margin-right: auto; }
         
         .site-footer { border-top: 1px solid rgba(255, 255, 255, 0.05); padding: 40px 0; text-align: center; margin-top: auto; background: #020202; width: 100%; }
         .footer-links { display: flex; justify-content: center; gap: 20px; margin-bottom: 20px; flex-wrap: wrap; }
@@ -57,8 +75,7 @@
             .header-content { flex-direction: column; text-align: center; } 
             .nav-right { width: 100%; flex-direction: column; gap: 15px; }
             .nav-links { width: 100%; }
-            .btn { width: 100%; } 
-            .roadmap.container { padding-left: 20px; padding-right: 20px; }
+            .btn { width: 100%; }
             .phase { padding-left: 20px; margin-left: 10px; }
         }
     </style>
@@ -70,7 +87,9 @@
         <a href="/" class="logo">QUBEX <span>SENTINEL</span></a>
         <div class="nav-right">
             <div class="nav-links">
-                <a href="/development">Development</a>
+                <a href="#problem">Problem</a>
+                <a href="#solution">Solution</a>
+                <a href="#roadmap">Roadmap</a>
                 <a href="https://github.com/SpirosDR1/Qubex-PQC-Benchmarks" target="_blank">GitHub</a>
             </div>
             <a href="https://forms.gle/hmUdBiQz3PT2x8TT7" target="_blank" class="btn">Join Community</a>
@@ -80,53 +99,120 @@
 
 <section class="hero">
     <div class="container">
-        <h1>Enterprise API for <br><span style="color: var(--quantum-cyan);">Quantum-Safe Crypto</span></h1>
-        <p>$1T+ in institutional cryptocurrency needs post-quantum protection. We're building the enterprise SaaS API that integrates in weeks, not years. Fast deployment. Real revenue. Proven model.</p>
+        <h1>Enterprise Post-Quantum <br><span style="color: var(--quantum-cyan);">Security API</span></h1>
+        <p>$1T+ in institutional cryptocurrency is exposed to quantum computing threats. We're building the enterprise SaaS API that institutions integrate in weeks—not years. Real security. Fast deployment. Revenue model proven at scale.</p>
         
         <div style="margin-top: 40px; display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
             <a href="https://forms.gle/hmUdBiQz3PT2x8TT7" target="_blank" class="btn btn-primary">Join Genesis Community</a>
             <a href="/development" class="btn" style="border-color: #333; color: #fff; padding: 18px 30px; font-size: 14px;">View Development →</a>
         </div>
-        <p style="font-size: 11px; color: #666; margin-top: 25px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px;">Phase 1: Enterprise SaaS • Phase 2: DePIN Protocol • Founded 2026</p>
+        <p style="font-size: 11px; color: #666; margin-top: 25px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px;">Enterprise SaaS API • Founded 2026 • 20-Year-Old Founder</p>
     </div>
 </section>
 
 <section class="container">
+    <div class="section-header" id="problem">
+        <h2>The Problem</h2>
+        <p>$1 trillion in institutional cryptocurrency is managed by Fireblocks, BitGo, Copper, and Kraken. All of it is secured by ECDSA. When quantum computers mature (2030-2035), ECDSA breaks. Institutions know. They have no solution.</p>
+    </div>
     <div class="benchmarks">
         <div class="stat-card">
-            <h3>Phase 1</h3>
-            <p>Enterprise SaaS API</p>
-            <span style="font-size: 11px; color: var(--text-dim); display: block; margin-top: 5px;">Development: June - Sept 2026</span>
+            <h3>$1T+</h3>
+            <p>Institutional Crypto TVL</p>
+            <span style="font-size: 11px; color: var(--text-dim); display: block; margin-top: 5px;">At Risk (ECDSA)</span>
         </div>
         <div class="stat-card">
-            <h3>Q4 2026</h3>
-            <p>First Customer Live</p>
-            <span style="font-size: 11px; color: var(--text-dim); display: block; margin-top: 5px;">Institutional Integration Target</span>
+            <h3>4-9 Years</h3>
+            <p>Until Quantum Breaks ECDSA</p>
+            <span style="font-size: 11px; color: var(--text-dim); display: block; margin-top: 5px;">2030-2035 Timeline</span>
         </div>
         <div class="stat-card">
-            <h3>$20-50M</h3>
-            <p>ARR Target Q4 2027</p>
-            <span style="font-size: 11px; color: var(--text-dim); display: block; margin-top: 5px;">2-3 Tier-1 Institutional Customers</span>
+            <h3>Zero</h3>
+            <p>Production PQC Solutions</p>
+            <span style="font-size: 11px; color: var(--text-dim); display: block; margin-top: 5px;">In Market Today</span>
         </div>
     </div>
 </section>
 
-<section class="roadmap container">
-    <h2>Two-Phase Strategy</h2>
-    <div class="phase">
-        <h4>PHASE 1 (2026-2027)</h4>
-        <h2>Enterprise SaaS API</h2>
-        <p>RESTful API that validates post-quantum signatures. Institutions submit ML-DSA signatures, receive verification certificates. Fast deployment. Proven B2B SaaS revenue model. $100-500/month per customer.</p>
+<section class="container">
+    <div class="section-header" id="solution">
+        <h2>Our Solution</h2>
+        <p>Enterprise REST API that validates post-quantum cryptography signatures. Institutions integrate in weeks. No chain changes. No protocol forking. Revenue from day one.</p>
+    </div>
+    <div class="problem-solution">
+        <div class="problem-solution-text">
+            <h3>How It Works</h3>
+            <p><strong>1. Institution Calls API</strong><br>POST request with ML-DSA signature and metadata.</p>
+            <p><strong>2. Qubex Validates</strong><br>Backend validates signature in milliseconds. Returns certificate.</p>
+            <p><strong>3. Institution Pays</strong><br>$100-500/month subscription. Per-call fees. Enterprise SaaS model.</p>
+        </div>
+        <div style="background: var(--card-bg); border: 1px solid rgba(255, 255, 255, 0.05); padding: 40px; border-radius: 4px;">
+            <h4 style="color: var(--quantum-cyan); margin-bottom: 20px; font-family: Space Grotesk; text-transform: uppercase;">Why This Works</h4>
+            <ul style="list-style: none; color: var(--text-dim); line-height: 2;">
+                <li>✓ Fast integration (weeks, not months)</li>
+                <li>✓ Zero protocol changes</li>
+                <li>✓ Enterprise-grade security</li>
+                <li>✓ Proven SaaS revenue model</li>
+                <li>✓ Scalable to 100+ customers</li>
+                <li>✓ Path to $1B+ valuation</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="container">
+    <div class="section-header">
+        <h2>Why Now</h2>
+    </div>
+    <div class="features">
+        <div class="feature">
+            <h3>NIST Finalized Standards</h3>
+            <p>Post-quantum cryptography standards are approved (August 2024). Technology is proven. Regulations are beginning to ask institutions: "What's your quantum roadmap?"</p>
+        </div>
+        <div class="feature">
+            <h3>Institutional Demand</h3>
+            <p>First-mover institutions are having conversations about PQC now. They need solutions before 2030. Migration takes 2-3 years. The window is opening.</p>
+        </div>
+        <div class="feature">
+            <h3>Market Monopoly</h3>
+            <p>No company has shipped enterprise PQC infrastructure. First mover owns the market for a decade. This is a $5B+ infrastructure opportunity.</p>
+        </div>
+    </div>
+</section>
+
+<section class="roadmap container" id="roadmap">
+    <div class="section-header">
+        <h2>Execution Plan</h2>
+        <p>From API development to revenue generation in 12 months.</p>
     </div>
     <div class="phase">
-        <h4>PHASE 2 (2027+)</h4>
-        <h2>Decentralized Node Network</h2>
-        <p>Build on Phase 1 success. Add decentralized validation layer + ZK proofs + DePIN incentives. Scale to protocol level. Token economics backed by real API revenue.</p>
+        <h4>PHASE 1A: FOUNDATION (June-August 2026)</h4>
+        <h2>API Development</h2>
+        <p>Build RESTful API for ML-DSA signature validation. Implement database layer. Deploy to staging. Target: 6-week development sprint.</p>
     </div>
-    <div class="phase" style="border-left-color: transparent;">
-        <h4>WHY TWO PHASES</h4>
-        <h2>Speed + Sustainability</h2>
-        <p>Phase 1 generates revenue immediately (2026-2027). Phase 2 builds on proven product-market fit. Token launch backed by real institutional demand + $20-50M ARR. Sustainable path to scale.</p>
+    <div class="phase">
+        <h4>PHASE 1B: SECURITY (September 2026)</h4>
+        <h2>Professional Audits</h2>
+        <p>Third-party security review of API and cryptography. Fix audit findings. Publish audit results. Target: Tier-1 security firm (Certora, Trail of Bits, or equivalent).</p>
+    </div>
+    <div class="phase">
+        <h4>PHASE 1C: LAUNCH (October-December 2026)</h4>
+        <h2>Institutional Pilots</h2>
+        <p>Begin integration conversations with Copper, BitGo, Kraken. Run pilot programs (beta, zero cost). Convert to paying customers Q1 2027.</p>
+    </div>
+    <div class="phase">
+        <h4>PHASE 2: SCALE (2027+)</h4>
+        <h2>Revenue & Growth</h2>
+        <p>Target: 2-3 institutional customers by Q4 2027 → $20-50M ARR. Build DePIN layer in Phase 2 (2027+) once SaaS is proven. Token launch backed by real revenue.</p>
+    </div>
+</section>
+
+<section class="cta-section container">
+    <h2>Ready to Build the Future of Institutional Crypto Security?</h2>
+    <p>Join the community. Follow the execution. Help us solve the $1T institutional security problem.</p>
+    <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+        <a href="https://forms.gle/hmUdBiQz3PT2x8TT7" target="_blank" class="btn btn-primary">Join Genesis Community</a>
+        <a href="https://x.com/QUBEX_SENTINEL" target="_blank" class="btn" style="border-color: #333; color: #fff;">Follow on X</a>
     </div>
 </section>
 
@@ -137,8 +223,10 @@
             <a href="https://x.com/QUBEX_SENTINEL" target="_blank">X (Twitter)</a>
             <a href="https://www.linkedin.com/company/qubex-sentinel/" target="_blank">LinkedIn</a>
             <a href="https://www.linkedin.com/in/spyridon-g-9858b03a0/" target="_blank">Founder</a>
+            <a href="/development">Development</a>
+            <a href="https://github.com/SpirosDR1/Qubex-PQC-Benchmarks" target="_blank">GitHub</a>
         </div>
-        <div class="copyright">&copy; 2026 QUBEX Sentinel. Building enterprise solutions for institutional crypto security.</div>
+        <div class="copyright">&copy; 2026 QUBEX Sentinel. Enterprise post-quantum security infrastructure for institutions.</div>
     </div>
 </footer>
 
