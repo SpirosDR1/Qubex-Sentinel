@@ -34,6 +34,9 @@
         .btn:hover { background: var(--quantum-cyan); color: #000; box-shadow: 0 0 25px rgba(0, 229, 255, 0.3); }
         .btn-primary { padding: 18px 40px; font-size: 15px; }
         
+        .btn-container { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; }
+        @media (max-width: 768px) { .btn-container { flex-direction: column; } .btn { width: 100%; } }
+        
         .section-header { text-align: center; margin-bottom: 60px; }
         .section-header h2 { font-size: clamp(26px, 6vw, 42px); margin-bottom: 15px; }
         .section-header p { color: var(--text-dim); font-size: clamp(14px, 3vw, 16px); max-width: 700px; margin: 0 auto; }
@@ -70,14 +73,6 @@
         .footer-links a { color: var(--text-dim); text-decoration: none; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; }
         .footer-links a:hover { color: var(--quantum-cyan); }
         .copyright { font-size: 12px; color: #555; }
-        
-        @media (max-width: 768px) { 
-            .header-content { flex-direction: column; text-align: center; } 
-            .nav-right { width: 100%; flex-direction: column; gap: 15px; }
-            .nav-links { width: 100%; }
-            .btn { width: 100%; }
-            .phase { padding-left: 20px; margin-left: 10px; }
-        }
     </style>
 </head>
 <body>
@@ -92,7 +87,7 @@
                 <a href="#roadmap">Roadmap</a>
                 <a href="https://github.com/SpirosDR1/Qubex-PQC-Benchmarks" target="_blank">GitHub</a>
             </div>
-            <a href="https://forms.gle/hmUdBiQz3PT2x8TT7" target="_blank" class="btn">Join Community</a>
+            <a href="https://discord.gg/ZQXZcNVcR" target="_blank" class="btn">Join Community</a>
         </div>
     </div>
 </header>
@@ -102,11 +97,11 @@
         <h1>Enterprise Post-Quantum <br><span style="color: var(--quantum-cyan);">Security Infrastructure</span></h1>
         <p>Institutional cryptocurrency faces an existential security threat. We're building the enterprise infrastructure that will become the standard for quantum-safe custody across Web3.</p>
         
-        <div style="margin-top: 40px; display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
-            <a href="https://forms.gle/hmUdBiQz3PT2x8TT7" target="_blank" class="btn btn-primary">Join Genesis Community</a>
+        <div class="btn-container">
+            <a href="https://discord.gg/ZQXZcNVcR" target="_blank" class="btn btn-primary">Join Genesis Community</a>
             <a href="/development" class="btn" style="border-color: #333; color: #fff; padding: 18px 30px; font-size: 14px;">View Development →</a>
         </div>
-        <p style="font-size: 11px; color: #666; margin-top: 25px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px;">Enterprise Infrastructure • Building the Standard • Founded 2026</p>
+        <p style="font-size: 11px; color: #666; margin-top: 25px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px;">Enterprise Infrastructure • Building the Standard</p>
     </div>
 </section>
 
@@ -123,7 +118,7 @@
         </div>
         <div class="stat-card">
             <h3>Migration Window</h3>
-            <p>4-9 Years</p>
+            <p>3-5 Years</p>
             <span style="font-size: 11px; color: var(--text-dim); display: block; margin-top: 5px;">Before Quantum Breaks ECDSA</span>
         </div>
         <div class="stat-card">
@@ -210,8 +205,8 @@
 <section class="cta-section container">
     <h2>Help Us Build the Future of Institutional Crypto Security</h2>
     <p>We're moving fast. We're building the standard. Join the community and be part of the infrastructure that protects Web3's institutional foundation.</p>
-    <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
-        <a href="https://forms.gle/hmUdBiQz3PT2x8TT7" target="_blank" class="btn btn-primary">Join Genesis Community</a>
+    <div class="btn-container">
+        <a href="https://discord.gg/ZQXZcNVcR" target="_blank" class="btn btn-primary">Join Genesis Community</a>
         <a href="https://x.com/QUBEX_SENTINEL" target="_blank" class="btn" style="border-color: #333; color: #fff;">Follow Our Progress</a>
     </div>
 </section>
