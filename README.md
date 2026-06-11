@@ -1,25 +1,32 @@
-# QUBEX SENTINEL | DePIN Client Interfaces
+# QUBEX SENTINEL | Enterprise Post-Quantum Security Infrastructure
 
-The 1st AI-Driven Post-Quantum DePIN. This repository hosts the production environment code for QUBEX Sentinel's public-facing architecture and DePIN governance interfaces.
+Official website for QUBEX Sentinel — building the standard infrastructure for quantum-safe institutional cryptocurrency custody.
 
-> Primary Mission: Natively shielding high-TVL L1 Settlement Layers, L2 Sequencers, and Cross-Chain Bridges from "Harvest Now, Decrypt Later" (HNDL) vectors. Zero integration friction. Zero L1 calldata overhead.
+## What's Here
 
-### Live Production Environments
-*   Main Infrastructure: [qubexsentinel.com](https://qubexsentinel.com/) *(The AI-Driven Post-Quantum Shield)*
-*   Sentinel Node Network: [qubexsentinel.com/depin](https://qubexsentinel.com/depin) *(DePIN Governance & Node Deployment)*
+- **index.html** — Main landing page. Problem → Vision → Why Now → Execution Timeline
+- **development.html** — Development roadmap, API architecture, transparency on what's real vs. in-progress
 
-### Core Architecture (Mainnet Status)
-QUBEX has successfully deployed its decoupled pre-batcher routing layer across Tier-1 EVM Mainnets. 
+## Technology
 
-*Note: To protect enterprise intellectual property, the core Python-based AI Chaos Engine remains in a private repository. This repository serves strictly as the public-facing access point for our client interfaces.*
+- Pure HTML/CSS (no frameworks)
+- Responsive design (mobile-first)
+- Dark theme optimized for crypto/technical audience
 
-| Architectural Metric | Mainnet Verified Value | Technical Notes |
-| :--- | :--- | :--- |
-| Routing Latency | Sub-second | Concurrent mempool piercing across major EVM ecosystems. |
-| Hardware Baseline | Consumer-Grade CPUs | Decentralized Sentinel Node execution. No enterprise data centers required. |
-| L1 Impact | 0% Gas Bloat | Executed entirely via decoupled pre-batcher proxy integration. |
+## Links
 
-### Genesis Integration Pilots
-We are actively allocating a strict cap of 12 Genesis Pilot slots for high-TVL L1s, L2 Rollups, and Cross-Chain Bridges to integrate our active ML-DSA cryptographic payload via the established Mainnet routing layer.
+- **Main Site:** https://qubexsentinel.com
+- **GitHub (Code):** https://github.com/SpirosDR1/Qubex-PQC-Benchmarks
+- **Discord:** https://discord.gg/ZQXZcNVcR
+- **Twitter:** https://x.com/QUBEX_SENTINEL
 
-Institutional Access: [Submit Genesis Pilot Request Here](https://forms.gle/hmUdBiQz3PT2x8TT7)
+## Status
+
+Phase 1: Enterprise SaaS API (Q2-Q3 2026)
+Phase 2: Professional Security Review (Sept-Dec 2026)
+Phase 3: Institutional Pilots (2027)
+Phase 4: Becoming the Standard (2028+)
+
+---
+
+Built for institutions. No hype. Just execution.
