@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>QUBEX SENTINEL | Enterprise Post-Quantum API for Institutions</title>
-    <meta name="description" content="Enterprise API for quantum-safe institutional cryptocurrency. Validate ML-DSA signatures. Building the standard infrastructure for Web3.">
+    <title>QUBEX SENTINEL | Post-Quantum Verification for Institutional Custody</title>
+    <meta name="description" content="Post-quantum verification with signed, independently-verifiable attestations for institutional crypto custody. ML-DSA-87, live and early.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/jpeg" href="favicon.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,7 +17,7 @@
         h1, h2, h3, .logo { font-family: 'Space Grotesk', sans-serif; text-transform: uppercase; }
         .container { width: 100%; max-width: 1100px; margin: 0 auto; padding: 0 20px; }
 
-        /* ===== HEADER ===== */
+      
         header { padding: 16px 0; border-bottom: 1px solid rgba(255, 255, 255, 0.05); background: rgba(5, 5, 5, 0.95); backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 100; }
         .header-content { display: flex; justify-content: space-between; align-items: center; gap: 15px; }
         .logo { font-size: 22px; font-weight: 900; letter-spacing: 1px; text-decoration: none; color: #fff; white-space: nowrap; }
@@ -27,7 +27,7 @@
         .nav-links a { color: var(--text-main); text-decoration: none; font-weight: 600; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; }
         .nav-links a:hover { color: var(--quantum-cyan); }
 
-        /* ===== HERO ===== */
+     
         .hero { padding: 100px 0 70px; text-align: center; }
         .hero h1 { font-size: 64px; font-weight: 900; margin-bottom: 20px; letter-spacing: -1.5px; line-height: 1.1; }
         .hero p { font-size: 18px; color: var(--text-dim); max-width: 750px; margin: 0 auto 40px; font-weight: 300; }
@@ -37,7 +37,7 @@
         .btn-primary { padding: 18px 40px; font-size: 15px; }
         .btn-container { display: flex; gap: 15px; justify-content: center; align-items: center; flex-wrap: wrap; width: 100%; }
 
-        /* ===== SECTIONS ===== */
+     
         .section-header { text-align: center; margin-bottom: 60px; }
         .section-header h2 { font-size: 40px; margin-bottom: 15px; letter-spacing: -0.5px; }
         .section-header p { color: var(--text-dim); font-size: 16px; max-width: 700px; margin: 0 auto; }
@@ -57,7 +57,7 @@
         .feature h3 { color: var(--quantum-cyan); margin-bottom: 15px; font-size: 20px; }
         .feature p { color: var(--text-dim); line-height: 1.8; }
 
-        /* ===== ROADMAP ===== */
+       
         .roadmap { padding: 90px 0; }
         .phase { border-left: 1px solid rgba(0, 229, 255, 0.3); padding-left: 30px; position: relative; max-width: 800px; margin: 0 auto 50px; }
         .phase::before { content: ''; width: 10px; height: 10px; background: var(--quantum-cyan); position: absolute; left: -5.5px; top: 8px; border-radius: 50%; }
@@ -65,7 +65,7 @@
         .phase h2 { margin: 10px 0 15px; font-size: 30px; letter-spacing: -0.5px; }
         .phase p { color: var(--text-dim); font-size: 16px; }
 
-        /* ===== CTA / FOOTER ===== */
+      
         .cta-section { background: linear-gradient(135deg, rgba(0, 229, 255, 0.05) 0%, rgba(0, 229, 255, 0.02) 100%); border: 1px solid rgba(0, 229, 255, 0.1); border-radius: 4px; padding: 60px 30px; text-align: center; margin: 80px auto; max-width: 1100px; width: calc(100% - 40px); }
         .cta-section h2 { margin-bottom: 20px; font-size: 34px; }
         .cta-section p { color: var(--text-dim); margin-bottom: 30px; max-width: 600px; margin-left: auto; margin-right: auto; }
@@ -76,9 +76,7 @@
         .footer-links a:hover { color: var(--quantum-cyan); }
         .copyright { font-size: 12px; color: #555; }
 
-        /* ============================================ */
-        /* ===== TABLET (max 900px) ===== */
-        /* ============================================ */
+      
         @media (max-width: 900px) {
             .hero h1 { font-size: 44px; }
             .benchmarks { grid-template-columns: 1fr; }
@@ -86,13 +84,11 @@
             .problem-solution { grid-template-columns: 1fr; }
         }
 
-        /* ============================================ */
-        /* ===== MOBILE (max 640px) — σκληρά fixes ===== */
-        /* ============================================ */
+      
         @media (max-width: 640px) {
             .container { padding: 0 16px; }
 
-            /* Header: compact, μία γραμμή logo + community, nav από κάτω */
+           
             header { padding: 12px 0; }
             .header-content { flex-direction: column; gap: 10px; }
             .nav-right { width: 100%; flex-direction: column; gap: 10px; }
@@ -100,7 +96,7 @@
             .nav-links a { font-size: 12px; }
             .nav-right .btn { width: 100%; padding: 12px; font-size: 12px; }
 
-            /* Hero: μικρότερο, σφιχτό */
+          
             .hero { padding: 50px 0 40px; }
             .hero h1 { font-size: 30px; letter-spacing: -0.5px; line-height: 1.15; }
             .hero p { font-size: 15px; margin-bottom: 30px; }
@@ -160,37 +156,37 @@
 
 <section class="hero">
     <div class="container">
-        <h1>Enterprise Post-Quantum <br><span style="color: var(--quantum-cyan);">Security Infrastructure</span></h1>
-        <p>Institutional cryptocurrency faces an existential security threat. We're building the enterprise infrastructure that will become the standard for quantum-safe custody across Web3.</p>
+        <h1>Post-Quantum Verification <br><span style="color: var(--quantum-cyan);">for Institutional Custody</span></h1>
+        <p>Institutional crypto sits on ECDSA-secured chains that can't migrate. We're building the post-quantum verification layer that adds quantum-safe assurance to the assets institutions already hold — on the chains they already use, with no migration.</p>
 
         <div class="btn-container">
             <a href="https://discord.gg/ZQXZcNVcR" target="_blank" class="btn btn-primary">Join Genesis Community</a>
             <a href="/development" class="btn" style="border-color: #333; color: #fff;">View Development →</a>
         </div>
-        <p style="font-size: 11px; color: #666; margin-top: 25px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px;">Enterprise Infrastructure • Building the Standard</p>
+        <p style="font-size: 11px; color: #666; margin-top: 25px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px;">Post-Quantum Verification • Live &amp; Early</p>
     </div>
 </section>
 
 <section class="container">
     <div class="section-header" id="problem">
         <h2>The Problem</h2>
-        <p>Institutions managing trillions in cryptocurrency use ECDSA for security. When quantum computers mature, ECDSA becomes obsolete. The window to migrate is now. The solution doesn't exist yet.</p>
+        <p>Institutional crypto sits on chains secured by ECDSA. Those public keys are exposed to "harvest now, decrypt later" — data captured today can be broken once a cryptographically relevant quantum computer exists. Institutions can't migrate chains to fix it.</p>
     </div>
     <div class="benchmarks">
         <div class="stat-card">
             <h3>Quantum Threat</h3>
-            <p>ECDSA Vulnerability</p>
-            <span style="font-size: 11px; color: var(--text-dim); display: block; margin-top: 5px;">Real. Imminent. Unaddressed.</span>
+            <p>ECDSA Exposure</p>
+            <span style="font-size: 11px; color: var(--text-dim); display: block; margin-top: 5px;">Harvest now, decrypt later.</span>
         </div>
         <div class="stat-card">
-            <h3>Migration Window</h3>
-            <p>3-5 Years</p>
-            <span style="font-size: 11px; color: var(--text-dim); display: block; margin-top: 5px;">Before Quantum Breaks ECDSA</span>
+            <h3>The Timeline</h3>
+            <p>2030s (Uncertain)</p>
+            <span style="font-size: 11px; color: var(--text-dim); display: block; margin-top: 5px;">When quantum may threaten ECDSA. Estimates vary.</span>
         </div>
         <div class="stat-card">
             <h3>Market Gap</h3>
-            <p>No Institutional-Grade Solution</p>
-            <span style="font-size: 11px; color: var(--text-dim); display: block; margin-top: 5px;">Retail wrappers exist. Enterprise custody infrastructure doesn't.</span>
+            <p>Built For Retail, Not Institutions</p>
+            <span style="font-size: 11px; color: var(--text-dim); display: block; margin-top: 5px;">Existing PQC tools target retail wallets. Institutional custody needs different infrastructure.</span>
         </div>
     </div>
 </section>
@@ -198,24 +194,24 @@
 <section class="container">
     <div class="section-header" id="solution">
         <h2>Our Vision</h2>
-        <p>We're building the infrastructure layer that institutions will rely on for quantum-safe custody. Fast integration. No protocol changes. The foundation that Web3 needs to survive quantum computing.</p>
+        <p>We're building the verification layer institutions can add to their existing ECDSA flows — no protocol changes, no chain migration, and no custody of keys or funds.</p>
     </div>
     <div class="problem-solution">
         <div class="problem-solution-text">
             <h3>How We Move</h3>
-            <p><strong>1. Enterprise API</strong><br>RESTful infrastructure for post-quantum signature validation.</p>
-            <p><strong>2. Institutional Integration</strong><br>Fast deployment. Zero friction. Proven integration model.</p>
-            <p><strong>3. Become the Standard</strong><br>First mover in quantum-safe institutional custody becomes the reference implementation for Web3.</p>
+            <p><strong>1. Verification API</strong><br>A stateless REST service that verifies ML-DSA-87 signatures and returns a signed, independently-verifiable attestation. Live and early.</p>
+            <p><strong>2. Institutional Integration</strong><br>An added post-quantum check alongside existing custody flows. No migration, no key custody. (In design.)</p>
+            <p><strong>3. Earn Trust Through Audits</strong><br>Independent security review, then institutional pilots. The standard that wins is the one a regulator can stand behind.</p>
         </div>
         <div style="background: var(--card-bg); border: 1px solid rgba(255, 255, 255, 0.05); padding: 40px; border-radius: 4px;">
-            <h4 style="color: var(--quantum-cyan); margin-bottom: 20px; font-family: 'Space Grotesk', sans-serif; text-transform: uppercase;">Why This Approach</h4>
+            <h4 style="color: var(--quantum-cyan); margin-bottom: 20px; font-family: 'Space Grotesk', sans-serif; text-transform: uppercase;">Design Principles</h4>
             <ul style="list-style: none; color: var(--text-dim); line-height: 2;">
-                <li>✓ Fast institutional adoption</li>
-                <li>✓ Enterprise-grade security</li>
-                <li>✓ Zero protocol fragmentation</li>
-                <li>✓ Scalable to all custody players</li>
-                <li>✓ Path to industry standard</li>
-                <li>✓ Defensible market position</li>
+                <li>✓ Added where assets already sit</li>
+                <li>✓ No chain migration</li>
+                <li>✓ No custody of keys or funds</li>
+                <li>✓ NIST-standard cryptography (FIPS 204)</li>
+                <li>✓ Independently verifiable results</li>
+                <li>✓ Stateless, horizontally scalable</li>
             </ul>
         </div>
     </div>
@@ -227,16 +223,16 @@
     </div>
     <div class="features">
         <div class="feature">
-            <h3>Standards Finalized</h3>
-            <p>NIST approved post-quantum cryptography standards in 2024. The technology is proven. The regulatory framework is beginning to move. Institutions are asking questions.</p>
+            <h3>Standards Are Ready</h3>
+            <p>NIST finalized its post-quantum cryptography standards in 2024 (FIPS 204, ML-DSA). The cryptography is standardized and ready to build real infrastructure on.</p>
         </div>
         <div class="feature">
-            <h3>Market Window Opening</h3>
-            <p>Early conversations with custodians are accelerating. Institutional migration requires 2-3 years. The first mover builds infrastructure that becomes industry standard.</p>
+            <h3>The Gap Is Open</h3>
+            <p>Incumbent custody providers haven't shipped post-quantum verification built for institutions. The infrastructure to close that gap is what we're building.</p>
         </div>
         <div class="feature">
-            <h3>First Mover Advantage</h3>
-            <p>No company has shipped quantum-safe institutional infrastructure. The winner becomes the reference implementation. This is a foundational infrastructure play.</p>
+            <h3>Trust Beats Noise</h3>
+            <p>Whoever institutions trust here will be whoever can show real, auditable cryptography — not the loudest claims. We're building to be checkable, not just heard.</p>
         </div>
     </div>
 </section>
@@ -244,33 +240,33 @@
 <section class="roadmap container" id="roadmap">
     <div class="section-header">
         <h2>Execution Timeline</h2>
-        <p>From infrastructure development to institutional adoption.</p>
+        <p>Direction, not a promise of dates. Timelines depend on audits and partners.</p>
     </div>
     <div class="phase">
-        <h4>PHASE 1: DEVELOPMENT</h4>
-        <h2>Build Enterprise Infrastructure</h2>
-        <p>Develop REST API for post-quantum signature validation. Implement security hardening. Deploy to production. Target institutional-grade reliability.</p>
+        <h4>PHASE 1: BUILD</h4>
+        <h2>Verification Infrastructure</h2>
+        <p>Build the ML-DSA-87 verification API with signed attestations. The cryptographic core and a live verification service exist today; persistent attestation identity and hardening are in progress.</p>
     </div>
     <div class="phase">
         <h4>PHASE 2: VALIDATION</h4>
-        <h2>Professional Security Review</h2>
-        <p>Third-party audits of API and cryptography. Publish audit results. Establish institutional trust. Security is the barrier to adoption—we eliminate it.</p>
+        <h2>Independent Security Review</h2>
+        <p>Third-party review of the API and cryptography. Publish results. Security is the barrier to institutional adoption — earning trust here is the work.</p>
     </div>
     <div class="phase">
         <h4>PHASE 3: ADOPTION</h4>
-        <h2>Institutional Integration</h2>
-        <p>Begin pilot programs with tier-1 custodians. Fast integration. Real customers. Prove the market exists and our solution works at scale.</p>
+        <h2>Institutional Pilots</h2>
+        <p>Profile post-quantum verification against real custodian and rollup traffic. Honest assessment of fit, including where it doesn't fit yet.</p>
     </div>
     <div class="phase">
-        <h4>PHASE 4: STANDARDIZATION</h4>
-        <h2>Become the Reference</h2>
-        <p>Scale infrastructure. Expand to custody ecosystem. As adoption accelerates, Qubex becomes the standard infrastructure for quantum-safe custody across Web3.</p>
+        <h4>PHASE 4: STANDARD</h4>
+        <h2>Toward A Reference</h2>
+        <p>If the cryptography holds up under audit and real use, Qubex aims to become a verification layer institutions can rely on for the quantum transition.</p>
     </div>
 </section>
 
 <section class="cta-section">
     <h2>Help Us Build the Future of Institutional Crypto Security</h2>
-    <p>We're moving fast. We're building the standard. Join the community and be part of the infrastructure that protects Web3's institutional foundation.</p>
+    <p>We're building in public, honestly — real cryptography, clearly labelled. Join the community and follow the work as it ships.</p>
     <div class="btn-container">
         <a href="https://discord.gg/ZQXZcNVcR" target="_blank" class="btn btn-primary">Join Genesis Community</a>
         <a href="https://x.com/QUBEX_SENTINEL" target="_blank" class="btn" style="border-color: #333; color: #fff;">Follow Our Progress</a>
@@ -288,7 +284,7 @@
             <a href="/development">Development</a>
             <a href="https://github.com/SpirosDR1/Qubex-PQC-Benchmarks" target="_blank">GitHub</a>
         </div>
-        <div class="copyright">&copy; 2026 QUBEX Sentinel. Building enterprise post-quantum security infrastructure for Web3.</div>
+        <div class="copyright">&copy; 2026 QUBEX Sentinel. Building post-quantum verification infrastructure for institutional custody.</div>
     </div>
 </footer>
 
