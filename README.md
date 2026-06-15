@@ -25,9 +25,8 @@ quantum-safe institutional cryptocurrency custody.
 ## Status
 
 - **Live today:** ML-DSA-87 benchmark + stateless verification API with
-  signed attestations.
-- **In progress:** persistent attestation identity, institutional
-  integration path.
+  signed attestations and a persistent attestation identity.
+- **In progress:** institutional integration path.
 - **Research:** zero-knowledge proof of correct verification.
 
 Direction, not a promise of dates: enterprise verification API →
