@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
     <title>QUBEX SENTINEL | API Development & Roadmap</title>
-    <meta name="description" content="Enterprise API in development. Building the standard infrastructure for Web3. Join the community.">
+    <meta name="description" content="Post-quantum verification API for institutional custody. Live and early. Honest about what's built versus in progress.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
@@ -67,9 +67,9 @@
     
     <section class="slide">
         <div style="text-align: center; width: 100%;">
-            <div class="subtitle">Enterprise API in Development</div>
+            <div class="subtitle">Post-Quantum Verification API · Live &amp; Early</div>
             <h1>Build the <br><span class="highlight">Future</span></h1>
-            <p style="margin-top: 25px; color: #888; max-width: 750px; margin-left: auto; margin-right: auto;">We're moving fast. We're building the standard. Join the community and be part of the infrastructure that protects Web3's institutional foundation.</p>
+            <p style="margin-top: 25px; color: #888; max-width: 750px; margin-left: auto; margin-right: auto;">We're building in public — real cryptography, clearly labelled. Join the community and be part of the infrastructure that protects Web3's institutional foundation.</p>
             
             <div class="btn-container">
                 <a href="https://discord.gg/ZQXZcNVcR" target="_blank" class="btn-access">Join Genesis Community</a>
@@ -81,46 +81,46 @@
     <section class="slide">
         <div style="text-align: center; width: 100%;" class="center">
             <div class="subtitle">How It Works</div>
-            <h2>API Architecture <span class="highlight">Phase 1</span></h2>
+            <h2>API Architecture <span class="highlight">Today</span></h2>
         </div>
         <div class="grid-3">
             <div class="tile">
-                <h3>01. Institution Calls API</h3>
-                <p>POST /verify-pqc-signature with ML-DSA signature and metadata. RESTful endpoint. Standard API contract.</p>
+                <h3>01. Caller Sends Signature</h3>
+                <p>POST /verify with an ML-DSA-87 public key, message, and signature. Stateless REST endpoint. Holds no keys, stores nothing.</p>
             </div>
             <div class="tile">
-                <h3>02. Backend Validates</h3>
-                <p>Qubex backend validates ML-DSA-87 signature. Returns verification certificate. Response in milliseconds.</p>
+                <h3>02. Backend Verifies</h3>
+                <p>Qubex verifies the ML-DSA-87 signature and signs the result with its own attestation key — returning a portable receipt in milliseconds.</p>
             </div>
             <div class="tile">
-                <h3>03. Institution Uses Certificate</h3>
-                <p>Institution posts certificate on-chain as proof of PQC verification. Zero on-chain latency impact. Institution adopts standard.</p>
+                <h3>03. Anyone Verifies the Receipt</h3>
+                <p>The attestation is checkable independently against the public key at /attestation-key. You don't have to trust us — you can verify.</p>
             </div>
         </div>
     </section>
 
     <section class="slide">
-        <h2 class="slide-title">Development Timeline</h2>
+        <h2 class="slide-title">Direction</h2>
         <div style="width: 100%; margin-top: 40px;">
             <div class="chart-bar">
-                <div class="bar-label"><span>June - August 2026: API Development</span></div>
+                <div class="bar-label"><span>Built: ML-DSA-87 core + verification API + signed attestations</span></div>
                 <div class="bar-outer"><div class="bar-inner" style="width: 100%;"></div></div>
             </div>
             <div class="chart-bar">
-                <div class="bar-label"><span>September - December 2026: Security Review + Testing</span></div>
-                <div class="bar-outer"><div class="bar-inner" style="width: 70%;"></div></div>
+                <div class="bar-label"><span>In progress: persistent attestation identity, hardening</span></div>
+                <div class="bar-outer"><div class="bar-inner" style="width: 45%;"></div></div>
             </div>
             <div class="chart-bar">
-                <div class="bar-label"><span>2027: Institutional Pilots</span></div>
-                <div class="bar-outer"><div class="bar-inner" style="width: 50%;"></div></div>
+                <div class="bar-label"><span>Next: independent security review</span></div>
+                <div class="bar-outer"><div class="bar-inner" style="width: 20%;"></div></div>
             </div>
             <div class="chart-bar">
-                <div class="bar-label"><span>2028+: Scale & Standardization</span> <span class="highlight">Becoming the Reference</span></div>
-                <div class="bar-outer"><div class="bar-inner" style="width: 40%;"></div></div>
+                <div class="bar-label"><span>Then: institutional pilots</span> <span class="highlight">Toward the standard</span></div>
+                <div class="bar-outer"><div class="bar-inner" style="width: 10%;"></div></div>
             </div>
         </div>
         <p style="text-align: center; margin-top: 50px; font-weight: 300;">
-            <strong style="color: #fff;">Phase 1 Timeline: From development to institutional adoption.</strong> We move fast. We iterate based on real feedback. We build toward becoming the standard.
+            <strong style="color: #fff;">Direction, not a promise of dates.</strong> We move fast and iterate on real feedback. Timelines depend on audits and partners, so we don't pin them.
         </p>
     </section>
 
@@ -129,18 +129,18 @@
         <div style="width: 100%; max-width: 900px; margin: 40px auto 0;">
             <div style="background: var(--card-bg); border: 1px solid var(--border); padding: 30px; margin-bottom: 20px; border-radius: 4px;">
                 <h3 style="color: #27c93f; margin-bottom: 15px;">What Exists</h3>
-                <p style="color: #aaa; margin-bottom: 10px;">• ML-DSA-87 signature validation (working, benchmarked)</p>
-                <p style="color: #aaa; margin-bottom: 10px;">• 6 mainnet RPC connections (verified, tested)</p>
-                <p style="color: #aaa; margin-bottom: 10px;">• Institutional demand signals (conversations happening now)</p>
-                <p style="color: #aaa;">• Founder + team (building now)</p>
+                <p style="color: #aaa; margin-bottom: 10px;">• ML-DSA-87 signature verification (live, benchmarked)</p>
+                <p style="color: #aaa; margin-bottom: 10px;">• Stateless /verify API returning signed attestations</p>
+                <p style="color: #aaa; margin-bottom: 10px;">• Independent receipt verification (/verify-attestation, /attestation-key)</p>
+                <p style="color: #aaa;">• Public, reproducible benchmark + open repo</p>
             </div>
             
             <div style="background: var(--card-bg); border: 1px solid var(--border); padding: 30px; border-radius: 4px;">
                 <h3 style="color: #ffb300; margin-bottom: 15px;">What's In Development</h3>
-                <p style="color: #aaa; margin-bottom: 10px;">• RESTful API (starting June 2026)</p>
-                <p style="color: #aaa; margin-bottom: 10px;">• Professional security audits (Sept-Dec 2026)</p>
-                <p style="color: #aaa; margin-bottom: 10px;">• Institutional integrations (2027)</p>
-                <p style="color: #aaa;">• Becoming the industry standard (2028+)</p>
+                <p style="color: #aaa; margin-bottom: 10px;">• Persistent attestation identity (currently ephemeral)</p>
+                <p style="color: #aaa; margin-bottom: 10px;">• ZK proof of correct verification (research)</p>
+                <p style="color: #aaa; margin-bottom: 10px;">• Independent security review</p>
+                <p style="color: #aaa;">• Institutional integration path &amp; pilots</p>
             </div>
         </div>
     </section>
@@ -149,7 +149,7 @@
       <div style="text-align: center; width: 100%;">
             <div class="subtitle">Fast. Honest. Executable.</div>
             <h2 style="font-size: clamp(32px, 6vw, 72px);">Join The <span class="highlight">Mission</span></h2>
-            <p style="margin-top: 30px; color: #888; max-width: 750px; margin-left: auto; margin-right: auto;">We're building enterprise infrastructure for institutional crypto. No hype. No fake metrics. Just execution toward becoming the standard.</p>
+            <p style="margin-top: 30px; color: #888; max-width: 750px; margin-left: auto; margin-right: auto;">We're building post-quantum verification infrastructure for institutional crypto. No hype. No fake metrics. Just execution toward becoming the standard.</p>
             
             <div style="margin-top: 50px; display: flex; justify-content: center;">
                 <a href="https://github.com/SpirosDR1/Qubex-PQC-Benchmarks" target="_blank" class="btn-access">View GitHub</a>
