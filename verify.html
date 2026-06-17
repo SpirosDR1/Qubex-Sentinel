@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>QUBEX SENTINEL | Verify It Yourself</title>
-    <meta name="description" content="Run the live proof: demo signature → verification → independently-checkable attestation → tamper test. No trust required.">
+    <meta name="description" content="Run the live proof: demo signature, verification, independently-checkable attestation, tamper test. No trust required.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/jpeg" href="favicon.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,27 +34,34 @@
         .btn:disabled { opacity: 0.4; cursor: not-allowed; }
         .btn-wrap { text-align: center; margin: 30px 0 50px; }
 
-        .steps { display: flex; flex-direction: column; gap: 16px; margin-bottom: 60px; }
+        .steps { display: flex; flex-direction: column; gap: 16px; margin-bottom: 40px; }
         .step { background: var(--card-bg); border: 1px solid rgba(255, 255, 255, 0.06); border-radius: 4px; padding: 24px; transition: border-color 0.3s; }
         .step.active { border-color: rgba(0, 229, 255, 0.4); }
         .step.success { border-color: rgba(39, 201, 63, 0.4); }
         .step.fail { border-color: rgba(255, 95, 86, 0.4); }
-        .step-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+        .step-head { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-bottom: 10px; }
         .step-title { font-family: 'Space Grotesk', sans-serif; font-size: 14px; font-weight: 700; letter-spacing: 0.5px; color: var(--text-main); }
-        .step-badge { font-family: 'Space Grotesk', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 1px; padding: 4px 10px; border-radius: 2px; text-transform: uppercase; }
+        .step-badge { font-family: 'Space Grotesk', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 1px; padding: 4px 10px; border-radius: 2px; text-transform: uppercase; white-space: nowrap; flex-shrink: 0; }
         .badge-pending { background: rgba(255,255,255,0.06); color: var(--text-dim); }
         .badge-running { background: rgba(0,229,255,0.1); color: var(--quantum-cyan); }
         .badge-success { background: rgba(39,201,63,0.12); color: var(--good); }
         .badge-fail { background: rgba(255,95,86,0.12); color: var(--bad); }
         .step-body { font-size: 13px; color: var(--text-dim); }
-        .step-body p { margin-bottom: 6px; word-break: break-all; }
-        .step-body code { color: var(--text-main); font-family: monospace; font-size: 12px; }
+        .field { margin-bottom: 12px; }
+        .field-label { display: block; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: #777; margin-bottom: 4px; font-weight: 600; }
+        .field-value { display: flex; align-items: flex-start; gap: 8px; }
+        .field-value code { color: var(--text-main); font-family: monospace; font-size: 12px; word-break: break-all; line-height: 1.5; flex: 1; }
+        .field-value code.collapsed { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .toggle-btn { background: rgba(0,229,255,0.08); color: var(--quantum-cyan); border: 1px solid rgba(0,229,255,0.2); border-radius: 2px; font-size: 10px; font-family: 'Space Grotesk', sans-serif; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; padding: 3px 8px; cursor: pointer; white-space: nowrap; flex-shrink: 0; transition: 0.2s; }
+        .toggle-btn:hover { background: var(--quantum-cyan); color: #000; }
+        .result-line { font-size: 14px; margin-bottom: 6px; }
+        .result-line code { color: var(--text-main); font-family: monospace; font-weight: 600; }
         .step-note { font-size: 12px; color: #666; margin-top: 10px; font-style: italic; }
 
         .summary { text-align: center; padding: 30px; border: 1px solid rgba(0, 229, 255, 0.15); border-radius: 4px; background: linear-gradient(135deg, rgba(0, 229, 255, 0.04) 0%, rgba(0, 229, 255, 0.01) 100%); margin-bottom: 60px; display: none; }
         .summary.show { display: block; }
         .summary h3 { color: var(--quantum-cyan); margin-bottom: 10px; font-size: 18px; }
-        .summary p { color: var(--text-dim); font-size: 14px; }
+        .summary p { color: var(--text-dim); font-size: 14px; max-width: 640px; margin: 0 auto; }
 
         .site-footer { border-top: 1px solid rgba(255, 255, 255, 0.05); padding: 40px 0; text-align: center; margin-top: auto; background: #020202; width: 100%; }
         .footer-links { display: flex; justify-content: center; gap: 20px; margin-bottom: 20px; flex-wrap: wrap; }
@@ -63,11 +70,24 @@
         .copyright { font-size: 12px; color: #555; }
 
         @media (max-width: 640px) {
+            .header-content { padding: 0 16px; }
+            .logo { font-size: 18px; }
+            .nav-links { gap: 14px; }
+            .nav-links a { font-size: 11px; }
+            .container { padding: 0 16px; }
             .hero { padding: 40px 0 30px; }
             .hero h1 { font-size: 30px; }
             .hero p { font-size: 14px; }
+            .btn-wrap { margin: 24px 0 36px; }
+            .btn { width: 100%; padding: 15px; }
             .step { padding: 18px; }
+            .step-head { flex-direction: column; align-items: flex-start; gap: 8px; }
             .step-title { font-size: 13px; }
+            .field-value { flex-direction: column; gap: 6px; }
+            .toggle-btn { align-self: flex-start; }
+        }
+        @media (max-width: 380px) {
+            .hero h1 { font-size: 25px; }
         }
     </style>
 </head>
@@ -85,7 +105,7 @@
 
 <section class="hero container">
     <h1>Verify It <span style="color: var(--quantum-cyan);">Yourself</span></h1>
-    <p>You don't have to trust us. Press the button and watch the live API generate a signature, verify it, sign the result, and prove that result is genuine — independently, in your browser, right now.</p>
+    <p>You don't have to trust us. Press the button and watch the live API generate a signature, verify it, sign the result, and prove that result is genuine — independently, in your browser, right now. Every value below can be expanded in full and copied, so you can re-check it however you like.</p>
 </section>
 
 <section class="container">
@@ -129,7 +149,7 @@
 
     <div class="summary" id="summary">
         <h3>That's the whole trust model.</h3>
-        <p>A genuine receipt checks out. A tampered one doesn't. Nothing here asked you to believe a claim — every step above is a real call to the live API, happening in your browser.</p>
+        <p>A genuine receipt checks out. A tampered one doesn't. Nothing here asked you to believe a claim — every step above is a real call to the live API, happening in your browser. Expand any value, copy it, and re-run the checks yourself against the public endpoints.</p>
     </div>
 </section>
 
@@ -148,6 +168,7 @@
 
 <script>
 const API = "https://qubexsentinel-api.onrender.com";
+let fieldCounter = 0;
 
 function setStep(n, state, html) {
     const step = document.getElementById('step' + n);
@@ -159,9 +180,36 @@ function setStep(n, state, html) {
     body.innerHTML = html;
 }
 
-function trunc(s, n = 28) {
-    if (!s) return '';
-    return s.length > n ? s.slice(0, n) + '…' : s;
+function escapeHtml(s) {
+    if (s === undefined || s === null) return '';
+    return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+
+function field(label, value) {
+    const id = 'f' + (fieldCounter++);
+    const safe = escapeHtml(value);
+    return `<div class="field">
+        <span class="field-label">${escapeHtml(label)}</span>
+        <div class="field-value">
+            <code id="${id}" class="collapsed">${safe}</code>
+            <button class="toggle-btn" onclick="toggleField('${id}', this)">Show full</button>
+        </div>
+    </div>`;
+}
+
+function toggleField(id, btn) {
+    const el = document.getElementById(id);
+    if (el.classList.contains('collapsed')) {
+        el.classList.remove('collapsed');
+        btn.textContent = 'Collapse';
+    } else {
+        el.classList.add('collapsed');
+        btn.textContent = 'Show full';
+    }
+}
+
+function resultLine(label, value) {
+    return `<p class="result-line">${escapeHtml(label)}: <code>${escapeHtml(value)}</code></p>`;
 }
 
 async function runProof() {
@@ -175,11 +223,10 @@ async function runProof() {
     }
 
     try {
-        
         setStep(1, 'running', 'Calling /demo — generating a fresh ML-DSA-87 keypair and signature. The API may take up to a minute to wake up if it has been idle.');
         const demoRes = await fetch(API + '/demo');
         const demo = await demoRes.json();
-        setStep(1, 'success', `<p>Public key: <code>${trunc(demo.public_key)}</code></p><p>Message (hex): <code>${trunc(demo.message)}</code></p><p>Signature: <code>${trunc(demo.signature)}</code></p>`);
+        setStep(1, 'success', field('Public key', demo.public_key) + field('Message (hex)', demo.message) + field('Signature', demo.signature));
 
         setStep(2, 'running', 'Sending the signature to /verify.');
         const verifyRes = await fetch(API + '/verify', {
@@ -188,7 +235,7 @@ async function runProof() {
             body: JSON.stringify(demo)
         });
         const verify = await verifyRes.json();
-        setStep(2, 'success', `<p>valid: <code>${verify.valid}</code></p><p>statement: <code>${trunc(verify.statement, 50)}</code></p><p>attestation: <code>${trunc(verify.attestation)}</code></p><div class="step-note">The service signed this result with its own persistent key — that signature is the receipt.</div>`);
+        setStep(2, 'success', resultLine('valid', verify.valid) + field('Statement', verify.statement) + field('Attestation (the receipt)', verify.attestation) + '<div class="step-note">The service signed this result with its own persistent key — that signature is the receipt.</div>');
 
         setStep(3, 'running', 'Checking the receipt against the published attestation public key.');
         const checkRes = await fetch(API + '/verify-attestation', {
@@ -197,7 +244,7 @@ async function runProof() {
             body: JSON.stringify({ statement: verify.statement, attestation: verify.attestation })
         });
         const check = await checkRes.json();
-        setStep(3, check.genuine ? 'success' : 'fail', `<p>genuine: <code>${check.genuine}</code></p><div class="step-note">Anyone can run this exact check against /attestation-key — no special access required.</div>`);
+        setStep(3, check.genuine ? 'success' : 'fail', resultLine('genuine', check.genuine) + '<div class="step-note">Anyone can run this exact check against /attestation-key — no special access required.</div>');
 
         setStep(4, 'running', 'Flipping one character in the attestation and checking again.');
         const original = verify.attestation;
@@ -208,11 +255,11 @@ async function runProof() {
             body: JSON.stringify({ statement: verify.statement, attestation: flipped })
         });
         const tamper = await tamperRes.json();
-        setStep(4, tamper.genuine ? 'fail' : 'success', `<p>genuine: <code>${tamper.genuine}</code></p><div class="step-note">One changed character is enough to break the signature. That's the proof the receipt can't be faked.</div>`);
+        setStep(4, tamper.genuine ? 'fail' : 'success', resultLine('genuine', tamper.genuine) + '<div class="step-note">One changed character is enough to break the signature. That\'s the proof the receipt can\'t be faked.</div>');
 
         document.getElementById('summary').className = 'summary show';
     } catch (err) {
-        setStep(1, 'fail', `Something went wrong reaching the API: ${err.message}. The free-tier API can take up to a minute to wake up — try again in a moment.`);
+        setStep(1, 'fail', `Something went wrong reaching the API: ${escapeHtml(err.message)}. The free-tier API can take up to a minute to wake up — try again in a moment.`);
     } finally {
         btn.disabled = false;
         btn.textContent = 'Run The Proof Again';
