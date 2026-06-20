@@ -1,7 +1,8 @@
 # QUBEX SENTINEL | Post-Quantum Security Infrastructure
 
-Official website for QUBEX Sentinel — building infrastructure for
-quantum-safe institutional cryptocurrency custody.
+Official website for QUBEX Sentinel — building a verification
+checkpoint institutions can add to their own authorization flows on the
+path to quantum-safe custody.
 
 ## What's Here
 
